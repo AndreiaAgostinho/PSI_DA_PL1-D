@@ -35,12 +35,12 @@ namespace Projeto
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePareceresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,7 @@ namespace Projeto
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -102,6 +103,20 @@ namespace Projeto
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // gestoresToolStripMenuItem
+            // 
+            this.gestoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestãoDeFuncionáriosToolStripMenuItem,
+            this.gestãoDePareceresToolStripMenuItem,
+            this.gestãoDeProcessosToolStripMenuItem,
+            this.gestãoDeProjetosToolStripMenuItem,
+            this.gestãoDePromotoresToolStripMenuItem});
+            this.gestoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gestoresToolStripMenuItem.Name = "gestoresToolStripMenuItem";
+            this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.gestoresToolStripMenuItem.Text = "Gestores";
+            this.gestoresToolStripMenuItem.Click += new System.EventHandler(this.gestoresToolStripMenuItem_Click);
+            // 
             // gestãoDeFuncionáriosToolStripMenuItem
             // 
             this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
@@ -131,20 +146,6 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem.Name = "gestãoDePromotoresToolStripMenuItem";
             this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
-            // 
-            // gestoresToolStripMenuItem
-            // 
-            this.gestoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestãoDeFuncionáriosToolStripMenuItem,
-            this.gestãoDePareceresToolStripMenuItem,
-            this.gestãoDeProcessosToolStripMenuItem,
-            this.gestãoDeProjetosToolStripMenuItem,
-            this.gestãoDePromotoresToolStripMenuItem});
-            this.gestoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gestoresToolStripMenuItem.Name = "gestoresToolStripMenuItem";
-            this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
-            this.gestoresToolStripMenuItem.Text = "Gestores";
-            this.gestoresToolStripMenuItem.Click += new System.EventHandler(this.gestoresToolStripMenuItem_Click);
             // 
             // button5
             // 

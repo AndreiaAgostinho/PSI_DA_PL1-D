@@ -21,5 +21,12 @@ namespace Projeto
         {
 
         }
+
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var registroFuncionario = new RegistroFuncionario();
+            registroFuncionario.Show();
+            this.Hide();
+        }
     }
 }

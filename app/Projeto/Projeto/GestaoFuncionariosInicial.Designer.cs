@@ -55,6 +55,7 @@ namespace Projeto
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
             this.voltarToolStripMenuItem.Size = new System.Drawing.Size(74, 25);
             this.voltarToolStripMenuItem.Text = "Registo";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
             // alteraçãoDeDadosToolStripMenuItem
             // 

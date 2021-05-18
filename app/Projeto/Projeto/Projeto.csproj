@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroFuncionario.Designer.cs">
+      <DependentUpon>RegistroFuncionario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GestaoFuncionariosInicial.resx">
       <DependentUpon>GestaoFuncionariosInicial.cs</DependentUpon>
     </EmbeddedResource>
