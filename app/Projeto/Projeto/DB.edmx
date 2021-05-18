@@ -4,11 +4,346 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="DB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="DBTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="DB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DBStoreContainer">
+    <EntitySet Name="Promotor" EntityType="DB.Store.Promotor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Processo" EntityType="DB.Store.Processo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadoProcesso" EntityType="DB.Store.EstadoProcesso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoDocumento" EntityType="DB.Store.TipoDocumento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Documento" EntityType="DB.Store.Documento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProjetoSet" EntityType="DB.Store.ProjetoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoProjeto" EntityType="DB.Store.TipoProjeto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProjetoAtribuicao" EntityType="DB.Store.ProjetoAtribuicao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Funcionario" EntityType="DB.Store.Funcionario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParecerSet" EntityType="DB.Store.ParecerSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EspecialistaSet" EntityType="DB.Store.EspecialistaSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PromotorProcesso" Association="DB.Store.PromotorProcesso">
+      <End Role="Promotor" EntitySet="Promotor" />
+      <End Role="Processo" EntitySet="Processo" />
+    </AssociationSet>
+    <AssociationSet Name="EstadoProcessoProcesso" Association="DB.Store.EstadoProcessoProcesso">
+      <End Role="EstadoProcesso" EntitySet="EstadoProcesso" />
+      <End Role="Processo" EntitySet="Processo" />
+    </AssociationSet>
+    <AssociationSet Name="TipoDocumentoDocumento" Association="DB.Store.TipoDocumentoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="ProcessoProjeto" Association="DB.Store.ProcessoProjeto">
+      <End Role="Processo" EntitySet="Processo" />
+      <End Role="Projeto" EntitySet="ProjetoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProjetoDocumento" Association="DB.Store.ProjetoDocumento">
+      <End Role="Projeto" EntitySet="ProjetoSet" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="TipoProcessoTipoProcesso" Association="DB.Store.TipoProcessoTipoProcesso">
+      <End Role="TipoProcesso" EntitySet="TipoProjeto" />
+      <End Role="TipoProcesso1" EntitySet="TipoProjeto" />
+    </AssociationSet>
+    <AssociationSet Name="TipoProjetoProjeto" Association="DB.Store.TipoProjetoProjeto">
+      <End Role="TipoProjeto" EntitySet="TipoProjeto" />
+      <End Role="Projeto" EntitySet="ProjetoSet" />
+    </AssociationSet>
+    <AssociationSet Name="TipoProjetoEspecialista" Association="DB.Store.TipoProjetoEspecialista">
+      <End Role="TipoProjeto" EntitySet="TipoProjeto" />
+      <End Role="Especialista" EntitySet="EspecialistaSet" />
+    </AssociationSet>
+    <AssociationSet Name="ParecerFuncionario" Association="DB.Store.ParecerFuncionario">
+      <End Role="Parecer" EntitySet="ParecerSet" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="ProjetoParecer" Association="DB.Store.ProjetoParecer">
+      <End Role="Projeto" EntitySet="ProjetoSet" />
+      <End Role="Parecer" EntitySet="ParecerSet" />
+    </AssociationSet>
+    <AssociationSet Name="ParecerDocumento" Association="DB.Store.ParecerDocumento">
+      <End Role="Documento" EntitySet="Documento" />
+      <End Role="Parecer" EntitySet="ParecerSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProjetoAtribuicaoFuncionario" Association="DB.Store.ProjetoAtribuicaoFuncionario">
+      <End Role="ProjetoAtribuicao" EntitySet="ProjetoAtribuicao" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="ProjetoProjetoAtribuicao" Association="DB.Store.ProjetoProjetoAtribuicao">
+      <End Role="Projeto" EntitySet="ProjetoSet" />
+      <End Role="ProjetoAtribuicao" EntitySet="ProjetoAtribuicao" />
+    </AssociationSet>
+    <AssociationSet Name="EspecialistaFuncionario" Association="DB.Store.EspecialistaFuncionario">
+      <End Role="Especialista" EntitySet="EspecialistaSet" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Promotor">
+    <Key>
+      <PropertyRef Name="NIF" />
+    </Key>
+    <Property Name="NIF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telemovel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CodigoAcesso" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Senha" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Processo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataInicio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PromotorNIF" Type="int" Nullable="false" />
+    <Property Name="EstadoProcessoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadoProcesso">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescricaoEstado" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Designacao" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titulo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataEntrega" Type="datetime" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="int" Nullable="false" />
+    <Property Name="ProjetoId" Type="int" Nullable="false" />
+    <Property Name="ParecerNumero" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProjetoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EstadoProjeto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataEntrega" Type="datetime" Nullable="false" />
+    <Property Name="DataAprovação" Type="datetime" Nullable="false" />
+    <Property Name="ProcessoId" Type="int" Nullable="false" />
+    <Property Name="TipoProjetoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoProjeto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NrDiasAprovacao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Designacao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TipoProcessoAscendenteId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ProjetoAtribuicao">
+    <Key>
+      <PropertyRef Name="ProjetoId" />
+      <PropertyRef Name="FuncionarioNumero" />
+    </Key>
+    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FuncionarioNumero" Type="int" Nullable="false" />
+    <Property Name="ProjetoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Extencao" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParecerSet">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TextoParecer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataParecer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FuncionarioNumero" Type="int" Nullable="false" />
+    <Property Name="ProjetoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EspecialistaSet">
+    <Key>
+      <PropertyRef Name="TipoProjetoId" />
+      <PropertyRef Name="FuncionarioNumero" />
+    </Key>
+    <Property Name="TipoProjetoId" Type="int" Nullable="false" />
+    <Property Name="FuncionarioNumero" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="PromotorProcesso">
+    <End Role="Promotor" Type="DB.Store.Promotor" Multiplicity="1" />
+    <End Role="Processo" Type="DB.Store.Processo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Promotor">
+        <PropertyRef Name="NIF" />
+      </Principal>
+      <Dependent Role="Processo">
+        <PropertyRef Name="PromotorNIF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EstadoProcessoProcesso">
+    <End Role="EstadoProcesso" Type="DB.Store.EstadoProcesso" Multiplicity="1" />
+    <End Role="Processo" Type="DB.Store.Processo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoProcesso">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Processo">
+        <PropertyRef Name="EstadoProcessoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TipoDocumentoDocumento">
+    <End Role="TipoDocumento" Type="DB.Store.TipoDocumento" Multiplicity="1" />
+    <End Role="Documento" Type="DB.Store.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="TipoDocumentoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProcessoProjeto">
+    <End Role="Processo" Type="DB.Store.Processo" Multiplicity="1" />
+    <End Role="Projeto" Type="DB.Store.ProjetoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Processo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Projeto">
+        <PropertyRef Name="ProcessoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProjetoDocumento">
+    <End Role="Projeto" Type="DB.Store.ProjetoSet" Multiplicity="1" />
+    <End Role="Documento" Type="DB.Store.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projeto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="ProjetoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TipoProcessoTipoProcesso">
+    <End Role="TipoProcesso" Type="DB.Store.TipoProjeto" Multiplicity="0..1" />
+    <End Role="TipoProcesso1" Type="DB.Store.TipoProjeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoProcesso">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TipoProcesso1">
+        <PropertyRef Name="TipoProcessoAscendenteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TipoProjetoProjeto">
+    <End Role="TipoProjeto" Type="DB.Store.TipoProjeto" Multiplicity="1" />
+    <End Role="Projeto" Type="DB.Store.ProjetoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoProjeto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Projeto">
+        <PropertyRef Name="TipoProjetoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TipoProjetoEspecialista">
+    <End Role="TipoProjeto" Type="DB.Store.TipoProjeto" Multiplicity="1" />
+    <End Role="Especialista" Type="DB.Store.EspecialistaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoProjeto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Especialista">
+        <PropertyRef Name="TipoProjetoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ParecerFuncionario">
+    <End Role="Parecer" Type="DB.Store.ParecerSet" Multiplicity="*" />
+    <End Role="Funcionario" Type="DB.Store.Funcionario" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="Parecer">
+        <PropertyRef Name="FuncionarioNumero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProjetoParecer">
+    <End Role="Projeto" Type="DB.Store.ProjetoSet" Multiplicity="1" />
+    <End Role="Parecer" Type="DB.Store.ParecerSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projeto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Parecer">
+        <PropertyRef Name="ProjetoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ParecerDocumento">
+    <End Role="Documento" Type="DB.Store.Documento" Multiplicity="*" />
+    <End Role="Parecer" Type="DB.Store.ParecerSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Parecer">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="ParecerNumero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProjetoAtribuicaoFuncionario">
+    <End Role="ProjetoAtribuicao" Type="DB.Store.ProjetoAtribuicao" Multiplicity="*" />
+    <End Role="Funcionario" Type="DB.Store.Funcionario" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="ProjetoAtribuicao">
+        <PropertyRef Name="FuncionarioNumero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProjetoProjetoAtribuicao">
+    <End Role="Projeto" Type="DB.Store.ProjetoSet" Multiplicity="1" />
+    <End Role="ProjetoAtribuicao" Type="DB.Store.ProjetoAtribuicao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projeto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProjetoAtribuicao">
+        <PropertyRef Name="ProjetoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EspecialistaFuncionario">
+    <End Role="Especialista" Type="DB.Store.EspecialistaSet" Multiplicity="*" />
+    <End Role="Funcionario" Type="DB.Store.Funcionario" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="Especialista">
+        <PropertyRef Name="FuncionarioNumero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -382,13 +717,120 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="DB" />
-        <Alias Key="Target" Value="DB.Store" />
-        <EntityContainerMapping CdmEntityContainer="DBContainer" StorageEntityContainer="DBTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBStoreContainer" CdmEntityContainer="DBContainer">
+    <EntitySetMapping Name="Promotor">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Promotor)">
+        <MappingFragment StoreEntitySet="Promotor">
+          <ScalarProperty Name="NIF" ColumnName="NIF" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="Telemovel" ColumnName="Telemovel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CodigoAcesso" ColumnName="CodigoAcesso" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Processo">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Processo)">
+        <MappingFragment StoreEntitySet="Processo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="PromotorNIF" ColumnName="PromotorNIF" />
+          <ScalarProperty Name="EstadoProcessoId" ColumnName="EstadoProcessoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoProcesso">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.EstadoProcesso)">
+        <MappingFragment StoreEntitySet="EstadoProcesso">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DescricaoEstado" ColumnName="DescricaoEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDocumento">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.TipoDocumento)">
+        <MappingFragment StoreEntitySet="TipoDocumento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Designacao" ColumnName="Designacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documento">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Documento)">
+        <MappingFragment StoreEntitySet="Documento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="DataEntrega" ColumnName="DataEntrega" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="ProjetoId" ColumnName="ProjetoId" />
+          <ScalarProperty Name="ParecerNumero" ColumnName="ParecerNumero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjetoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Projeto)">
+        <MappingFragment StoreEntitySet="ProjetoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EstadoProjeto" ColumnName="EstadoProjeto" />
+          <ScalarProperty Name="DataEntrega" ColumnName="DataEntrega" />
+          <ScalarProperty Name="DataAprovação" ColumnName="DataAprovação" />
+          <ScalarProperty Name="ProcessoId" ColumnName="ProcessoId" />
+          <ScalarProperty Name="TipoProjetoId" ColumnName="TipoProjetoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoProjeto">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.TipoProjeto)">
+        <MappingFragment StoreEntitySet="TipoProjeto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NrDiasAprovacao" ColumnName="NrDiasAprovacao" />
+          <ScalarProperty Name="Designacao" ColumnName="Designacao" />
+          <ScalarProperty Name="TipoProcessoAscendenteId" ColumnName="TipoProcessoAscendenteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjetoAtribuicao">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.ProjetoAtribuicao)">
+        <MappingFragment StoreEntitySet="ProjetoAtribuicao">
+          <ScalarProperty Name="ProjetoId" ColumnName="ProjetoId" />
+          <ScalarProperty Name="FuncionarioNumero" ColumnName="FuncionarioNumero" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funcionario">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Funcionario)">
+        <MappingFragment StoreEntitySet="Funcionario">
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Extencao" ColumnName="Extencao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParecerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Parecer)">
+        <MappingFragment StoreEntitySet="ParecerSet">
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="TextoParecer" ColumnName="TextoParecer" />
+          <ScalarProperty Name="DataParecer" ColumnName="DataParecer" />
+          <ScalarProperty Name="FuncionarioNumero" ColumnName="FuncionarioNumero" />
+          <ScalarProperty Name="ProjetoId" ColumnName="ProjetoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EspecialistaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Especialista)">
+        <MappingFragment StoreEntitySet="EspecialistaSet">
+          <ScalarProperty Name="TipoProjetoId" ColumnName="TipoProjetoId" />
+          <ScalarProperty Name="FuncionarioNumero" ColumnName="FuncionarioNumero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -402,6 +844,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
