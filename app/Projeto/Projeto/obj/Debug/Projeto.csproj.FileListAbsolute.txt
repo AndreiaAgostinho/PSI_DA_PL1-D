@@ -20,3 +20,15 @@ C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.csproj.CoreCompileInputs.cache
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.exe
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.pdb
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\bin\Debug\Projeto.exe.config
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\bin\Debug\Projeto.exe
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\bin\Debug\Projeto.pdb
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.csprojAssemblyReference.cache
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.GestaoFuncionariosInicial.resources
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.GestaoPromotoresInicial.resources
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.MainPage.resources
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.Properties.Resources.resources
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.csproj.GenerateResource.cache
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.csproj.CoreCompileInputs.cache
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.exe
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.pdb
