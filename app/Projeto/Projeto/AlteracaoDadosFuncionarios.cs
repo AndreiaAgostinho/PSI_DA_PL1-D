@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class GestaoPareceres : Form
+    public partial class AlteracaoDadosFuncionarios : Form
     {
-        public GestaoPareceres()
+        public AlteracaoDadosFuncionarios()
         {
             InitializeComponent();
         }
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var voltarGestaoPareceres = new MainPage();
-            voltarGestaoPareceres.Show();
+            var alterardadosfuncionariosInicial = new MainPage();
+            alterardadosfuncionariosInicial.Show();
             this.Hide();
         }
 
@@ -38,17 +38,17 @@ namespace Projeto
             this.Hide();
         }
 
-        private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var gestaoProjetosButao = new GestaoProjetosInicial();
-            gestaoProjetosButao.Show();
-            this.Hide();
-        }
-
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoProcessosButao = new GestaoProcessosInicial();
             gestaoProcessosButao.Show();
+            this.Hide();
+        }
+
+        private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var gestaoProjetosButao = new GestaoProjetosInicial();
+            gestaoProjetosButao.Show();
             this.Hide();
         }
 
