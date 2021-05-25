@@ -53,6 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcessoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcessoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AcessoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlteracaoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlteracaoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AlteracaoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlteraçãoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlteraçãoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AlteraçãoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -145,6 +163,9 @@
     <Compile Include="TipoProjeto.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlteracaoDadosFuncionarios.resx">
+      <DependentUpon>AlteracaoDadosFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestaoFuncionariosInicial.resx">
       <DependentUpon>GestaoFuncionariosInicial.cs</DependentUpon>
     </EmbeddedResource>
