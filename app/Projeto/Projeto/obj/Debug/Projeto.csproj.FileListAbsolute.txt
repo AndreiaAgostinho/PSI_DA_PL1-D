@@ -32,3 +32,6 @@ C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\P
 C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.csproj.CoreCompileInputs.cache
 C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.exe
 C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.pdb
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\bin\Debug\EntityFramework.dll
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\bin\Debug\EntityFramework.xml
+C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.csproj.CopyComplete
