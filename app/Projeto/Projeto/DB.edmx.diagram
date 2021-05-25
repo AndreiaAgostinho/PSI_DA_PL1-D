@@ -4,7 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="482ef924c69147bd843c42712e4b8ec0" Name="Diagram1" />
+      <Diagram DiagramId="482ef924c69147bd843c42712e4b8ec0" Name="Diagram1" ZoomLevel="86" >
+        <EntityTypeShape EntityType="DB.Promotor" Width="1.5" PointX="1.375" PointY="3.125" />
+        <EntityTypeShape EntityType="DB.Processo" Width="1.5" PointX="4.875" PointY="3.5" />
+        <AssociationConnector Association="DB.PromotorProcesso" />
+        <EntityTypeShape EntityType="DB.EstadoProcesso" Width="1.5" PointX="4.875" PointY="0.5" />
+        <AssociationConnector Association="DB.EstadoProcessoProcesso" />
+        <EntityTypeShape EntityType="DB.TipoDocumento" Width="1.5" PointX="1.375" PointY="6.875" />
+        <EntityTypeShape EntityType="DB.Documento" Width="1.5" PointX="4.875" PointY="6.875" />
+        <AssociationConnector Association="DB.TipoDocumentoDocumento" />
+        <EntityTypeShape EntityType="DB.Projeto" Width="1.5" PointX="8.5" PointY="4.5" />
+        <AssociationConnector Association="DB.ProcessoProjeto" />
+        <AssociationConnector Association="DB.ProjetoDocumento" />
+        <EntityTypeShape EntityType="DB.TipoProjeto" Width="1.5" PointX="8.5" PointY="1" />
+        <AssociationConnector Association="DB.TipoProcessoTipoProcesso" />
+        <EntityTypeShape EntityType="DB.ProjetoAtribuicao" Width="1.5" PointX="12" PointY="4.5" />
+        <EntityTypeShape EntityType="DB.Funcionario" Width="1.5" PointX="15" PointY="4.5" />
+        <EntityTypeShape EntityType="DB.Parecer" Width="1.5" PointX="12" PointY="7.375" />
+        <EntityTypeShape EntityType="DB.Especialista" Width="1.5" PointX="15" PointY="1" />
+        <AssociationConnector Association="DB.TipoProjetoProjeto" />
+        <AssociationConnector Association="DB.TipoProjetoEspecialista" />
+        <AssociationConnector Association="DB.ParecerFuncionario" />
+        <AssociationConnector Association="DB.ProjetoParecer" />
+        <AssociationConnector Association="DB.ParecerDocumento" />
+        <AssociationConnector Association="DB.ProjetoAtribuicaoFuncionario" />
+        <AssociationConnector Association="DB.ProjetoProjetoAtribuicao" />
+        <AssociationConnector Association="DB.EspecialistaFuncionario" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
