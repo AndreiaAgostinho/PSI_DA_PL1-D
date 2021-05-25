@@ -53,24 +53,128 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcessoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcessoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AcessoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlteracaoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlteracaoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AlteracaoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlteraçãoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlteraçãoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AlteraçãoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="DB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Documento.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Especialista.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoProcesso.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionario.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoFuncionariosInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GestaoFuncionariosInicial.Designer.cs">
+      <DependentUpon>GestaoFuncionariosInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoPareceresInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoPareceresInicial.Designer.cs">
+      <DependentUpon>GestaoPareceresInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoProcessosInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoProcessosInicial.Designer.cs">
+      <DependentUpon>GestaoProcessosInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoProjetosInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoProjetosInicial.Designer.cs">
+      <DependentUpon>GestaoProjetosInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoPromotoresInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoPromotoresInicial.Designer.cs">
+      <DependentUpon>GestaoPromotoresInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parecer.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Processo.cs">
+      <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Projeto.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetoAtribuicao.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Promotor.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroFuncionario.Designer.cs">
+      <DependentUpon>RegistroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoDocumento.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoProjeto.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlteracaoDadosFuncionarios.resx">
+      <DependentUpon>AlteracaoDadosFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoFuncionariosInicial.resx">
+      <DependentUpon>GestaoFuncionariosInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoPromotoresInicial.resx">
+      <DependentUpon>GestaoPromotoresInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -102,14 +206,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DB.Context.cs</LastGenOutput>
+      <DependentUpon>DB.edmx</DependentUpon>
     </Content>
     <Content Include="DB.edmx.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DB.cs</LastGenOutput>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/18/2021 14:19:38
+-- Date Created: 05/24/2021 11:01:32
 -- Generated from EDMX file: C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\DB.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,86 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_PromotorProcesso]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Processo] DROP CONSTRAINT [FK_PromotorProcesso];
+GO
+IF OBJECT_ID(N'[dbo].[FK_EstadoProcessoProcesso]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Processo] DROP CONSTRAINT [FK_EstadoProcessoProcesso];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TipoDocumentoDocumento]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Documento] DROP CONSTRAINT [FK_TipoDocumentoDocumento];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProcessoProjeto]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProjetoSet] DROP CONSTRAINT [FK_ProcessoProjeto];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProjetoDocumento]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Documento] DROP CONSTRAINT [FK_ProjetoDocumento];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TipoProcessoTipoProcesso]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TipoProjeto] DROP CONSTRAINT [FK_TipoProcessoTipoProcesso];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TipoProjetoProjeto]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProjetoSet] DROP CONSTRAINT [FK_TipoProjetoProjeto];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TipoProjetoEspecialista]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[EspecialistaSet] DROP CONSTRAINT [FK_TipoProjetoEspecialista];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ParecerFuncionario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ParecerSet] DROP CONSTRAINT [FK_ParecerFuncionario];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProjetoParecer]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ParecerSet] DROP CONSTRAINT [FK_ProjetoParecer];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ParecerDocumento]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Documento] DROP CONSTRAINT [FK_ParecerDocumento];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProjetoAtribuicaoFuncionario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProjetoAtribuicao] DROP CONSTRAINT [FK_ProjetoAtribuicaoFuncionario];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProjetoProjetoAtribuicao]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProjetoAtribuicao] DROP CONSTRAINT [FK_ProjetoProjetoAtribuicao];
+GO
+IF OBJECT_ID(N'[dbo].[FK_EspecialistaFuncionario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[EspecialistaSet] DROP CONSTRAINT [FK_EspecialistaFuncionario];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Promotor]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Promotor];
+GO
+IF OBJECT_ID(N'[dbo].[Processo]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Processo];
+GO
+IF OBJECT_ID(N'[dbo].[EstadoProcesso]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EstadoProcesso];
+GO
+IF OBJECT_ID(N'[dbo].[TipoDocumento]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TipoDocumento];
+GO
+IF OBJECT_ID(N'[dbo].[Documento]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Documento];
+GO
+IF OBJECT_ID(N'[dbo].[ProjetoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProjetoSet];
+GO
+IF OBJECT_ID(N'[dbo].[TipoProjeto]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TipoProjeto];
+GO
+IF OBJECT_ID(N'[dbo].[ProjetoAtribuicao]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProjetoAtribuicao];
+GO
+IF OBJECT_ID(N'[dbo].[Funcionario]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Funcionario];
+GO
+IF OBJECT_ID(N'[dbo].[ParecerSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ParecerSet];
+GO
+IF OBJECT_ID(N'[dbo].[EspecialistaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EspecialistaSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables

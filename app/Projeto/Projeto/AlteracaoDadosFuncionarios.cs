@@ -10,24 +10,17 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class GestaoPromotoresInicial : Form
+    public partial class AlteracaoDadosFuncionarios : Form
     {
-        public GestaoPromotoresInicial()
+        public AlteracaoDadosFuncionarios()
         {
             InitializeComponent();
         }
 
-        private void GestaoPromotores_Load(object sender, EventArgs e)
-        {
-
-        }
-<<<<<<< HEAD
-=======
-
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var voltarGestaoPromotores = new MainPage();
-            voltarGestaoPromotores.Show();
+            var alterardadosfuncionariosInicial = new MainPage();
+            alterardadosfuncionariosInicial.Show();
             this.Hide();
         }
 
@@ -65,6 +58,5 @@ namespace Projeto
             gestaoPromotoresButao.Show();
             this.Hide();
         }
->>>>>>> origin/main
     }
 }

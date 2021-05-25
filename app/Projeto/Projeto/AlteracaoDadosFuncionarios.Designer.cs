@@ -1,7 +1,7 @@
 ﻿
 namespace Projeto
 {
-    partial class GestaoProcessosInicial
+    partial class AlteracaoDadosFuncionarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,45 +29,27 @@ namespace Projeto
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "GestãoProcessos";
-        }
-
-        #endregion
-=======
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePareceresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuIniciarToolStripMenuItem,
-            this.gestoresToolStripMenuItem});
+            this.gestoresToolStripMenuItem,
+            this.menuIniciarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 29);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuIniciarToolStripMenuItem
-            // 
-            this.menuIniciarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
-            this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
-            this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
             // 
             // gestoresToolStripMenuItem
             // 
@@ -117,16 +99,23 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
             this.gestãoDePromotoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePromotoresToolStripMenuItem_Click);
             // 
-            // GestaoProcessosInicial
+            // menuIniciarToolStripMenuItem
+            // 
+            this.menuIniciarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
+            this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
+            this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
+            // 
+            // AlteracaoDadosFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "GestaoProcessosInicial";
-            this.Text = "GestãoProcessos";
+            this.Name = "AlteracaoDadosFuncionarios";
+            this.Text = "AlteracaoDadosFuncionarios";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -137,13 +126,12 @@ namespace Projeto
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePareceresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
->>>>>>> origin/main
+        private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
     }
 }
