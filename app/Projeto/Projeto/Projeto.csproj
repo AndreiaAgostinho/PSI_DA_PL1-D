@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcessoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcessoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AcessoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlteracaoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlteracaoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AlteracaoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlteraçãoDadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlteraçãoDadosFuncionarios.Designer.cs">
+      <DependentUpon>AlteraçãoDadosFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestaoProjetosInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,8 +108,20 @@
     <Compile Include="RegistroFuncionario.Designer.cs">
       <DependentUpon>RegistroFuncionario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlteracaoDadosFuncionarios.resx">
+      <DependentUpon>AlteracaoDadosFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestaoFuncionariosInicial.resx">
       <DependentUpon>GestaoFuncionariosInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoPareceresInicial.resx">
+      <DependentUpon>GestaoPareceresInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoProcessosInicial.resx">
+      <DependentUpon>GestaoProcessosInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoProjetosInicial.resx">
+      <DependentUpon>GestaoProjetosInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestaoPromotoresInicial.resx">
       <DependentUpon>GestaoPromotoresInicial.cs</DependentUpon>
@@ -108,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistroFuncionario.resx">
+      <DependentUpon>RegistroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -20,3 +20,8 @@ C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.csproj.CoreCompileInputs.cache
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.exe
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.pdb
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoPareceres.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.RegistroFuncionario.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoProcessosInicial.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoProjetosInicial.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.AlteracaoDadosFuncionarios.resources
