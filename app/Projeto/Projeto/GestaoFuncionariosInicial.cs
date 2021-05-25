@@ -77,5 +77,12 @@ namespace Projeto
             alteracaodadosButao.Show();
             this.Hide();
         }
+
+        private void alteraçãoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var acessoadadosButao = new AcessoDadosFuncionarios();
+            acessoadadosButao.Show();
+            this.Hide();
+        }
     }
 }

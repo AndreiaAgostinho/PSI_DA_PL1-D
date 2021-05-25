@@ -63,5 +63,10 @@ namespace Projeto
             gestaoPromotoresButao.Show();
             this.Hide();
         }
+
+        private void alteraçãoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

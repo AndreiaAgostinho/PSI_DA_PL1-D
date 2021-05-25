@@ -109,7 +109,7 @@ namespace Projeto
             // 
             // voltarToolStripMenuItem
             // 
-            this.voltarToolStripMenuItem.BackColor = System.Drawing.Color.PaleGreen;
+            this.voltarToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.voltarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
             this.voltarToolStripMenuItem.Size = new System.Drawing.Size(74, 25);
@@ -118,15 +118,16 @@ namespace Projeto
             // 
             // alteraçãoDeDadosToolStripMenuItem
             // 
-            this.alteraçãoDeDadosToolStripMenuItem.BackColor = System.Drawing.Color.PaleGreen;
+            this.alteraçãoDeDadosToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.alteraçãoDeDadosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alteraçãoDeDadosToolStripMenuItem.Name = "alteraçãoDeDadosToolStripMenuItem";
             this.alteraçãoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(130, 25);
             this.alteraçãoDeDadosToolStripMenuItem.Text = "Acesso a Dados";
+            this.alteraçãoDeDadosToolStripMenuItem.Click += new System.EventHandler(this.alteraçãoDeDadosToolStripMenuItem_Click);
             // 
             // alteraçãoDeDadosToolStripMenuItem1
             // 
-            this.alteraçãoDeDadosToolStripMenuItem1.BackColor = System.Drawing.Color.PaleGreen;
+            this.alteraçãoDeDadosToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.alteraçãoDeDadosToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alteraçãoDeDadosToolStripMenuItem1.Name = "alteraçãoDeDadosToolStripMenuItem1";
             this.alteraçãoDeDadosToolStripMenuItem1.Size = new System.Drawing.Size(156, 25);
