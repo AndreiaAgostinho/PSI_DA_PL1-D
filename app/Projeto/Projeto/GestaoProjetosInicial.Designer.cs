@@ -29,6 +29,15 @@ namespace Projeto
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "GestaoProjetos";
+        }
+
+        #endregion
+=======
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,5 +143,6 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
+>>>>>>> origin/main
     }
 }

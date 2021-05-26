@@ -28,6 +28,8 @@ namespace Projeto
             registroFuncionario.Show();
             this.Hide();
         }
+<<<<<<< HEAD
+=======
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -77,5 +79,6 @@ namespace Projeto
             alteracaodadosButao.Show();
             this.Hide();
         }
+>>>>>>> origin/main
     }
 }

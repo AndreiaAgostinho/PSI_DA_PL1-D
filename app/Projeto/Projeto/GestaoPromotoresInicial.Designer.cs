@@ -30,16 +30,25 @@ namespace Projeto
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+<<<<<<< HEAD
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alteraçãoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alteraçãoDeDadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+=======
+>>>>>>> origin/main
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePareceresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
+=======
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alteraçãoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alteraçãoDeDadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> origin/main
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,14 +58,45 @@ namespace Projeto
             this.gestoresToolStripMenuItem,
             this.voltarToolStripMenuItem,
             this.alteraçãoDeDadosToolStripMenuItem,
+<<<<<<< HEAD
+            this.alteraçãoDeDadosToolStripMenuItem1});
+=======
             this.alteraçãoDeDadosToolStripMenuItem1,
             this.menuIniciarToolStripMenuItem});
+>>>>>>> origin/main
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+<<<<<<< HEAD
+            // voltarToolStripMenuItem
+            // 
+            this.voltarToolStripMenuItem.BackColor = System.Drawing.Color.PaleGreen;
+            this.voltarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(74, 25);
+            this.voltarToolStripMenuItem.Text = "Registo";
+            // 
+            // alteraçãoDeDadosToolStripMenuItem
+            // 
+            this.alteraçãoDeDadosToolStripMenuItem.BackColor = System.Drawing.Color.PaleGreen;
+            this.alteraçãoDeDadosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alteraçãoDeDadosToolStripMenuItem.Name = "alteraçãoDeDadosToolStripMenuItem";
+            this.alteraçãoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(130, 25);
+            this.alteraçãoDeDadosToolStripMenuItem.Text = "Acesso a Dados";
+            // 
+            // alteraçãoDeDadosToolStripMenuItem1
+            // 
+            this.alteraçãoDeDadosToolStripMenuItem1.BackColor = System.Drawing.Color.PaleGreen;
+            this.alteraçãoDeDadosToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alteraçãoDeDadosToolStripMenuItem1.Name = "alteraçãoDeDadosToolStripMenuItem1";
+            this.alteraçãoDeDadosToolStripMenuItem1.Size = new System.Drawing.Size(156, 25);
+            this.alteraçãoDeDadosToolStripMenuItem1.Text = "Alteração de Dados";
+            // 
+=======
+>>>>>>> origin/main
             // gestoresToolStripMenuItem
             // 
             this.gestoresToolStripMenuItem.BackColor = System.Drawing.Color.LightCoral;
@@ -76,34 +116,50 @@ namespace Projeto
             this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
             this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
+<<<<<<< HEAD
+=======
             this.gestãoDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeFuncionáriosToolStripMenuItem_Click);
+>>>>>>> origin/main
             // 
             // gestãoDePareceresToolStripMenuItem
             // 
             this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
             this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
+<<<<<<< HEAD
+=======
             this.gestãoDePareceresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePareceresToolStripMenuItem_Click);
+>>>>>>> origin/main
             // 
             // gestãoDeProcessosToolStripMenuItem
             // 
             this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
             this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
+<<<<<<< HEAD
+=======
             this.gestãoDeProcessosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProcessosToolStripMenuItem_Click);
+>>>>>>> origin/main
             // 
             // gestãoDeProjetosToolStripMenuItem
             // 
             this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
             this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
+<<<<<<< HEAD
+=======
             this.gestãoDeProjetosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProjetosToolStripMenuItem_Click);
+>>>>>>> origin/main
             // 
             // gestãoDePromotoresToolStripMenuItem
             // 
             this.gestãoDePromotoresToolStripMenuItem.Name = "gestãoDePromotoresToolStripMenuItem";
             this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
+<<<<<<< HEAD
+            // 
+            // GestaoPromotores
+=======
             this.gestãoDePromotoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePromotoresToolStripMenuItem_Click);
             // 
             // voltarToolStripMenuItem
@@ -140,13 +196,18 @@ namespace Projeto
             this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
             // 
             // GestaoPromotoresInicial
+>>>>>>> origin/main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+<<<<<<< HEAD
+            this.Name = "GestaoPromotores";
+=======
             this.Name = "GestaoPromotoresInicial";
+>>>>>>> origin/main
             this.Text = "GestaoPromotores";
             this.Load += new System.EventHandler(this.GestaoPromotores_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -168,6 +229,9 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
+<<<<<<< HEAD
+=======
         private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
+>>>>>>> origin/main
     }
 }
