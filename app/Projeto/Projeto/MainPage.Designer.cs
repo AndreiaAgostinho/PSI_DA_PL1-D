@@ -30,30 +30,18 @@ namespace Projeto
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-=======
             this.btGestFunc = new System.Windows.Forms.Button();
             this.btGestaoProcessos = new System.Windows.Forms.Button();
             this.btGestaoPrometor = new System.Windows.Forms.Button();
             this.btGestaoProjetos = new System.Windows.Forms.Button();
             this.btGestaoPareceres = new System.Windows.Forms.Button();
->>>>>>> origin/main
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePareceresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
-            this.button5 = new System.Windows.Forms.Button();
-=======
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
->>>>>>> origin/main
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,54 +56,6 @@ namespace Projeto
             this.label1.Text = "Bem-Vindo!";
             this.label1.DragOver += new System.Windows.Forms.DragEventHandler(this.True);
             // 
-<<<<<<< HEAD
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(225, 318);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(335, 318);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(453, 318);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(562, 318);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestoresToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1049, 29);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-=======
             // btGestFunc
             // 
             this.btGestFunc.Location = new System.Drawing.Point(166, 318);
@@ -165,7 +105,6 @@ namespace Projeto
             this.btGestaoPareceres.Text = "Gestão de Pareceres";
             this.btGestaoPareceres.UseVisualStyleBackColor = true;
             this.btGestaoPareceres.Click += new System.EventHandler(this.btGestaoPareceres_Click);
->>>>>>> origin/main
             // 
             // gestoresToolStripMenuItem
             // 
@@ -211,16 +150,6 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
             // 
-<<<<<<< HEAD
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(672, 318);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-=======
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -230,26 +159,17 @@ namespace Projeto
             this.menuStrip1.Size = new System.Drawing.Size(1049, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
->>>>>>> origin/main
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 534);
-<<<<<<< HEAD
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-=======
             this.Controls.Add(this.btGestaoPareceres);
             this.Controls.Add(this.btGestaoProjetos);
             this.Controls.Add(this.btGestaoPrometor);
             this.Controls.Add(this.btGestaoProcessos);
             this.Controls.Add(this.btGestFunc);
->>>>>>> origin/main
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -264,29 +184,17 @@ namespace Projeto
 
         #endregion
         private System.Windows.Forms.Label label1;
-<<<<<<< HEAD
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-=======
         private System.Windows.Forms.Button btGestFunc;
         private System.Windows.Forms.Button btGestaoProcessos;
         private System.Windows.Forms.Button btGestaoPrometor;
         private System.Windows.Forms.Button btGestaoProjetos;
         private System.Windows.Forms.Button btGestaoPareceres;
->>>>>>> origin/main
         private System.Windows.Forms.ToolStripMenuItem gestoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePareceresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
-<<<<<<< HEAD
-        private System.Windows.Forms.Button button5;
-=======
         private System.Windows.Forms.MenuStrip menuStrip1;
->>>>>>> origin/main
     }
 }

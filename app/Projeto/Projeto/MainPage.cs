@@ -35,8 +35,6 @@ namespace Projeto
             gestaofuncionariosinicial.Show();
             this.Hide();
         }
-<<<<<<< HEAD
-=======
 
         private void btGestaoProcessos_Click(object sender, EventArgs e)
         {
@@ -65,6 +63,5 @@ namespace Projeto
             gestaoprojetos.Show();
             this.Hide();
         }
->>>>>>> origin/main
     }
 }

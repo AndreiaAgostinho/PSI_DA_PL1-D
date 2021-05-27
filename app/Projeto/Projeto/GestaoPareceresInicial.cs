@@ -10,14 +10,6 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-<<<<<<< HEAD
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-=======
     public partial class GestaoPareceres : Form
     {
         public GestaoPareceres()
@@ -66,6 +58,5 @@ namespace Projeto
             gestaoPromotoresButao.Show();
             this.Hide();
         }
->>>>>>> origin/main
     }
 }

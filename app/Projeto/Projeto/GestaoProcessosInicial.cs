@@ -16,8 +16,6 @@ namespace Projeto
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -60,6 +58,5 @@ namespace Projeto
             gestaoPromotoresButao.Show();
             this.Hide();
         }
->>>>>>> origin/main
     }
 }

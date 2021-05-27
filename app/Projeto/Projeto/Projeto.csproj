@@ -166,6 +166,15 @@
     <EmbeddedResource Include="GestaoFuncionariosInicial.resx">
       <DependentUpon>GestaoFuncionariosInicial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestaoPareceresInicial.resx">
+      <DependentUpon>GestaoPareceresInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoProcessosInicial.resx">
+      <DependentUpon>GestaoProcessosInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoProjetosInicial.resx">
+      <DependentUpon>GestaoProjetosInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestaoPromotoresInicial.resx">
       <DependentUpon>GestaoPromotoresInicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +190,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistroFuncionario.resx">
+      <DependentUpon>RegistroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DB.Designer.cs</LastGenOutput>
