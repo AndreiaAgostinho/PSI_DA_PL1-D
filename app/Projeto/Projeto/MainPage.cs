@@ -31,35 +31,35 @@ namespace Projeto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var gestaofuncionariosinicial = new GestaoFuncionariosInicial();
+            var gestaofuncionariosinicial = new GestaoFuncionariosTodos();
             gestaofuncionariosinicial.Show();
             this.Hide();
         }
 
         private void btGestaoProcessos_Click(object sender, EventArgs e)
         {
-            var gestaoprocessos = new GestaoProcessosInicial();
+            var gestaoprocessos = new GestaoProcesso();
             gestaoprocessos.Show();
             this.Hide();
         }
 
         private void btGestaoPrometor_Click(object sender, EventArgs e)
         {
-            var gestaopromotores = new GestaoPromotoresInicial();
+            var gestaopromotores = new GestaoPromotore();
             gestaopromotores.Show();
             this.Hide();
         }
 
         private void btGestaoPareceres_Click(object sender, EventArgs e)
         {
-            var gestaopareceres = new GestaoPareceres();
+            var gestaopareceres = new GestaoParecer();
             gestaopareceres.Show();
             this.Hide();
         }
 
         private void btGestaoProjetos_Click(object sender, EventArgs e)
         {
-            var gestaoprojetos = new GestaoProjetosInicial();
+            var gestaoprojetos = new GestaoProjeto();
             gestaoprojetos.Show();
             this.Hide();
         }

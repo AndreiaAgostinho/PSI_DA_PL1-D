@@ -10,53 +10,68 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class AcessoDadosFuncionarios : Form
+    public partial class GestaoPromotore : Form
     {
-        public AcessoDadosFuncionarios()
+        public GestaoPromotore()
         {
             InitializeComponent();
         }
 
+        private void GestaoPromotores_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var acessofuncionariosInicial = new MainPage();
-            acessofuncionariosInicial.Show();
+            var voltarGestaoPromotores = new MainPage();
+            voltarGestaoPromotores.Show();
             this.Hide();
         }
 
         private void gestãoDeFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoFuncionariosButao = new GestaoFuncionariosInicial();
+            var gestaoFuncionariosButao = new GestaoFuncionariosTodos();
             gestaoFuncionariosButao.Show();
             this.Hide();
         }
 
         private void gestãoDePareceresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoPareceresButao = new GestaoPareceres();
+            var gestaoPareceresButao = new GestaoParecer();
             gestaoPareceresButao.Show();
             this.Hide();
         }
 
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProcessosButao = new GestaoProcessosInicial();
+            var gestaoProcessosButao = new GestaoProcesso();
             gestaoProcessosButao.Show();
             this.Hide();
         }
 
         private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProjetosButao = new GestaoProjetosInicial();
+            var gestaoProjetosButao = new GestaoProjeto();
             gestaoProjetosButao.Show();
             this.Hide();
         }
 
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoPromotoresButao = new GestaoPromotoresInicial();
+            var gestaoPromotoresButao = new GestaoPromotore();
             gestaoPromotoresButao.Show();
             this.Hide();
+        }
+
+        private void alteraçãoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

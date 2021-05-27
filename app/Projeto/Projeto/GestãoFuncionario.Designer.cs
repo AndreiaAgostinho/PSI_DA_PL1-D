@@ -1,7 +1,7 @@
 ﻿
 namespace Projeto
 {
-    partial class AcessoDadosFuncionarios
+    partial class GestãoFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,26 +30,44 @@ namespace Projeto
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePareceresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestoresToolStripMenuItem,
-            this.menuIniciarToolStripMenuItem});
+            this.menuIniciarToolStripMenuItem,
+            this.gestoresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 29);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuIniciarToolStripMenuItem
+            // 
+            this.menuIniciarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
+            this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
+            this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
             // 
             // gestoresToolStripMenuItem
             // 
@@ -99,25 +117,94 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
             this.gestãoDePromotoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePromotoresToolStripMenuItem_Click);
             // 
-            // menuIniciarToolStripMenuItem
+            // textBox2
             // 
-            this.menuIniciarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
-            this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
-            this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
-            this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
+            this.textBox2.Location = new System.Drawing.Point(81, 55);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(272, 20);
+            this.textBox2.TabIndex = 2;
             // 
-            // AcessoDadosFuncionarios
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(81, 100);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(272, 20);
+            this.textBox3.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Nome:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Extensão:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(373, 327);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dados";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Location = new System.Drawing.Point(391, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(38, 319);
+            this.panel1.TabIndex = 8;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(435, 51);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(353, 319);
+            this.checkedListBox1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 377);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(372, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Guardar Dados";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // RegistroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "AcessoDadosFuncionarios";
-            this.Text = "AcessoDados";
+            this.Name = "RegistroFuncionario";
+            this.Text = "RegistroFuncionario";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,12 +213,20 @@ namespace Projeto
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePareceresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Projeto
 {
-    partial class RegistroFuncionario
+    partial class GestaoProcesso
     {
         /// <summary>
         /// Required designer variable.
@@ -37,15 +37,21 @@ namespace Projeto
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.alteraçãoDeDadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +60,8 @@ namespace Projeto
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuIniciarToolStripMenuItem,
-            this.gestoresToolStripMenuItem});
+            this.gestoresToolStripMenuItem,
+            this.alteraçãoDeDadosToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 29);
@@ -118,98 +125,158 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
             this.gestãoDePromotoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePromotoresToolStripMenuItem_Click);
             // 
-            // textBox1
+            // alteraçãoDeDadosToolStripMenuItem1
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 1;
+            this.alteraçãoDeDadosToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
+            this.alteraçãoDeDadosToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alteraçãoDeDadosToolStripMenuItem1.Name = "alteraçãoDeDadosToolStripMenuItem1";
+            this.alteraçãoDeDadosToolStripMenuItem1.Size = new System.Drawing.Size(104, 25);
+            this.alteraçãoDeDadosToolStripMenuItem1.Text = "Promotores";
             // 
-            // textBox2
+            // listBox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(86, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 20);
-            this.textBox2.TabIndex = 2;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(433, 21);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(355, 316);
+            this.listBox1.TabIndex = 0;
             // 
-            // textBox3
+            // button2
             // 
-            this.textBox3.Location = new System.Drawing.Point(86, 142);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 20);
-            this.textBox3.TabIndex = 3;
+            this.button2.Location = new System.Drawing.Point(433, 354);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(355, 52);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Apagar Processo";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 56);
+            this.label1.Location = new System.Drawing.Point(12, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Número:";
+            this.label1.Size = new System.Drawing.Size(136, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nome do novos processos:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 97);
+            this.label2.Location = new System.Drawing.Point(12, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Nome:";
+            this.label2.Size = new System.Drawing.Size(155, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Projetos incluídos no processo:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 145);
+            this.label3.Location = new System.Drawing.Point(12, 167);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Extensão:";
+            this.label3.Size = new System.Drawing.Size(180, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Promotores associados ao processo:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(173, 229);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 229);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Data de ínicio do processo:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(198, 167);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(177, 21);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(175, 91);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(144, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(231, 20);
+            this.textBox1.TabIndex = 10;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(20, 354);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(355, 52);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Guardar processo";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(175, 112);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(200, 21);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Adicionar projeto";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 43);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Location = new System.Drawing.Point(0, 32);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 327);
-            this.groupBox1.TabIndex = 7;
+            this.groupBox1.Size = new System.Drawing.Size(800, 415);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Gestão de Processos";
             // 
-            // panel1
+            // label5
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Location = new System.Drawing.Point(391, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(38, 322);
-            this.panel1.TabIndex = 8;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(120, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 25);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "[Por Aprovar]";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(435, 51);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(353, 319);
-            this.checkedListBox1.TabIndex = 7;
-            // 
-            // RegistroFuncionario
+            // GestaoProcessosInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "RegistroFuncionario";
-            this.Text = "RegistroFuncionario";
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "GestaoProcessosInicial";
+            this.Text = "GestãoProcessos";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -229,14 +296,20 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ToolStripMenuItem alteraçãoDeDadosToolStripMenuItem1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label label5;
     }
 }
