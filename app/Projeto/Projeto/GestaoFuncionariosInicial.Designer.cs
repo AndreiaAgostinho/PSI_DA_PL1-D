@@ -29,6 +29,12 @@ namespace Projeto
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alteraçãoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alteraçãoDeDadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+=======
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,23 +48,32 @@ namespace Projeto
             this.alteraçãoDeDadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+>>>>>>> origin/main
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+<<<<<<< HEAD
+            this.voltarToolStripMenuItem,
+            this.alteraçãoDeDadosToolStripMenuItem,
+            this.alteraçãoDeDadosToolStripMenuItem1});
+=======
             this.gestoresToolStripMenuItem,
             this.voltarToolStripMenuItem,
             this.alteraçãoDeDadosToolStripMenuItem,
             this.alteraçãoDeDadosToolStripMenuItem1,
             this.menuIniciarToolStripMenuItem});
+>>>>>>> origin/main
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+<<<<<<< HEAD
+=======
             // gestoresToolStripMenuItem
             // 
             this.gestoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -107,6 +122,7 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
             this.gestãoDePromotoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePromotoresToolStripMenuItem_Click);
             // 
+>>>>>>> origin/main
             // voltarToolStripMenuItem
             // 
             this.voltarToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
@@ -132,6 +148,8 @@ namespace Projeto
             this.alteraçãoDeDadosToolStripMenuItem1.Name = "alteraçãoDeDadosToolStripMenuItem1";
             this.alteraçãoDeDadosToolStripMenuItem1.Size = new System.Drawing.Size(156, 25);
             this.alteraçãoDeDadosToolStripMenuItem1.Text = "Alteração de Dados";
+<<<<<<< HEAD
+=======
             this.alteraçãoDeDadosToolStripMenuItem1.Click += new System.EventHandler(this.alteraçãoDeDadosToolStripMenuItem1_Click);
             // 
             // menuIniciarToolStripMenuItem
@@ -147,6 +165,7 @@ namespace Projeto
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+>>>>>>> origin/main
             // 
             // GestaoFuncionariosInicial
             // 
@@ -170,6 +189,8 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alteraçãoDeDadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alteraçãoDeDadosToolStripMenuItem1;
+<<<<<<< HEAD
+=======
         private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gestoresToolStripMenuItem;
@@ -178,5 +199,6 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
+>>>>>>> origin/main
     }
 }
