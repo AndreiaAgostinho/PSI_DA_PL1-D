@@ -12,8 +12,6 @@ C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\bin\Debug\Projeto.exe
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\bin\Debug\Projeto.pdb
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.csprojAssemblyReference.cache
-C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoFuncionariosInicial.resources
-C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoPromotoresInicial.resources
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.MainPage.resources
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.Properties.Resources.resources
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.csproj.GenerateResource.cache
@@ -37,6 +35,14 @@ C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\bin\Debug\E
 C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\obj\Debug\Projeto.csproj.CopyComplete
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\bin\Debug\EntityFramework.dll
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\bin\Debug\EntityFramework.xml
-C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.AlteracaoDadosFuncionarios.resources
 C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.csproj.CopyComplete
-C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.AcessoDadosFuncionarios.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestãoDocumentos.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestãoProcessosTodos.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestãoProjetosTodos.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoFuncionariosTodos.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoParecer.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoProcesso.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoProjeto.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestaoPromotore.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestãoPromotoresTodos.resources
+C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\obj\Debug\Projeto.GestãoFuncionario.resources

@@ -73,5 +73,32 @@ namespace Projeto
         {
 
         }
+
+        private void tb_nome_promotor_TextChanged(object sender, EventArgs e)
+        {
+            Promotor promo = new Promotor();
+            promo.Nome = tb_nome_promotor.Text;
+            
+        }
+
+        private void tb_morada_promotor_TextChanged(object sender, EventArgs e)
+        {
+            Promotor promo = new Promotor();
+            promo.Morada = tb_morada_promotor.Text;
+        }
+
+        private void tb_nif_promotor_TextChanged(object sender, EventArgs e)
+        {
+            Promotor promo = new Promotor();
+            promo.NIF = Int32.Parse(tb_nif_promotor.Text);
+        }
+
+        private void tb_nif_promotor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

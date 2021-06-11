@@ -38,11 +38,12 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tb_email_promotor = new System.Windows.Forms.TextBox();
+            this.tb_telemovel_promotor = new System.Windows.Forms.TextBox();
+            this.tb_nif_promotor = new System.Windows.Forms.TextBox();
+            this.tb_morada_promotor = new System.Windows.Forms.TextBox();
+            this.tb_nome_promotor = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace Projeto
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -130,11 +130,11 @@ namespace Projeto
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tb_email_promotor);
+            this.groupBox1.Controls.Add(this.tb_telemovel_promotor);
+            this.groupBox1.Controls.Add(this.tb_nif_promotor);
+            this.groupBox1.Controls.Add(this.tb_morada_promotor);
+            this.groupBox1.Controls.Add(this.tb_nome_promotor);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -148,40 +148,53 @@ namespace Projeto
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Promotor";
             // 
-            // textBox5
+            // button3
             // 
-            this.textBox5.Location = new System.Drawing.Point(60, 250);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(346, 20);
-            this.textBox5.TabIndex = 9;
+            this.button3.Location = new System.Drawing.Point(19, 364);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(387, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Remover Promotor";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // tb_email_promotor
             // 
-            this.textBox4.Location = new System.Drawing.Point(72, 197);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(334, 20);
-            this.textBox4.TabIndex = 8;
+            this.tb_email_promotor.Location = new System.Drawing.Point(60, 250);
+            this.tb_email_promotor.Name = "tb_email_promotor";
+            this.tb_email_promotor.Size = new System.Drawing.Size(346, 20);
+            this.tb_email_promotor.TabIndex = 9;
             // 
-            // textBox3
+            // tb_telemovel_promotor
             // 
-            this.textBox3.Location = new System.Drawing.Point(60, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(346, 20);
-            this.textBox3.TabIndex = 7;
+            this.tb_telemovel_promotor.Location = new System.Drawing.Point(72, 197);
+            this.tb_telemovel_promotor.Name = "tb_telemovel_promotor";
+            this.tb_telemovel_promotor.Size = new System.Drawing.Size(334, 20);
+            this.tb_telemovel_promotor.TabIndex = 8;
             // 
-            // textBox2
+            // tb_nif_promotor
             // 
-            this.textBox2.Location = new System.Drawing.Point(60, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(346, 20);
-            this.textBox2.TabIndex = 6;
+            this.tb_nif_promotor.Location = new System.Drawing.Point(60, 147);
+            this.tb_nif_promotor.Name = "tb_nif_promotor";
+            this.tb_nif_promotor.Size = new System.Drawing.Size(346, 20);
+            this.tb_nif_promotor.TabIndex = 7;
+            this.tb_nif_promotor.TextChanged += new System.EventHandler(this.tb_nif_promotor_TextChanged);
+            this.tb_nif_promotor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_nif_promotor_KeyPress);
             // 
-            // textBox1
+            // tb_morada_promotor
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 20);
-            this.textBox1.TabIndex = 5;
+            this.tb_morada_promotor.Location = new System.Drawing.Point(60, 86);
+            this.tb_morada_promotor.Name = "tb_morada_promotor";
+            this.tb_morada_promotor.Size = new System.Drawing.Size(346, 20);
+            this.tb_morada_promotor.TabIndex = 6;
+            this.tb_morada_promotor.TextChanged += new System.EventHandler(this.tb_morada_promotor_TextChanged);
+            // 
+            // tb_nome_promotor
+            // 
+            this.tb_nome_promotor.Location = new System.Drawing.Point(60, 30);
+            this.tb_nome_promotor.Name = "tb_nome_promotor";
+            this.tb_nome_promotor.Size = new System.Drawing.Size(346, 20);
+            this.tb_nome_promotor.TabIndex = 5;
+            this.tb_nome_promotor.TextChanged += new System.EventHandler(this.tb_nome_promotor_TextChanged);
             // 
             // button2
             // 
@@ -266,16 +279,7 @@ namespace Projeto
             this.listBox1.Size = new System.Drawing.Size(346, 342);
             this.listBox1.TabIndex = 0;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(19, 364);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(387, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Remover Promotor";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // GestaoPromotoresInicial
+            // GestaoPromotore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -284,7 +288,7 @@ namespace Projeto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "GestaoPromotoresInicial";
+            this.Name = "GestaoPromotore";
             this.Text = "GestaoPromotores";
             this.Load += new System.EventHandler(this.GestaoPromotores_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -313,11 +317,11 @@ namespace Projeto
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_email_promotor;
+        private System.Windows.Forms.TextBox tb_telemovel_promotor;
+        private System.Windows.Forms.TextBox tb_nif_promotor;
+        private System.Windows.Forms.TextBox tb_morada_promotor;
+        private System.Windows.Forms.TextBox tb_nome_promotor;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;

@@ -16,5 +16,12 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void tb_nome_documento_TextChanged(object sender, EventArgs e)
+        {
+            Documento doc = new Documento();
+            doc.Titulo = tb_titulo_documento.Text;
+            
+        }
     }
 }

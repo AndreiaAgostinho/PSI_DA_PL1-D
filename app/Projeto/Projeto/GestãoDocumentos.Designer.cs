@@ -40,20 +40,20 @@ namespace Projeto
             this.alteraçãoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alteraçãoDeDadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_titulo_documento = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.voltarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -148,6 +148,13 @@ namespace Projeto
             this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
             // 
+            // voltarToolStripMenuItem1
+            // 
+            this.voltarToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.voltarToolStripMenuItem1.Name = "voltarToolStripMenuItem1";
+            this.voltarToolStripMenuItem1.Size = new System.Drawing.Size(49, 25);
+            this.voltarToolStripMenuItem1.Text = "Voltar";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
@@ -155,7 +162,7 @@ namespace Projeto
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tb_titulo_documento);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
@@ -168,6 +175,16 @@ namespace Projeto
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestão de Documentos";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(130, 289);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 25);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "[Por Aprovar]";
             // 
             // dateTimePicker1
             // 
@@ -202,12 +219,13 @@ namespace Projeto
             this.button3.Text = "Guardar Documento";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tb_titulo_documento
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 20);
-            this.textBox1.TabIndex = 10;
+            this.tb_titulo_documento.Location = new System.Drawing.Point(154, 31);
+            this.tb_titulo_documento.Name = "tb_titulo_documento";
+            this.tb_titulo_documento.Size = new System.Drawing.Size(221, 20);
+            this.tb_titulo_documento.TabIndex = 10;
+            this.tb_titulo_documento.TextChanged += new System.EventHandler(this.tb_nome_documento_TextChanged);
             // 
             // comboBox2
             // 
@@ -251,7 +269,7 @@ namespace Projeto
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Nome do novo documento:";
+            this.label1.Text = "Título do novo documento:";
             // 
             // button2
             // 
@@ -261,23 +279,6 @@ namespace Projeto
             this.button2.TabIndex = 2;
             this.button2.Text = "Remover Documento";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // voltarToolStripMenuItem1
-            // 
-            this.voltarToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.voltarToolStripMenuItem1.Name = "voltarToolStripMenuItem1";
-            this.voltarToolStripMenuItem1.Size = new System.Drawing.Size(49, 25);
-            this.voltarToolStripMenuItem1.Text = "Voltar";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(130, 289);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 25);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "[Por Aprovar]";
             // 
             // GestãoDocumentos
             // 
@@ -312,7 +313,7 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_titulo_documento;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;

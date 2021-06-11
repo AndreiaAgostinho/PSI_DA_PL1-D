@@ -12,9 +12,11 @@ namespace Projeto
 {
     public partial class GestãoFuncionario : Form
     {
+        private DBContainer dBContainer;
         public GestãoFuncionario()
         {
             InitializeComponent();
+            dBContainer = new DBContainer();
         }
 
 
@@ -58,6 +60,21 @@ namespace Projeto
             var gestaoPromotoresButao = new GestaoPromotore();
             gestaoPromotoresButao.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Funcionario func = new Funcionario();
+            func.Nome = tb_nome_registro_funcionarios.Text;
+            func.Extencao = tb_extensao_registro_funcionarios.Text;
+            if(checkbox_registro_funcionario.CheckedItems.Count >= 0)
+            {
+                //checkbox_registro_funcionario.Text;
+            }
+            dBContainer.Funcionario.Add(func);
+            dBContainer.SaveChanges();
+
+            
         }
     }
 }

@@ -70,5 +70,12 @@ namespace Projeto
             gestaoPromotoresButao.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var loadfuncionariosregistro = new GestãoFuncionario();
+            loadfuncionariosregistro.Show();
+            this.Hide();
+        }
     }
 }

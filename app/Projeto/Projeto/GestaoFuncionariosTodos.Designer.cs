@@ -134,8 +134,9 @@ namespace Projeto
             this.button1.TabIndex = 5;
             this.button1.Text = "Adicionar Funcionario";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // GestaoFuncionariosInicial
+            // GestaoFuncionariosTodos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +144,7 @@ namespace Projeto
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "GestaoFuncionariosInicial";
+            this.Name = "GestaoFuncionariosTodos";
             this.Text = "GestãoFuncionários";
             this.Load += new System.EventHandler(this.GestaoFuncionariosInicial_Load);
             this.menuStrip1.ResumeLayout(false);
