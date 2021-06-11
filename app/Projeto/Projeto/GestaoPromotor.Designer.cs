@@ -38,13 +38,13 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_remover_promotor = new System.Windows.Forms.Button();
             this.tb_email_promotor = new System.Windows.Forms.TextBox();
             this.tb_telemovel_promotor = new System.Windows.Forms.TextBox();
             this.tb_nif_promotor = new System.Windows.Forms.TextBox();
             this.tb_morada_promotor = new System.Windows.Forms.TextBox();
             this.tb_nome_promotor = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bt_guardar_promotor = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +53,10 @@ namespace Projeto
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tb_codigo_acesso = new System.Windows.Forms.TextBox();
+            this.tb_senha_promotor = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -129,13 +133,17 @@ namespace Projeto
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.tb_senha_promotor);
+            this.groupBox1.Controls.Add(this.tb_codigo_acesso);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.bt_remover_promotor);
             this.groupBox1.Controls.Add(this.tb_email_promotor);
             this.groupBox1.Controls.Add(this.tb_telemovel_promotor);
             this.groupBox1.Controls.Add(this.tb_nif_promotor);
             this.groupBox1.Controls.Add(this.tb_morada_promotor);
             this.groupBox1.Controls.Add(this.tb_nome_promotor);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.bt_guardar_promotor);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -148,32 +156,35 @@ namespace Projeto
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Promotor";
             // 
-            // button3
+            // bt_remover_promotor
             // 
-            this.button3.Location = new System.Drawing.Point(19, 364);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(387, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Remover Promotor";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_remover_promotor.Location = new System.Drawing.Point(19, 364);
+            this.bt_remover_promotor.Name = "bt_remover_promotor";
+            this.bt_remover_promotor.Size = new System.Drawing.Size(387, 23);
+            this.bt_remover_promotor.TabIndex = 10;
+            this.bt_remover_promotor.Text = "Remover Promotor";
+            this.bt_remover_promotor.UseVisualStyleBackColor = true;
             // 
             // tb_email_promotor
             // 
-            this.tb_email_promotor.Location = new System.Drawing.Point(60, 250);
+            this.tb_email_promotor.Location = new System.Drawing.Point(60, 198);
             this.tb_email_promotor.Name = "tb_email_promotor";
             this.tb_email_promotor.Size = new System.Drawing.Size(346, 20);
             this.tb_email_promotor.TabIndex = 9;
             // 
             // tb_telemovel_promotor
             // 
-            this.tb_telemovel_promotor.Location = new System.Drawing.Point(72, 197);
+            this.tb_telemovel_promotor.Location = new System.Drawing.Point(60, 157);
+            this.tb_telemovel_promotor.MaxLength = 15;
             this.tb_telemovel_promotor.Name = "tb_telemovel_promotor";
-            this.tb_telemovel_promotor.Size = new System.Drawing.Size(334, 20);
+            this.tb_telemovel_promotor.Size = new System.Drawing.Size(346, 20);
             this.tb_telemovel_promotor.TabIndex = 8;
+            this.tb_telemovel_promotor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_telemovel_promotor_KeyPress);
             // 
             // tb_nif_promotor
             // 
-            this.tb_nif_promotor.Location = new System.Drawing.Point(60, 147);
+            this.tb_nif_promotor.Location = new System.Drawing.Point(60, 112);
+            this.tb_nif_promotor.MaxLength = 9;
             this.tb_nif_promotor.Name = "tb_nif_promotor";
             this.tb_nif_promotor.Size = new System.Drawing.Size(346, 20);
             this.tb_nif_promotor.TabIndex = 7;
@@ -182,7 +193,7 @@ namespace Projeto
             // 
             // tb_morada_promotor
             // 
-            this.tb_morada_promotor.Location = new System.Drawing.Point(60, 86);
+            this.tb_morada_promotor.Location = new System.Drawing.Point(60, 70);
             this.tb_morada_promotor.Name = "tb_morada_promotor";
             this.tb_morada_promotor.Size = new System.Drawing.Size(346, 20);
             this.tb_morada_promotor.TabIndex = 6;
@@ -196,19 +207,20 @@ namespace Projeto
             this.tb_nome_promotor.TabIndex = 5;
             this.tb_nome_promotor.TextChanged += new System.EventHandler(this.tb_nome_promotor_TextChanged);
             // 
-            // button2
+            // bt_guardar_promotor
             // 
-            this.button2.Location = new System.Drawing.Point(19, 335);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(387, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Guardar Promotor";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_guardar_promotor.Location = new System.Drawing.Point(19, 335);
+            this.bt_guardar_promotor.Name = "bt_guardar_promotor";
+            this.bt_guardar_promotor.Size = new System.Drawing.Size(387, 23);
+            this.bt_guardar_promotor.TabIndex = 2;
+            this.bt_guardar_promotor.Text = "Guardar Promotor";
+            this.bt_guardar_promotor.UseVisualStyleBackColor = true;
+            this.bt_guardar_promotor.Click += new System.EventHandler(this.bt_guardar_promotor_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 86);
+            this.label5.Location = new System.Drawing.Point(16, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 4;
@@ -217,7 +229,7 @@ namespace Projeto
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 147);
+            this.label4.Location = new System.Drawing.Point(27, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 3;
@@ -227,7 +239,7 @@ namespace Projeto
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 200);
+            this.label3.Location = new System.Drawing.Point(0, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 2;
@@ -236,7 +248,7 @@ namespace Projeto
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 253);
+            this.label2.Location = new System.Drawing.Point(21, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 1;
@@ -278,6 +290,38 @@ namespace Projeto
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(346, 342);
             this.listBox1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 242);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Código Acesso:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 281);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Senha:";
+            // 
+            // tb_codigo_acesso
+            // 
+            this.tb_codigo_acesso.Location = new System.Drawing.Point(90, 239);
+            this.tb_codigo_acesso.Name = "tb_codigo_acesso";
+            this.tb_codigo_acesso.Size = new System.Drawing.Size(316, 20);
+            this.tb_codigo_acesso.TabIndex = 13;
+            // 
+            // tb_senha_promotor
+            // 
+            this.tb_senha_promotor.Location = new System.Drawing.Point(60, 274);
+            this.tb_senha_promotor.Name = "tb_senha_promotor";
+            this.tb_senha_promotor.Size = new System.Drawing.Size(346, 20);
+            this.tb_senha_promotor.TabIndex = 14;
             // 
             // GestaoPromotore
             // 
@@ -322,10 +366,14 @@ namespace Projeto
         private System.Windows.Forms.TextBox tb_nif_promotor;
         private System.Windows.Forms.TextBox tb_morada_promotor;
         private System.Windows.Forms.TextBox tb_nome_promotor;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_guardar_promotor;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_remover_promotor;
+        private System.Windows.Forms.TextBox tb_senha_promotor;
+        private System.Windows.Forms.TextBox tb_codigo_acesso;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
