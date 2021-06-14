@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/24/2021 11:01:32
--- Generated from EDMX file: C:\Users\yuriohnice\Documents\PSI\S2\Projetos\DA\app\Projeto\Projeto\DB.edmx
+-- Date Created: 06/14/2021 17:41:14
+-- Generated from EDMX file: C:\Users\Renan\OneDrive\Documentos\TeSP\Desenvolvimento de aplicações\Projeto\app\Projeto\Projeto\DB.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -104,7 +104,7 @@ GO
 
 -- Creating table 'Promotor'
 CREATE TABLE [dbo].[Promotor] (
-    [NIF] int IDENTITY(1,1) NOT NULL,
+    [NIF] int  NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
     [Morada] nvarchar(max)  NOT NULL,
     [Telemovel] nvarchar(max)  NOT NULL,

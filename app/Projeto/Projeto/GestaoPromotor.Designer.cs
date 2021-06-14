@@ -38,6 +38,10 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tb_senha_promotor = new System.Windows.Forms.TextBox();
+            this.tb_codigo_acesso = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.bt_remover_promotor = new System.Windows.Forms.Button();
             this.tb_email_promotor = new System.Windows.Forms.TextBox();
             this.tb_telemovel_promotor = new System.Windows.Forms.TextBox();
@@ -52,11 +56,7 @@ namespace Projeto
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tb_codigo_acesso = new System.Windows.Forms.TextBox();
-            this.tb_senha_promotor = new System.Windows.Forms.TextBox();
+            this.listbox_promotor = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -155,6 +155,38 @@ namespace Projeto
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Promotor";
+            // 
+            // tb_senha_promotor
+            // 
+            this.tb_senha_promotor.Location = new System.Drawing.Point(60, 274);
+            this.tb_senha_promotor.Name = "tb_senha_promotor";
+            this.tb_senha_promotor.Size = new System.Drawing.Size(346, 20);
+            this.tb_senha_promotor.TabIndex = 14;
+            // 
+            // tb_codigo_acesso
+            // 
+            this.tb_codigo_acesso.Location = new System.Drawing.Point(90, 239);
+            this.tb_codigo_acesso.Name = "tb_codigo_acesso";
+            this.tb_codigo_acesso.Size = new System.Drawing.Size(316, 20);
+            this.tb_codigo_acesso.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 281);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Senha:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 242);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Código Acesso:";
             // 
             // bt_remover_promotor
             // 
@@ -265,8 +297,8 @@ namespace Projeto
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.listbox_promotor);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.listBox1);
             this.groupBox2.Location = new System.Drawing.Point(430, 32);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(358, 406);
@@ -283,45 +315,13 @@ namespace Projeto
             this.button1.Text = "Ver Processos";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listbox_promotor
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 16);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(346, 342);
-            this.listBox1.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 242);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Código Acesso:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 281);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Senha:";
-            // 
-            // tb_codigo_acesso
-            // 
-            this.tb_codigo_acesso.Location = new System.Drawing.Point(90, 239);
-            this.tb_codigo_acesso.Name = "tb_codigo_acesso";
-            this.tb_codigo_acesso.Size = new System.Drawing.Size(316, 20);
-            this.tb_codigo_acesso.TabIndex = 13;
-            // 
-            // tb_senha_promotor
-            // 
-            this.tb_senha_promotor.Location = new System.Drawing.Point(60, 274);
-            this.tb_senha_promotor.Name = "tb_senha_promotor";
-            this.tb_senha_promotor.Size = new System.Drawing.Size(346, 20);
-            this.tb_senha_promotor.TabIndex = 14;
+            this.listbox_promotor.FormattingEnabled = true;
+            this.listbox_promotor.Location = new System.Drawing.Point(6, 16);
+            this.listbox_promotor.Name = "listbox_promotor";
+            this.listbox_promotor.Size = new System.Drawing.Size(346, 342);
+            this.listbox_promotor.TabIndex = 2;
             // 
             // GestaoPromotore
             // 
@@ -369,11 +369,11 @@ namespace Projeto
         private System.Windows.Forms.Button bt_guardar_promotor;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button bt_remover_promotor;
         private System.Windows.Forms.TextBox tb_senha_promotor;
         private System.Windows.Forms.TextBox tb_codigo_acesso;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox listbox_promotor;
     }
 }

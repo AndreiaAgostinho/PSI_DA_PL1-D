@@ -73,7 +73,7 @@
     <Key>
       <PropertyRef Name="NIF" />
     </Key>
-    <Property Name="NIF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NIF" Type="int" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Telemovel" Type="nvarchar(max)" Nullable="false" />

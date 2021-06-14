@@ -8,9 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity.Validation;
+using System.Data.SqlClient;
 
 namespace Projeto
 {
+
     public partial class GestaoPromotore : Form
     {
         private DBContainer dBContainer;
@@ -18,11 +20,15 @@ namespace Projeto
         {
             InitializeComponent();
             dBContainer = new DBContainer();
+            listbox_promotor.DataSource = dBContainer.Promotor.ToList<Promotor>();
+
+
         }
 
+        
         private void GestaoPromotores_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,6 +129,8 @@ namespace Projeto
                 promo.Senha = tb_senha_promotor.Text;
                 dBContainer.Promotor.Add(promo);
                 dBContainer.SaveChanges();
+                
+                
             }
             catch (DbEntityValidationException a)
             {
@@ -140,6 +148,9 @@ namespace Projeto
             }
 
         }
+
+
+
 
 
 
