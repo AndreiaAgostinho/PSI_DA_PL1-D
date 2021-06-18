@@ -80,12 +80,14 @@
     <Compile Include="Documento.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DocumentoP.cs" />
     <Compile Include="Especialista.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="EstadoProcesso.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="FuncionarioP.cs" />
     <Compile Include="GestãoDocumentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +154,7 @@
     <Compile Include="Parecer.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ParecerP.cs" />
     <Compile Include="Processo.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
@@ -162,6 +165,8 @@
     <Compile Include="ProjetoAtribuicao.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProjetoAtribuicaoP.cs" />
+    <Compile Include="ProjetoP.cs" />
     <Compile Include="Promotor.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
@@ -179,6 +184,7 @@
     <Compile Include="TipoProjeto.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="TipoProjetoP.cs" />
     <EmbeddedResource Include="GestãoDocumentos.resx">
       <DependentUpon>GestãoDocumentos.cs</DependentUpon>
     </EmbeddedResource>

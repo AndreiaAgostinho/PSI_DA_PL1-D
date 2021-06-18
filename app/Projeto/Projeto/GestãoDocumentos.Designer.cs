@@ -43,13 +43,13 @@ namespace Projeto
             this.voltarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dateTimePicker_documento = new System.Windows.Forms.DateTimePicker();
+            this.lb_documento = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_guardar_documento = new System.Windows.Forms.Button();
             this.tb_titulo_documento = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_tipo_documento = new System.Windows.Forms.ComboBox();
+            this.comboBox_funcionario_documento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -158,13 +158,13 @@ namespace Projeto
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.dateTimePicker_documento);
+            this.groupBox1.Controls.Add(this.lb_documento);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.bt_guardar_documento);
             this.groupBox1.Controls.Add(this.tb_titulo_documento);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboBox_tipo_documento);
+            this.groupBox1.Controls.Add(this.comboBox_funcionario_documento);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -186,20 +186,20 @@ namespace Projeto
             this.label5.TabIndex = 17;
             this.label5.Text = "[Por Aprovar]";
             // 
-            // dateTimePicker1
+            // dateTimePicker_documento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(107, 227);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(268, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker_documento.Location = new System.Drawing.Point(107, 227);
+            this.dateTimePicker_documento.Name = "dateTimePicker_documento";
+            this.dateTimePicker_documento.Size = new System.Drawing.Size(268, 20);
+            this.dateTimePicker_documento.TabIndex = 16;
             // 
-            // listBox1
+            // lb_documento
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(433, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(355, 316);
-            this.listBox1.TabIndex = 15;
+            this.lb_documento.FormattingEnabled = true;
+            this.lb_documento.Location = new System.Drawing.Point(433, 19);
+            this.lb_documento.Name = "lb_documento";
+            this.lb_documento.Size = new System.Drawing.Size(355, 316);
+            this.lb_documento.TabIndex = 15;
             // 
             // label4
             // 
@@ -210,14 +210,15 @@ namespace Projeto
             this.label4.TabIndex = 12;
             this.label4.Text = "Data de Entrega:";
             // 
-            // button3
+            // bt_guardar_documento
             // 
-            this.button3.Location = new System.Drawing.Point(20, 354);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(355, 52);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Guardar Documento";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_guardar_documento.Location = new System.Drawing.Point(20, 354);
+            this.bt_guardar_documento.Name = "bt_guardar_documento";
+            this.bt_guardar_documento.Size = new System.Drawing.Size(355, 52);
+            this.bt_guardar_documento.TabIndex = 11;
+            this.bt_guardar_documento.Text = "Guardar Documento";
+            this.bt_guardar_documento.UseVisualStyleBackColor = true;
+            this.bt_guardar_documento.Click += new System.EventHandler(this.bt_guardar_documento_Click);
             // 
             // tb_titulo_documento
             // 
@@ -227,22 +228,22 @@ namespace Projeto
             this.tb_titulo_documento.TabIndex = 10;
             this.tb_titulo_documento.TextChanged += new System.EventHandler(this.tb_nome_documento_TextChanged);
             // 
-            // comboBox2
+            // comboBox_tipo_documento
             // 
-            this.comboBox2.AllowDrop = true;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(145, 91);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(230, 21);
-            this.comboBox2.TabIndex = 9;
+            this.comboBox_tipo_documento.AllowDrop = true;
+            this.comboBox_tipo_documento.FormattingEnabled = true;
+            this.comboBox_tipo_documento.Location = new System.Drawing.Point(145, 91);
+            this.comboBox_tipo_documento.Name = "comboBox_tipo_documento";
+            this.comboBox_tipo_documento.Size = new System.Drawing.Size(230, 21);
+            this.comboBox_tipo_documento.TabIndex = 9;
             // 
-            // comboBox1
+            // comboBox_funcionario_documento
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(198, 164);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 21);
-            this.comboBox1.TabIndex = 8;
+            this.comboBox_funcionario_documento.FormattingEnabled = true;
+            this.comboBox_funcionario_documento.Location = new System.Drawing.Point(198, 164);
+            this.comboBox_funcionario_documento.Name = "comboBox_funcionario_documento";
+            this.comboBox_funcionario_documento.Size = new System.Drawing.Size(177, 21);
+            this.comboBox_funcionario_documento.TabIndex = 8;
             // 
             // label3
             // 
@@ -312,16 +313,16 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem alteraçãoDeDadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_guardar_documento;
         private System.Windows.Forms.TextBox tb_titulo_documento;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_tipo_documento;
+        private System.Windows.Forms.ComboBox comboBox_funcionario_documento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_documento;
+        private System.Windows.Forms.ListBox lb_documento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem1;
         private System.Windows.Forms.Label label5;

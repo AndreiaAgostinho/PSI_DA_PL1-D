@@ -38,17 +38,16 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.combobox_projeto_associado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.bt_aprovar = new System.Windows.Forms.Button();
+            this.tb_observacoes = new System.Windows.Forms.TextBox();
+            this.combo_funcionario = new System.Windows.Forms.ComboBox();
+            this.datapicker_parecer = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bt_nao_aprovar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -123,15 +122,14 @@ namespace Projeto
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.bt_nao_aprovar);
+            this.groupBox1.Controls.Add(this.combobox_projeto_associado);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.bt_aprovar);
+            this.groupBox1.Controls.Add(this.tb_observacoes);
+            this.groupBox1.Controls.Add(this.combo_funcionario);
+            this.groupBox1.Controls.Add(this.datapicker_parecer);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(0, 32);
@@ -141,13 +139,13 @@ namespace Projeto
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestão de Pareceres";
             // 
-            // comboBox3
+            // combobox_projeto_associado
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(113, 107);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(647, 21);
-            this.comboBox3.TabIndex = 11;
+            this.combobox_projeto_associado.FormattingEnabled = true;
+            this.combobox_projeto_associado.Location = new System.Drawing.Point(113, 107);
+            this.combobox_projeto_associado.Name = "combobox_projeto_associado";
+            this.combobox_projeto_associado.Size = new System.Drawing.Size(647, 21);
+            this.combobox_projeto_associado.TabIndex = 11;
             // 
             // label5
             // 
@@ -158,63 +156,48 @@ namespace Projeto
             this.label5.TabIndex = 10;
             this.label5.Text = "Projeto Associado:";
             // 
-            // button1
+            // bt_aprovar
             // 
-            this.button1.Location = new System.Drawing.Point(15, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(745, 43);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Aprovar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_aprovar.Location = new System.Drawing.Point(15, 316);
+            this.bt_aprovar.Name = "bt_aprovar";
+            this.bt_aprovar.Size = new System.Drawing.Size(745, 43);
+            this.bt_aprovar.TabIndex = 9;
+            this.bt_aprovar.Text = "Aprovar";
+            this.bt_aprovar.UseVisualStyleBackColor = true;
+            this.bt_aprovar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tb_observacoes
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 192);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(745, 133);
-            this.textBox1.TabIndex = 8;
+            this.tb_observacoes.Location = new System.Drawing.Point(15, 168);
+            this.tb_observacoes.Multiline = true;
+            this.tb_observacoes.Name = "tb_observacoes";
+            this.tb_observacoes.Size = new System.Drawing.Size(745, 133);
+            this.tb_observacoes.TabIndex = 8;
             // 
-            // comboBox2
+            // combo_funcionario
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(135, 142);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(625, 21);
-            this.comboBox2.TabIndex = 7;
+            this.combo_funcionario.FormattingEnabled = true;
+            this.combo_funcionario.Location = new System.Drawing.Point(83, 28);
+            this.combo_funcionario.Name = "combo_funcionario";
+            this.combo_funcionario.Size = new System.Drawing.Size(677, 21);
+            this.combo_funcionario.TabIndex = 6;
+            this.combo_funcionario.SelectedIndexChanged += new System.EventHandler(this.combo_funcionario_SelectedIndexChanged);
             // 
-            // comboBox1
+            // datapicker_parecer
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(83, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(677, 21);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(83, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(677, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.datapicker_parecer.Location = new System.Drawing.Point(83, 61);
+            this.datapicker_parecer.Name = "datapicker_parecer";
+            this.datapicker_parecer.Size = new System.Drawing.Size(677, 20);
+            this.datapicker_parecer.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 176);
+            this.label4.Location = new System.Drawing.Point(12, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Observações:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Documento Associado:";
             // 
             // label2
             // 
@@ -234,7 +217,16 @@ namespace Projeto
             this.label1.TabIndex = 0;
             this.label1.Text = "Funcionário:";
             // 
-            // GestaoPareceres
+            // bt_nao_aprovar
+            // 
+            this.bt_nao_aprovar.Location = new System.Drawing.Point(15, 363);
+            this.bt_nao_aprovar.Name = "bt_nao_aprovar";
+            this.bt_nao_aprovar.Size = new System.Drawing.Size(745, 43);
+            this.bt_nao_aprovar.TabIndex = 12;
+            this.bt_nao_aprovar.Text = "Não Aprovar";
+            this.bt_nao_aprovar.UseVisualStyleBackColor = true;
+            // 
+            // GestaoParecer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -242,7 +234,7 @@ namespace Projeto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "GestaoPareceres";
+            this.Name = "GestaoParecer";
             this.Text = "Gestão Pareceres";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -264,17 +256,16 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox tb_observacoes;
+        private System.Windows.Forms.ComboBox combo_funcionario;
+        private System.Windows.Forms.DateTimePicker datapicker_parecer;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button bt_aprovar;
+        private System.Windows.Forms.ComboBox combobox_projeto_associado;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button bt_nao_aprovar;
     }
 }
 

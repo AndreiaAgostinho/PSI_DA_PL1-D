@@ -43,11 +43,11 @@ namespace Projeto
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.data_Processos = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_novos_processos = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -177,12 +177,12 @@ namespace Projeto
             this.label3.TabIndex = 5;
             this.label3.Text = "Promotores associados ao processo:";
             // 
-            // dateTimePicker1
+            // data_Processos
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(173, 229);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.data_Processos.Location = new System.Drawing.Point(173, 229);
+            this.data_Processos.Name = "data_Processos";
+            this.data_Processos.Size = new System.Drawing.Size(200, 20);
+            this.data_Processos.TabIndex = 6;
             // 
             // label4
             // 
@@ -209,12 +209,12 @@ namespace Projeto
             this.comboBox2.Size = new System.Drawing.Size(200, 21);
             this.comboBox2.TabIndex = 9;
             // 
-            // textBox1
+            // tb_novos_processos
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 10;
+            this.tb_novos_processos.Location = new System.Drawing.Point(144, 31);
+            this.tb_novos_processos.Name = "tb_novos_processos";
+            this.tb_novos_processos.Size = new System.Drawing.Size(231, 20);
+            this.tb_novos_processos.TabIndex = 10;
             // 
             // button3
             // 
@@ -239,11 +239,11 @@ namespace Projeto
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tb_novos_processos);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.data_Processos);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -266,7 +266,7 @@ namespace Projeto
             this.label5.TabIndex = 13;
             this.label5.Text = "[Por Aprovar]";
             // 
-            // GestaoProcessosInicial
+            // GestaoProcesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,7 +275,7 @@ namespace Projeto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "GestaoProcessosInicial";
+            this.Name = "GestaoProcesso";
             this.Text = "GestãoProcessos";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -302,11 +302,11 @@ namespace Projeto
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker data_Processos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_novos_processos;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;

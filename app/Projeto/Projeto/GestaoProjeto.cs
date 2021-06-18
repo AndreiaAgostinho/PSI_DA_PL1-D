@@ -12,9 +12,15 @@ namespace Projeto
 {
     public partial class GestaoProjeto : Form
     {
+        private DBContainer dBContainer;
         public GestaoProjeto()
         {
             InitializeComponent();
+            dBContainer = new DBContainer();
+            lb_projetos.DataSource = dBContainer.TipoProjeto.ToList<TipoProjeto>();
+            comboBox_documento_projeto.DataSource = dBContainer.Documento.ToList<Documento>();
+            comboBox_funcionario_projeto.DataSource = dBContainer.Funcionario.ToList<Funcionario>();
+            comboBox_tipo_projeto.DataSource = dBContainer.TipoProjeto.ToList<TipoProjeto>();
         }
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,6 +64,20 @@ namespace Projeto
             gestaoPromotoresButao.Show();
             this.Hide();
         }
-        
+
+        private void bt_guardar_projeto_Click(object sender, EventArgs e)
+        {
+            Projeto projeto = new Projeto();
+            projeto.TipoProjeto.Designacao = tb_nome_projeto.Text;
+            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var documentos = new GestãoDocumentos();
+            documentos.Show();
+            this.Hide();
+        }
     }
 }

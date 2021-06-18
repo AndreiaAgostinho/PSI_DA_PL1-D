@@ -37,22 +37,22 @@ namespace Projeto
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alteraçãoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox_tipo_projeto = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bt_guardar_projeto = new System.Windows.Forms.Button();
+            this.tb_nome_projeto = new System.Windows.Forms.TextBox();
+            this.comboBox_documento_projeto = new System.Windows.Forms.ComboBox();
+            this.comboBox_funcionario_projeto = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alteraçãoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lb_projetos = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -127,21 +127,37 @@ namespace Projeto
             this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
             this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
             // 
+            // voltarToolStripMenuItem
+            // 
+            this.voltarToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.voltarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
+            this.voltarToolStripMenuItem.Text = "Promotores";
+            // 
+            // alteraçãoDeDadosToolStripMenuItem
+            // 
+            this.alteraçãoDeDadosToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.alteraçãoDeDadosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alteraçãoDeDadosToolStripMenuItem.Name = "alteraçãoDeDadosToolStripMenuItem";
+            this.alteraçãoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
+            this.alteraçãoDeDadosToolStripMenuItem.Text = "Processos";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.comboBox_tipo_projeto);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.bt_guardar_projeto);
+            this.groupBox1.Controls.Add(this.tb_nome_projeto);
+            this.groupBox1.Controls.Add(this.comboBox_documento_projeto);
+            this.groupBox1.Controls.Add(this.comboBox_funcionario_projeto);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.lb_projetos);
             this.groupBox1.Location = new System.Drawing.Point(0, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(800, 406);
@@ -149,13 +165,33 @@ namespace Projeto
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestão de Projetos";
             // 
-            // comboBox3
+            // label5
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(100, 227);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(275, 21);
-            this.comboBox3.TabIndex = 13;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(130, 286);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 25);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "[Por Aprovar]";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(145, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 22);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Adicionar documentos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBox_tipo_projeto
+            // 
+            this.comboBox_tipo_projeto.FormattingEnabled = true;
+            this.comboBox_tipo_projeto.Location = new System.Drawing.Point(100, 227);
+            this.comboBox_tipo_projeto.Name = "comboBox_tipo_projeto";
+            this.comboBox_tipo_projeto.Size = new System.Drawing.Size(275, 21);
+            this.comboBox_tipo_projeto.TabIndex = 13;
             // 
             // label4
             // 
@@ -166,38 +202,39 @@ namespace Projeto
             this.label4.TabIndex = 12;
             this.label4.Text = "Tipo de Projeto:";
             // 
-            // button3
+            // bt_guardar_projeto
             // 
-            this.button3.Location = new System.Drawing.Point(20, 354);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(355, 52);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Guardar projeto";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_guardar_projeto.Location = new System.Drawing.Point(20, 354);
+            this.bt_guardar_projeto.Name = "bt_guardar_projeto";
+            this.bt_guardar_projeto.Size = new System.Drawing.Size(355, 52);
+            this.bt_guardar_projeto.TabIndex = 11;
+            this.bt_guardar_projeto.Text = "Guardar projeto";
+            this.bt_guardar_projeto.UseVisualStyleBackColor = true;
+            this.bt_guardar_projeto.Click += new System.EventHandler(this.bt_guardar_projeto_Click);
             // 
-            // textBox1
+            // tb_nome_projeto
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 10;
+            this.tb_nome_projeto.Location = new System.Drawing.Point(144, 31);
+            this.tb_nome_projeto.Name = "tb_nome_projeto";
+            this.tb_nome_projeto.Size = new System.Drawing.Size(231, 20);
+            this.tb_nome_projeto.TabIndex = 10;
             // 
-            // comboBox2
+            // comboBox_documento_projeto
             // 
-            this.comboBox2.AllowDrop = true;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(145, 91);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(230, 21);
-            this.comboBox2.TabIndex = 9;
+            this.comboBox_documento_projeto.AllowDrop = true;
+            this.comboBox_documento_projeto.FormattingEnabled = true;
+            this.comboBox_documento_projeto.Location = new System.Drawing.Point(145, 91);
+            this.comboBox_documento_projeto.Name = "comboBox_documento_projeto";
+            this.comboBox_documento_projeto.Size = new System.Drawing.Size(230, 21);
+            this.comboBox_documento_projeto.TabIndex = 9;
             // 
-            // comboBox1
+            // comboBox_funcionario_projeto
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(198, 167);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 21);
-            this.comboBox1.TabIndex = 8;
+            this.comboBox_funcionario_projeto.FormattingEnabled = true;
+            this.comboBox_funcionario_projeto.Location = new System.Drawing.Point(198, 167);
+            this.comboBox_funcionario_projeto.Name = "comboBox_funcionario_projeto";
+            this.comboBox_funcionario_projeto.Size = new System.Drawing.Size(177, 21);
+            this.comboBox_funcionario_projeto.TabIndex = 8;
             // 
             // label3
             // 
@@ -235,50 +272,15 @@ namespace Projeto
             this.button2.Text = "Apagar Projeto";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lb_projetos
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(433, 21);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(355, 316);
-            this.listBox1.TabIndex = 0;
+            this.lb_projetos.FormattingEnabled = true;
+            this.lb_projetos.Location = new System.Drawing.Point(433, 21);
+            this.lb_projetos.Name = "lb_projetos";
+            this.lb_projetos.Size = new System.Drawing.Size(355, 316);
+            this.lb_projetos.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(145, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 22);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Adicionar documentos";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // voltarToolStripMenuItem
-            // 
-            this.voltarToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.voltarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
-            this.voltarToolStripMenuItem.Text = "Promotores";
-            // 
-            // alteraçãoDeDadosToolStripMenuItem
-            // 
-            this.alteraçãoDeDadosToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.alteraçãoDeDadosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alteraçãoDeDadosToolStripMenuItem.Name = "alteraçãoDeDadosToolStripMenuItem";
-            this.alteraçãoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
-            this.alteraçãoDeDadosToolStripMenuItem.Text = "Processos";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(130, 286);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "[Por Aprovar]";
-            // 
-            // GestaoProjetosInicial
+            // GestaoProjeto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -286,7 +288,7 @@ namespace Projeto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "GestaoProjetosInicial";
+            this.Name = "GestaoProjeto";
             this.Text = "GestaoProjetos";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -308,16 +310,16 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button bt_guardar_projeto;
+        private System.Windows.Forms.TextBox tb_nome_projeto;
+        private System.Windows.Forms.ComboBox comboBox_funcionario_projeto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ListBox lb_projetos;
+        private System.Windows.Forms.ComboBox comboBox_documento_projeto;
+        private System.Windows.Forms.ComboBox comboBox_tipo_projeto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;

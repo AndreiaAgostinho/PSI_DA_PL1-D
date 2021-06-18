@@ -12,9 +12,14 @@ namespace Projeto
 {
     public partial class GestaoParecer : Form
     {
+        private DBContainer dBContainer;
         public GestaoParecer()
         {
             InitializeComponent();
+            dBContainer = new DBContainer();
+            combo_funcionario.DataSource = dBContainer.Funcionario.ToList<Funcionario>();
+            combobox_projeto_associado.DataSource = dBContainer.ProjetoSet.ToList<Projeto>();
+
         }
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,5 +64,19 @@ namespace Projeto
             this.Hide();
         }
 
+        private void combo_funcionario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Parecer parecer = new Parecer();
+            //parecer.Funcionario = combo_funcionario;
+            parecer.DataParecer = datapicker_parecer.Value.ToString();
+            parecer.TextoParecer = tb_observacoes.Text;
+            dBContainer.ParecerSet.Add(parecer);
+            dBContainer.SaveChanges();
+        }
     }
 }
