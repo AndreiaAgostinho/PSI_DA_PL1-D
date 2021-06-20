@@ -17,6 +17,9 @@ namespace Projeto
         {
             InitializeComponent();
             dBContainer = new DBContainer();
+            dataGridView1.DataSource = dBContainer.ProjetoSet.ToList<Projeto>();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Columns.Remove("ProcessoId");
         }
 
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,6 +54,13 @@ namespace Projeto
         {
             var menu = new MainPage();
             menu.Show();
+            this.Hide();
+        }
+
+        private void bt_adicionar_projeto_Click(object sender, EventArgs e)
+        {
+            var projeto = new GestaoProjeto();
+            projeto.Show();
             this.Hide();
         }
     }

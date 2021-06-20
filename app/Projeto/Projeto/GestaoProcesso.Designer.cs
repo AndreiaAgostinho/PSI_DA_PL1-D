@@ -40,14 +40,12 @@ namespace Projeto
             this.alteraçãoDeDadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.data_Processos = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.tb_novos_processos = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -151,19 +149,10 @@ namespace Projeto
             this.button2.Text = "Apagar Processo";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nome do novos processos:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 91);
+            this.label2.Location = new System.Drawing.Point(6, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 13);
             this.label2.TabIndex = 4;
@@ -172,7 +161,7 @@ namespace Projeto
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 167);
+            this.label3.Location = new System.Drawing.Point(6, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 13);
             this.label3.TabIndex = 5;
@@ -180,7 +169,7 @@ namespace Projeto
             // 
             // data_Processos
             // 
-            this.data_Processos.Location = new System.Drawing.Point(173, 229);
+            this.data_Processos.Location = new System.Drawing.Point(196, 194);
             this.data_Processos.Name = "data_Processos";
             this.data_Processos.Size = new System.Drawing.Size(200, 20);
             this.data_Processos.TabIndex = 6;
@@ -188,7 +177,7 @@ namespace Projeto
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 229);
+            this.label4.Location = new System.Drawing.Point(17, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 13);
             this.label4.TabIndex = 7;
@@ -197,7 +186,7 @@ namespace Projeto
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(198, 167);
+            this.comboBox1.Location = new System.Drawing.Point(196, 127);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(177, 21);
             this.comboBox1.TabIndex = 8;
@@ -205,17 +194,10 @@ namespace Projeto
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(175, 91);
+            this.comboBox2.Location = new System.Drawing.Point(167, 40);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(200, 21);
             this.comboBox2.TabIndex = 9;
-            // 
-            // tb_novos_processos
-            // 
-            this.tb_novos_processos.Location = new System.Drawing.Point(144, 31);
-            this.tb_novos_processos.Name = "tb_novos_processos";
-            this.tb_novos_processos.Size = new System.Drawing.Size(231, 20);
-            this.tb_novos_processos.TabIndex = 10;
             // 
             // button3
             // 
@@ -228,7 +210,7 @@ namespace Projeto
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(175, 112);
+            this.button4.Location = new System.Drawing.Point(167, 67);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 21);
             this.button4.TabIndex = 12;
@@ -241,14 +223,12 @@ namespace Projeto
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.tb_novos_processos);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.data_Processos);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Location = new System.Drawing.Point(0, 32);
@@ -301,14 +281,12 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem alteraçãoDeDadosToolStripMenuItem1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker data_Processos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox tb_novos_processos;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;

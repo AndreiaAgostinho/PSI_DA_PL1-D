@@ -17,6 +17,7 @@ namespace Projeto
         {
             InitializeComponent();
             dBContainer = new DBContainer();
+            //checkbox_registro_funcionario.data
         }
 
 
