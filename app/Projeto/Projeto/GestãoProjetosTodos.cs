@@ -12,39 +12,46 @@ namespace Projeto
 {
     public partial class GestãoProjetosTodos : Form
     {
+        private DBContainer dBContainer;
         public GestãoProjetosTodos()
         {
             InitializeComponent();
-        }
-
-        private void gestãoDeFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gestãoDePareceresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            dBContainer = new DBContainer();
         }
 
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var processos = new GestãoProcessosTodos();
+            processos.Show();
+            this.Hide();
         }
 
-        private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void gestãoDeFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var funcionario = new GestaoFuncionariosTodos();
+            funcionario.Show();
+            this.Hide();
+        }
 
+        private void gestãoDePareceresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var parecer = new GestaoParecer();
+            parecer.Show();
+            this.Hide();
         }
 
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var promotor = new GestãoPromotoresTodos();
+            promotor.Show();
+            this.Hide();
         }
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var menu = new MainPage();
+            menu.Show();
+            this.Hide();
         }
     }
 }

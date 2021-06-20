@@ -34,7 +34,6 @@ namespace Projeto
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePareceresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -59,7 +58,6 @@ namespace Projeto
             this.gestãoDeFuncionáriosToolStripMenuItem,
             this.gestãoDePareceresToolStripMenuItem,
             this.gestãoDeProcessosToolStripMenuItem,
-            this.gestãoDeProjetosToolStripMenuItem,
             this.gestãoDePromotoresToolStripMenuItem});
             this.gestoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestoresToolStripMenuItem.Name = "gestoresToolStripMenuItem";
@@ -71,30 +69,28 @@ namespace Projeto
             this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
             this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
+            this.gestãoDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeFuncionáriosToolStripMenuItem_Click);
             // 
             // gestãoDePareceresToolStripMenuItem
             // 
             this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
             this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
+            this.gestãoDePareceresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePareceresToolStripMenuItem_Click);
             // 
             // gestãoDeProcessosToolStripMenuItem
             // 
             this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
             this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
-            // 
-            // gestãoDeProjetosToolStripMenuItem
-            // 
-            this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
-            this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
-            this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
+            this.gestãoDeProcessosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProcessosToolStripMenuItem_Click);
             // 
             // gestãoDePromotoresToolStripMenuItem
             // 
             this.gestãoDePromotoresToolStripMenuItem.Name = "gestãoDePromotoresToolStripMenuItem";
             this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
+            this.gestãoDePromotoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePromotoresToolStripMenuItem_Click);
             // 
             // menuIniciarToolStripMenuItem
             // 
@@ -103,6 +99,7 @@ namespace Projeto
             this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
             this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
+            this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -121,7 +118,7 @@ namespace Projeto
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GestãoProjetosTodos";
-            this.Text = "Form1";
+            this.Text = "Gestão Projetos";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -137,7 +134,6 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePareceresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;

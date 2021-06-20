@@ -38,14 +38,14 @@ namespace Projeto
 
         private void btGestaoProcessos_Click(object sender, EventArgs e)
         {
-            var gestaoprocessos = new GestaoProcesso();
+            var gestaoprocessos = new GestãoProcessosTodos();
             gestaoprocessos.Show();
             this.Hide();
         }
 
         private void btGestaoPrometor_Click(object sender, EventArgs e)
         {
-            var gestaopromotores = new GestaoPromotore();
+            var gestaopromotores = new GestãoPromotoresTodos();
             gestaopromotores.Show();
             this.Hide();
         }
@@ -59,7 +59,7 @@ namespace Projeto
 
         private void btGestaoProjetos_Click(object sender, EventArgs e)
         {
-            var gestaoprojetos = new GestaoProjeto();
+            var gestaoprojetos = new GestãoProjetosTodos();
             gestaoprojetos.Show();
             this.Hide();
         }

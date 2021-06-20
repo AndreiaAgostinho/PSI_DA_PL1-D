@@ -29,26 +29,25 @@ namespace Projeto
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_promotores = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePareceresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_promotores)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_promotores
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 406);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView_promotores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_promotores.Location = new System.Drawing.Point(12, 38);
+            this.dataGridView_promotores.Name = "dataGridView_promotores";
+            this.dataGridView_promotores.Size = new System.Drawing.Size(776, 406);
+            this.dataGridView_promotores.TabIndex = 3;
             // 
             // menuStrip1
             // 
@@ -67,8 +66,7 @@ namespace Projeto
             this.gestãoDeFuncionáriosToolStripMenuItem,
             this.gestãoDePareceresToolStripMenuItem,
             this.gestãoDeProcessosToolStripMenuItem,
-            this.gestãoDeProjetosToolStripMenuItem,
-            this.gestãoDePromotoresToolStripMenuItem});
+            this.gestãoDeProjetosToolStripMenuItem});
             this.gestoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestoresToolStripMenuItem.Name = "gestoresToolStripMenuItem";
             this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
@@ -79,30 +77,28 @@ namespace Projeto
             this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
             this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
+            this.gestãoDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeFuncionáriosToolStripMenuItem_Click);
             // 
             // gestãoDePareceresToolStripMenuItem
             // 
             this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
             this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
+            this.gestãoDePareceresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePareceresToolStripMenuItem_Click);
             // 
             // gestãoDeProcessosToolStripMenuItem
             // 
             this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
             this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
+            this.gestãoDeProcessosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProcessosToolStripMenuItem_Click);
             // 
             // gestãoDeProjetosToolStripMenuItem
             // 
             this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
             this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
-            // 
-            // gestãoDePromotoresToolStripMenuItem
-            // 
-            this.gestãoDePromotoresToolStripMenuItem.Name = "gestãoDePromotoresToolStripMenuItem";
-            this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
-            this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
+            this.gestãoDeProjetosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProjetosToolStripMenuItem_Click);
             // 
             // menuIniciarToolStripMenuItem
             // 
@@ -111,17 +107,18 @@ namespace Projeto
             this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
             this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
+            this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
             // 
             // GestãoPromotoresTodos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_promotores);
             this.Controls.Add(this.menuStrip1);
             this.Name = "GestãoPromotoresTodos";
             this.Text = "GestãoPromotoresTodos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_promotores)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -131,14 +128,13 @@ namespace Projeto
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_promotores;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gestoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePareceresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
     }
 }
