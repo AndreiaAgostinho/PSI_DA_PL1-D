@@ -17,8 +17,8 @@ namespace Projeto
         {
             InitializeComponent();
             dBContainer = new DBContainer();
+            comboBox_tipo_documento.DataSource = dBContainer.TipoDocumento.ToList<TipoDocumento>();
             lb_documento.DataSource = dBContainer.Documento.ToList<Documento>();
-            comboBox_funcionario_documento.DataSource = dBContainer.Funcionario.ToList<Funcionario>();
         }
 
         private void tb_nome_documento_TextChanged(object sender, EventArgs e)
@@ -31,6 +31,39 @@ namespace Projeto
         {
             Documento doc = new Documento();
             doc.Titulo = tb_titulo_documento.Text;
+            doc.DataEntrega = dateTimePicker_documento.Value;
+            dBContainer.Documento.Add(doc);
+            dBContainer.SaveChanges();
+
+
+        }
+
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var gestaoPromotoresButao = new GestaoPromotore();
+            gestaoPromotoresButao.Show();
+            this.Hide();
+        }
+
+        private void alteraçãoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var gestaoProcessosButao = new GestaoProcesso();
+            gestaoProcessosButao.Show();
+            this.Hide();
+        }
+
+        private void alteraçãoDeDadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var gestaoProjetoButao = new GestaoProjeto();
+            gestaoProjetoButao.Show();
+            this.Hide();
+        }
+
+        private void voltarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var gestaoProjetoButao = new GestaoProjeto();
+            gestaoProjetoButao.Show();
+            this.Hide();
         }
     }
 }

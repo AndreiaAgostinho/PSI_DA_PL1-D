@@ -132,6 +132,7 @@ namespace Projeto
             this.alteraçãoDeDadosToolStripMenuItem1.Name = "alteraçãoDeDadosToolStripMenuItem1";
             this.alteraçãoDeDadosToolStripMenuItem1.Size = new System.Drawing.Size(104, 25);
             this.alteraçãoDeDadosToolStripMenuItem1.Text = "Promotores";
+            this.alteraçãoDeDadosToolStripMenuItem1.Click += new System.EventHandler(this.alteraçãoDeDadosToolStripMenuItem1_Click);
             // 
             // listBox1
             // 
@@ -233,6 +234,7 @@ namespace Projeto
             this.button4.TabIndex = 12;
             this.button4.Text = "Adicionar projeto";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox1
             // 

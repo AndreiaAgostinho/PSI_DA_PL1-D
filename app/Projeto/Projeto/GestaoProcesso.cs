@@ -58,5 +58,19 @@ namespace Projeto
             gestaoPromotoresButao.Show();
             this.Hide();
         }
+
+        private void alteraçãoDeDadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var gestaoPromotoresButao = new GestaoPromotore();
+            gestaoPromotoresButao.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var gestaoProjetosButao = new GestaoProjeto();
+            gestaoProjetosButao.Show();
+            this.Hide();
+        }
     }
 }

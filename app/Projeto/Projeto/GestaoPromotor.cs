@@ -149,11 +149,11 @@ namespace Projeto
 
         }
 
-
-
-
-
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var gestaoProcessoButao = new GestaoProcesso();
+            gestaoProcessoButao.Show();
+            this.Hide();
+        }
     }
 }

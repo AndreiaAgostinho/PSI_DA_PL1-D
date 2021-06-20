@@ -12,9 +12,12 @@ namespace Projeto
 {
     public partial class GestaoFuncionariosTodos : Form
     {
+        private DBContainer dBContainer;
         public GestaoFuncionariosTodos()
         {
             InitializeComponent();
+            dBContainer = new DBContainer();
+           dataGridView_funcionarios.DataSource = dBContainer.Funcionario.ToList<Funcionario>();
         }
 
         private void GestaoFuncionariosInicial_Load(object sender, EventArgs e)

@@ -39,10 +39,10 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_funcionarios = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_funcionarios)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -118,13 +118,13 @@ namespace Projeto
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dataGridView1
+            // dataGridView_funcionarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 383);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridView_funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_funcionarios.Location = new System.Drawing.Point(12, 32);
+            this.dataGridView_funcionarios.Name = "dataGridView_funcionarios";
+            this.dataGridView_funcionarios.Size = new System.Drawing.Size(776, 383);
+            this.dataGridView_funcionarios.TabIndex = 4;
             // 
             // button1
             // 
@@ -142,14 +142,14 @@ namespace Projeto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_funcionarios);
             this.Controls.Add(this.menuStrip1);
             this.Name = "GestaoFuncionariosTodos";
             this.Text = "GestãoFuncionários";
             this.Load += new System.EventHandler(this.GestaoFuncionariosInicial_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_funcionarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +166,7 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_funcionarios;
         private System.Windows.Forms.Button button1;
     }
 }

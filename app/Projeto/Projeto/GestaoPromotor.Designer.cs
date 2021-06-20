@@ -55,8 +55,8 @@ namespace Projeto
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.listbox_promotor = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -306,6 +306,14 @@ namespace Projeto
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Alterar Promotor";
             // 
+            // listbox_promotor
+            // 
+            this.listbox_promotor.FormattingEnabled = true;
+            this.listbox_promotor.Location = new System.Drawing.Point(6, 16);
+            this.listbox_promotor.Name = "listbox_promotor";
+            this.listbox_promotor.Size = new System.Drawing.Size(346, 342);
+            this.listbox_promotor.TabIndex = 2;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(6, 364);
@@ -314,14 +322,7 @@ namespace Projeto
             this.button1.TabIndex = 1;
             this.button1.Text = "Ver Processos";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // listbox_promotor
-            // 
-            this.listbox_promotor.FormattingEnabled = true;
-            this.listbox_promotor.Location = new System.Drawing.Point(6, 16);
-            this.listbox_promotor.Name = "listbox_promotor";
-            this.listbox_promotor.Size = new System.Drawing.Size(346, 342);
-            this.listbox_promotor.TabIndex = 2;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GestaoPromotore
             // 

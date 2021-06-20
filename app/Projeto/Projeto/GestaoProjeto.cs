@@ -17,7 +17,7 @@ namespace Projeto
         {
             InitializeComponent();
             dBContainer = new DBContainer();
-            lb_projetos.DataSource = dBContainer.TipoProjeto.ToList<TipoProjeto>();
+            lb_projetos.DataSource = dBContainer.ProjetoSet.ToList<Projeto>();
             comboBox_documento_projeto.DataSource = dBContainer.Documento.ToList<Documento>();
             comboBox_funcionario_projeto.DataSource = dBContainer.Funcionario.ToList<Funcionario>();
             comboBox_tipo_projeto.DataSource = dBContainer.TipoProjeto.ToList<TipoProjeto>();
@@ -77,6 +77,20 @@ namespace Projeto
         {
             var documentos = new GestãoDocumentos();
             documentos.Show();
+            this.Hide();
+        }
+
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var gestaoPromotoresButao = new GestaoPromotore();
+            gestaoPromotoresButao.Show();
+            this.Hide();
+        }
+
+        private void alteraçãoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var gestaoProcessosButao = new GestaoProcesso();
+            gestaoProcessosButao.Show();
             this.Hide();
         }
     }

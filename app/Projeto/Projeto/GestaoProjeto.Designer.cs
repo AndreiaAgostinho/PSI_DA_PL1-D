@@ -134,6 +134,7 @@ namespace Projeto
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
             this.voltarToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
             this.voltarToolStripMenuItem.Text = "Promotores";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
             // alteraçãoDeDadosToolStripMenuItem
             // 
@@ -142,6 +143,7 @@ namespace Projeto
             this.alteraçãoDeDadosToolStripMenuItem.Name = "alteraçãoDeDadosToolStripMenuItem";
             this.alteraçãoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
             this.alteraçãoDeDadosToolStripMenuItem.Text = "Processos";
+            this.alteraçãoDeDadosToolStripMenuItem.Click += new System.EventHandler(this.alteraçãoDeDadosToolStripMenuItem_Click);
             // 
             // groupBox1
             // 

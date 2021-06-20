@@ -181,6 +181,7 @@
     <Compile Include="TipoDocumento.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="TipoDocumentoP.cs" />
     <Compile Include="TipoProjeto.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
