@@ -68,22 +68,50 @@ namespace Projeto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Funcionario func = new Funcionario();
-            func.Nome = tb_nome_registro_funcionarios.Text;
-            func.Extencao = tb_extensao_registro_funcionarios.Text;
-            if(checkbox_registro_funcionario.CheckedItems.Count >= 0)
+            //Verificação da textbox: se o nome foi escrito
+            //Caso não tenha sido escrito, o cursor posiciona-se na respetiva textbox
+            if (string.IsNullOrEmpty(tb_nome_registro_funcionarios.Text))
             {
-                foreach (TipoProjeto tipo in checkbox_registro_funcionario.CheckedItems) {
+                MessageBox.Show("Insira um nome.", "Registro de Funcionários");
+                tb_nome_registro_funcionarios.Select();
+                return;
+            }
+            //Verificação da textbox: se a extensão foi escrita
+            //Caso não tenha sido escrito, o cursor posiciona-se na respetiva textbox
+            if (string.IsNullOrEmpty(tb_extensao_registro_funcionarios.Text))
+            {
+                MessageBox.Show("Insira uma extensão.", "Registro de Funcionários");
+                tb_extensao_registro_funcionarios.Select();
+                return;
+            }
+            //MessageBox que pergunta se deseja criar o utilizador.
+            else
+            {
+                DialogResult result;
+                result = MessageBox.Show("Quer salvar o registro?", "Registro de Funcionários", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                //se o resultado for sim o funcionario é criado apresentado uma mensagem dizendo que a acção foi executada com sucesso
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Funcionário salvo com sucesso!");
+                    Funcionario func = new Funcionario();
+                    func.Nome = tb_nome_registro_funcionarios.Text;
+                    func.Extencao = tb_extensao_registro_funcionarios.Text;
+                    if (checkbox_registro_funcionario.CheckedItems.Count >= 0)
+                    {
+                        foreach (TipoProjeto tipo in checkbox_registro_funcionario.CheckedItems)
+                        {
 
-                    Especialista especialista = new Especialista();
-                    especialista.Funcionario = func;
-                    especialista.TipoProjeto = tipo;
-                    func.Especialista.Add(especialista);
+                            Especialista especialista = new Especialista();
+                            especialista.Funcionario = func;
+                            especialista.TipoProjeto = tipo;
+                            func.Especialista.Add(especialista);
 
+                        }
+                    }
+                    dBContainer.Funcionario.Add(func);
+                    dBContainer.SaveChanges();
                 }
             }
-            dBContainer.Funcionario.Add(func);
-            dBContainer.SaveChanges();
 
             
         }
