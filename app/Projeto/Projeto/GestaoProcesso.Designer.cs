@@ -41,15 +41,14 @@ namespace Projeto
             this.listBox_processos = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.data_Processos = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.comboBox_projetos = new System.Windows.Forms.ComboBox();
+            this.bt_guardar = new System.Windows.Forms.Button();
+            this.bt_addprojeto = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_aprovar = new System.Windows.Forms.Label();
+            this.bt_limpar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -138,15 +137,16 @@ namespace Projeto
             this.listBox_processos.FormattingEnabled = true;
             this.listBox_processos.ItemHeight = 16;
             this.listBox_processos.Location = new System.Drawing.Point(577, 26);
-            this.listBox_processos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox_processos.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_processos.Name = "listBox_processos";
             this.listBox_processos.Size = new System.Drawing.Size(472, 388);
             this.listBox_processos.TabIndex = 0;
+            this.listBox_processos.Click += new System.EventHandler(this.listBox_processos_Click);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(577, 436);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(473, 64);
             this.button2.TabIndex = 2;
@@ -163,20 +163,10 @@ namespace Projeto
             this.label2.TabIndex = 4;
             this.label2.Text = "Projetos incluídos no processo:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 160);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Promotores associados ao processo:";
-            // 
             // data_Processos
             // 
-            this.data_Processos.Location = new System.Drawing.Point(261, 239);
-            this.data_Processos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.data_Processos.Location = new System.Drawing.Point(251, 142);
+            this.data_Processos.Margin = new System.Windows.Forms.Padding(4);
             this.data_Processos.Name = "data_Processos";
             this.data_Processos.Size = new System.Drawing.Size(265, 22);
             this.data_Processos.TabIndex = 6;
@@ -184,84 +174,86 @@ namespace Projeto
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 246);
+            this.label4.Location = new System.Drawing.Point(13, 142);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Data de ínicio do processo:";
             // 
-            // comboBox1
+            // comboBox_projetos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(261, 156);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 24);
-            this.comboBox1.TabIndex = 8;
+            this.comboBox_projetos.FormattingEnabled = true;
+            this.comboBox_projetos.Location = new System.Drawing.Point(223, 49);
+            this.comboBox_projetos.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_projetos.Name = "comboBox_projetos";
+            this.comboBox_projetos.Size = new System.Drawing.Size(293, 24);
+            this.comboBox_projetos.TabIndex = 9;
             // 
-            // comboBox2
+            // bt_guardar
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(223, 49);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(265, 24);
-            this.comboBox2.TabIndex = 9;
+            this.bt_guardar.Location = new System.Drawing.Point(27, 436);
+            this.bt_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_guardar.Name = "bt_guardar";
+            this.bt_guardar.Size = new System.Drawing.Size(473, 64);
+            this.bt_guardar.TabIndex = 11;
+            this.bt_guardar.Text = "Guardar processo";
+            this.bt_guardar.UseVisualStyleBackColor = true;
+            this.bt_guardar.Click += new System.EventHandler(this.bt_guardar_Click);
             // 
-            // button3
+            // bt_addprojeto
             // 
-            this.button3.Location = new System.Drawing.Point(27, 436);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(473, 64);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Guardar processo";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(223, 82);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(267, 26);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Adicionar projeto";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.bt_addprojeto.Location = new System.Drawing.Point(223, 82);
+            this.bt_addprojeto.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_addprojeto.Name = "bt_addprojeto";
+            this.bt_addprojeto.Size = new System.Drawing.Size(293, 26);
+            this.bt_addprojeto.TabIndex = 12;
+            this.bt_addprojeto.Text = "Adicionar projeto";
+            this.bt_addprojeto.UseVisualStyleBackColor = true;
+            this.bt_addprojeto.Click += new System.EventHandler(this.bt_addprojeto_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.bt_limpar);
+            this.groupBox1.Controls.Add(this.label_aprovar);
+            this.groupBox1.Controls.Add(this.bt_addprojeto);
+            this.groupBox1.Controls.Add(this.bt_guardar);
+            this.groupBox1.Controls.Add(this.comboBox_projetos);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.data_Processos);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.listBox_processos);
             this.groupBox1.Location = new System.Drawing.Point(0, 39);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1067, 511);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestão de Processos";
             // 
-            // label5
+            // label_aprovar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(160, 354);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 31);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "[Por Aprovar]";
+            this.label_aprovar.AutoSize = true;
+            this.label_aprovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_aprovar.Location = new System.Drawing.Point(79, 305);
+            this.label_aprovar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_aprovar.Name = "label_aprovar";
+            this.label_aprovar.Size = new System.Drawing.Size(174, 31);
+            this.label_aprovar.TabIndex = 13;
+            this.label_aprovar.Text = "[Por Aprovar]";
+            this.label_aprovar.Visible = false;
+            // 
+            // bt_limpar
+            // 
+            this.bt_limpar.Location = new System.Drawing.Point(428, 172);
+            this.bt_limpar.Name = "bt_limpar";
+            this.bt_limpar.Size = new System.Drawing.Size(87, 34);
+            this.bt_limpar.TabIndex = 14;
+            this.bt_limpar.Text = "Limpar";
+            this.bt_limpar.UseVisualStyleBackColor = true;
+            this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
             // 
             // GestaoProcesso
             // 
@@ -272,7 +264,7 @@ namespace Projeto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GestaoProcesso";
             this.Text = "GestãoProcessos";
             this.menuStrip1.ResumeLayout(false);
@@ -298,14 +290,13 @@ namespace Projeto
         private System.Windows.Forms.ListBox listBox_processos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker data_Processos;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox_projetos;
+        private System.Windows.Forms.Button bt_guardar;
+        private System.Windows.Forms.Button bt_addprojeto;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_aprovar;
+        private System.Windows.Forms.Button bt_limpar;
     }
 }

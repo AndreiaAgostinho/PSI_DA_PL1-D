@@ -19,6 +19,7 @@ namespace Projeto
             dBContainer = new DBContainer();
             foreach (TipoProjeto tipo in dBContainer.TipoProjeto) {
                 checkbox_registro_funcionario.Items.Add(tipo);
+                
                     }
         }
 

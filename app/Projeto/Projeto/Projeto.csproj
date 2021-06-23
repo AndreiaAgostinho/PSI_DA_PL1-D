@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A16AA7B2-CFE7-4DBB-AF03-7D767533A90D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Projeto</RootNamespace>
     <AssemblyName>Projeto</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -159,6 +159,7 @@
     <Compile Include="Processo.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProcessoP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Projeto.cs">
       <DependentUpon>DB.tt</DependentUpon>

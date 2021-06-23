@@ -16,13 +16,12 @@ namespace Projeto
     public partial class GestaoPromotore : Form
     {
         private DBContainer dBContainer;
-        public int idpromotor;
+        public int idpromotor = 0;
         public GestaoPromotore()
         {
             InitializeComponent();
             dBContainer = new DBContainer();
             listbox_promotor.DataSource = dBContainer.Promotor.ToList<Promotor>();
-
 
         }
 
@@ -167,12 +166,6 @@ namespace Projeto
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var gestaoProcessoButao = new GestaoProcesso();
-            gestaoProcessoButao.Show();
-            this.Hide();
-        }
 
         private void reloadDados()
         {
@@ -224,6 +217,14 @@ namespace Projeto
             tb_senha_promotor.Text = "";
 
             idpromotor = -1;
+        }
+
+        private void bt_processo_Click(object sender, EventArgs e)
+        {
+            Formularios.gestaoProcesso.addProcessosListbox();
+            Formularios.gestaoProcesso.populateTextBoxes();
+            Formularios.gestaoProcesso.Show();
+            this.Hide();
         }
     }
 }

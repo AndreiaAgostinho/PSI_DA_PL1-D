@@ -17,10 +17,8 @@ namespace Projeto
         {
             InitializeComponent();
             dBContainer = new DBContainer();
-            lb_projetos.DataSource = dBContainer.ProjetoSet.ToList<Projeto>();
-            comboBox_documento_projeto.DataSource = dBContainer.Documento.ToList<Documento>();
-            comboBox_funcionario_projeto.DataSource = dBContainer.Funcionario.ToList<Funcionario>();
-            comboBox_tipo_projeto.DataSource = dBContainer.TipoProjeto.ToList<TipoProjeto>();
+            comboBox_tipo_projeto.DataSource = dBContainer.TipoProjeto.ToList<TipoProjeto>(); 
+            
         }
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,11 +67,40 @@ namespace Projeto
         {
             Projeto projeto = new Projeto();
             projeto.DataEntrega = dateTimePicker_projetos.Value;
-            projeto.TipoProjetoId = comboBox_tipo_projeto.SelectedIndex;
-            Documento documento = new Documento();
-            documento.ProjetoId = comboBox_documento_projeto.SelectedIndex;
-            dBContainer.ProjetoSet.Add(projeto);
-            dBContainer.Documento.Add(documento);
+            if(comboBox_documento_projeto.Items.Count != 0)
+            {
+                foreach(Documento documentos in comboBox_documento_projeto.Items)
+                {
+                    projeto.Documento.Add(documentos);
+                    projeto.EstadoProjeto = "Por Aprovar";
+                }
+            }
+            else
+            {
+                projeto.EstadoProjeto = "Falta Documentos";
+            }
+
+            if (comboBox_tipo_projeto.SelectedItem != null) {
+                projeto.TipoProjeto = (TipoProjeto)comboBox_tipo_projeto.SelectedItem;
+            }
+
+
+            if(comboBox_funcionario_projeto.SelectedItem != null)
+            {
+                ProjetoAtribuicao atribuicao = new ProjetoAtribuicao();
+
+                atribuicao.Funcionario = (Funcionario)comboBox_funcionario_projeto.SelectedItem;
+                atribuicao.Data = dateTimePicker_projetos.Value.ToString();
+                atribuicao.Projeto = projeto;
+                projeto.ProjetoAtribuicao.Add(atribuicao);
+            }
+
+            Promotor promo = dBContainer.Promotor.ToList<Promotor>()[Formularios.gestaoPromotore.idpromotor];
+
+            Processo processo = promo.Processo.ToList<Processo>()[Formularios.gestaoProcesso.idprocesso];
+
+            processo.Projeto.Add(projeto);
+
             dBContainer.SaveChanges();
 
 
@@ -88,16 +115,48 @@ namespace Projeto
 
         private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoPromotoresButao = new GestaoPromotore();
-            gestaoPromotoresButao.Show();
+            Formularios.gestaoPromotore.Show();
             this.Hide();
         }
 
         private void alteraçãoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProcessosButao = new GestaoProcesso();
-            gestaoProcessosButao.Show();
+            Formularios.gestaoProcesso.Show();
             this.Hide();
+        }
+
+        public void addProjetoListBox()
+        {
+            Promotor promo = dBContainer.Promotor.ToList<Promotor>()[Formularios.gestaoPromotore.idpromotor];
+
+            Processo processo = promo.Processo.ToList<Processo>()[Formularios.gestaoProcesso.idprocesso];
+
+            lb_projetos.DataSource = processo.Projeto.ToList<Projeto>();
+        }
+
+        private void comboBox_tipo_projeto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TipoProjeto tipo = (TipoProjeto)comboBox_tipo_projeto.SelectedItem;
+
+            List<Funcionario> lista = new List<Funcionario>();
+
+            foreach(Funcionario func in dBContainer.Funcionario)
+            {
+                foreach(Especialista espe in func.Especialista)
+                {
+                    if(espe.TipoProjeto == tipo)
+                    {
+                        lista.Add(func);
+                    }
+                }
+            }
+            comboBox_funcionario_projeto.DataSource = lista;
+           
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

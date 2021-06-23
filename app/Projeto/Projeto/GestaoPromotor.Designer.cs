@@ -38,6 +38,7 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_limpar = new System.Windows.Forms.Button();
             this.tb_senha_promotor = new System.Windows.Forms.TextBox();
             this.tb_codigo_acesso = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,8 +57,7 @@ namespace Projeto
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listbox_promotor = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.bt_limpar = new System.Windows.Forms.Button();
+            this.bt_processo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -153,18 +153,28 @@ namespace Projeto
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(16, 39);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(549, 500);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Promotor";
             // 
+            // bt_limpar
+            // 
+            this.bt_limpar.Location = new System.Drawing.Point(464, 367);
+            this.bt_limpar.Name = "bt_limpar";
+            this.bt_limpar.Size = new System.Drawing.Size(75, 26);
+            this.bt_limpar.TabIndex = 15;
+            this.bt_limpar.Text = "Limpar";
+            this.bt_limpar.UseVisualStyleBackColor = true;
+            this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
+            // 
             // tb_senha_promotor
             // 
             this.tb_senha_promotor.Location = new System.Drawing.Point(80, 337);
-            this.tb_senha_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_senha_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.tb_senha_promotor.Name = "tb_senha_promotor";
             this.tb_senha_promotor.Size = new System.Drawing.Size(460, 22);
             this.tb_senha_promotor.TabIndex = 14;
@@ -172,7 +182,7 @@ namespace Projeto
             // tb_codigo_acesso
             // 
             this.tb_codigo_acesso.Location = new System.Drawing.Point(120, 294);
-            this.tb_codigo_acesso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_codigo_acesso.Margin = new System.Windows.Forms.Padding(4);
             this.tb_codigo_acesso.Name = "tb_codigo_acesso";
             this.tb_codigo_acesso.Size = new System.Drawing.Size(420, 22);
             this.tb_codigo_acesso.TabIndex = 13;
@@ -200,7 +210,7 @@ namespace Projeto
             // bt_remover_promotor
             // 
             this.bt_remover_promotor.Location = new System.Drawing.Point(25, 448);
-            this.bt_remover_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_remover_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.bt_remover_promotor.Name = "bt_remover_promotor";
             this.bt_remover_promotor.Size = new System.Drawing.Size(516, 28);
             this.bt_remover_promotor.TabIndex = 10;
@@ -210,7 +220,7 @@ namespace Projeto
             // tb_email_promotor
             // 
             this.tb_email_promotor.Location = new System.Drawing.Point(80, 244);
-            this.tb_email_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_email_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.tb_email_promotor.Name = "tb_email_promotor";
             this.tb_email_promotor.Size = new System.Drawing.Size(460, 22);
             this.tb_email_promotor.TabIndex = 9;
@@ -218,7 +228,7 @@ namespace Projeto
             // tb_telemovel_promotor
             // 
             this.tb_telemovel_promotor.Location = new System.Drawing.Point(80, 193);
-            this.tb_telemovel_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_telemovel_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.tb_telemovel_promotor.MaxLength = 15;
             this.tb_telemovel_promotor.Name = "tb_telemovel_promotor";
             this.tb_telemovel_promotor.Size = new System.Drawing.Size(460, 22);
@@ -228,7 +238,7 @@ namespace Projeto
             // tb_nif_promotor
             // 
             this.tb_nif_promotor.Location = new System.Drawing.Point(80, 138);
-            this.tb_nif_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_nif_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nif_promotor.MaxLength = 9;
             this.tb_nif_promotor.Name = "tb_nif_promotor";
             this.tb_nif_promotor.Size = new System.Drawing.Size(460, 22);
@@ -239,7 +249,7 @@ namespace Projeto
             // tb_morada_promotor
             // 
             this.tb_morada_promotor.Location = new System.Drawing.Point(80, 86);
-            this.tb_morada_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_morada_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.tb_morada_promotor.Name = "tb_morada_promotor";
             this.tb_morada_promotor.Size = new System.Drawing.Size(460, 22);
             this.tb_morada_promotor.TabIndex = 6;
@@ -248,7 +258,7 @@ namespace Projeto
             // tb_nome_promotor
             // 
             this.tb_nome_promotor.Location = new System.Drawing.Point(80, 37);
-            this.tb_nome_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_nome_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nome_promotor.Name = "tb_nome_promotor";
             this.tb_nome_promotor.Size = new System.Drawing.Size(460, 22);
             this.tb_nome_promotor.TabIndex = 5;
@@ -257,7 +267,7 @@ namespace Projeto
             // bt_guardar_promotor
             // 
             this.bt_guardar_promotor.Location = new System.Drawing.Point(25, 412);
-            this.bt_guardar_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_guardar_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.bt_guardar_promotor.Name = "bt_guardar_promotor";
             this.bt_guardar_promotor.Size = new System.Drawing.Size(516, 28);
             this.bt_guardar_promotor.TabIndex = 2;
@@ -319,11 +329,11 @@ namespace Projeto
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listbox_promotor);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.bt_processo);
             this.groupBox2.Location = new System.Drawing.Point(573, 39);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(477, 500);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -334,32 +344,22 @@ namespace Projeto
             this.listbox_promotor.FormattingEnabled = true;
             this.listbox_promotor.ItemHeight = 16;
             this.listbox_promotor.Location = new System.Drawing.Point(8, 20);
-            this.listbox_promotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listbox_promotor.Margin = new System.Windows.Forms.Padding(4);
             this.listbox_promotor.Name = "listbox_promotor";
             this.listbox_promotor.Size = new System.Drawing.Size(460, 420);
             this.listbox_promotor.TabIndex = 2;
             this.listbox_promotor.Click += new System.EventHandler(this.listbox_promotor_Click);
             // 
-            // button1
+            // bt_processo
             // 
-            this.button1.Location = new System.Drawing.Point(8, 448);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(461, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ver Processos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // bt_limpar
-            // 
-            this.bt_limpar.Location = new System.Drawing.Point(464, 367);
-            this.bt_limpar.Name = "bt_limpar";
-            this.bt_limpar.Size = new System.Drawing.Size(75, 23);
-            this.bt_limpar.TabIndex = 15;
-            this.bt_limpar.Text = "Limpar";
-            this.bt_limpar.UseVisualStyleBackColor = true;
-            this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
+            this.bt_processo.Location = new System.Drawing.Point(8, 448);
+            this.bt_processo.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_processo.Name = "bt_processo";
+            this.bt_processo.Size = new System.Drawing.Size(461, 28);
+            this.bt_processo.TabIndex = 1;
+            this.bt_processo.Text = "Ver Processos";
+            this.bt_processo.UseVisualStyleBackColor = true;
+            this.bt_processo.Click += new System.EventHandler(this.bt_processo_Click);
             // 
             // GestaoPromotore
             // 
@@ -370,7 +370,7 @@ namespace Projeto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GestaoPromotore";
             this.Text = "GestaoPromotores";
             this.Load += new System.EventHandler(this.GestaoPromotores_Load);
@@ -407,7 +407,7 @@ namespace Projeto
         private System.Windows.Forms.TextBox tb_nome_promotor;
         private System.Windows.Forms.Button bt_guardar_promotor;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_processo;
         private System.Windows.Forms.Button bt_remover_promotor;
         private System.Windows.Forms.TextBox tb_senha_promotor;
         private System.Windows.Forms.TextBox tb_codigo_acesso;
