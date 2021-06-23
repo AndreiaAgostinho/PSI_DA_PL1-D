@@ -68,8 +68,14 @@ namespace Projeto
         private void bt_guardar_projeto_Click(object sender, EventArgs e)
         {
             Projeto projeto = new Projeto();
-            projeto.TipoProjeto.Designacao = tb_nome_projeto.Text;
-            
+            projeto.DataEntrega = dateTimePicker_projetos.Value;
+            projeto.TipoProjetoId = comboBox_tipo_projeto.SelectedIndex;
+            Documento documento = new Documento();
+            documento.ProjetoId = comboBox_documento_projeto.SelectedIndex;
+            dBContainer.ProjetoSet.Add(projeto);
+            dBContainer.Documento.Add(documento);
+            dBContainer.SaveChanges();
+
 
         }
 

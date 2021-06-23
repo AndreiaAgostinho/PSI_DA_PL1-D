@@ -45,7 +45,6 @@ namespace Projeto
             this.comboBox_tipo_projeto = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.bt_guardar_projeto = new System.Windows.Forms.Button();
-            this.tb_nome_projeto = new System.Windows.Forms.TextBox();
             this.comboBox_documento_projeto = new System.Windows.Forms.ComboBox();
             this.comboBox_funcionario_projeto = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@ namespace Projeto
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.lb_projetos = new System.Windows.Forms.ListBox();
+            this.dateTimePicker_projetos = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -147,12 +147,12 @@ namespace Projeto
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePicker_projetos);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.comboBox_tipo_projeto);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.bt_guardar_projeto);
-            this.groupBox1.Controls.Add(this.tb_nome_projeto);
             this.groupBox1.Controls.Add(this.comboBox_documento_projeto);
             this.groupBox1.Controls.Add(this.comboBox_funcionario_projeto);
             this.groupBox1.Controls.Add(this.label3);
@@ -214,13 +214,6 @@ namespace Projeto
             this.bt_guardar_projeto.UseVisualStyleBackColor = true;
             this.bt_guardar_projeto.Click += new System.EventHandler(this.bt_guardar_projeto_Click);
             // 
-            // tb_nome_projeto
-            // 
-            this.tb_nome_projeto.Location = new System.Drawing.Point(144, 31);
-            this.tb_nome_projeto.Name = "tb_nome_projeto";
-            this.tb_nome_projeto.Size = new System.Drawing.Size(231, 20);
-            this.tb_nome_projeto.TabIndex = 10;
-            // 
             // comboBox_documento_projeto
             // 
             this.comboBox_documento_projeto.AllowDrop = true;
@@ -259,11 +252,11 @@ namespace Projeto
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Location = new System.Drawing.Point(17, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Nome do novo projeto:";
+            this.label1.Text = "Data de entrega:";
             // 
             // button2
             // 
@@ -281,6 +274,13 @@ namespace Projeto
             this.lb_projetos.Name = "lb_projetos";
             this.lb_projetos.Size = new System.Drawing.Size(355, 316);
             this.lb_projetos.TabIndex = 0;
+            // 
+            // dateTimePicker_projetos
+            // 
+            this.dateTimePicker_projetos.Location = new System.Drawing.Point(110, 31);
+            this.dateTimePicker_projetos.Name = "dateTimePicker_projetos";
+            this.dateTimePicker_projetos.Size = new System.Drawing.Size(265, 20);
+            this.dateTimePicker_projetos.TabIndex = 16;
             // 
             // GestaoProjeto
             // 
@@ -313,7 +313,6 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button bt_guardar_projeto;
-        private System.Windows.Forms.TextBox tb_nome_projeto;
         private System.Windows.Forms.ComboBox comboBox_funcionario_projeto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -327,5 +326,6 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alteraçãoDeDadosToolStripMenuItem;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_projetos;
     }
 }

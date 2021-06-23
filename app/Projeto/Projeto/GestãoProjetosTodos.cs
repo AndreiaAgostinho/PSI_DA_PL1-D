@@ -20,6 +20,10 @@ namespace Projeto
             dataGridView1.DataSource = dBContainer.ProjetoSet.ToList<Projeto>();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Columns.Remove("ProcessoId");
+            dataGridView1.Columns.Remove("Documento");
+            dataGridView1.Columns.Remove("TipoProjetoId");
+            dataGridView1.Columns.Remove("Parecer");
+            dataGridView1.Columns.Remove("DataAprovação");
         }
 
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
