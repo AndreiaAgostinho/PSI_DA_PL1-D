@@ -87,6 +87,7 @@
     <Compile Include="EstadoProcesso.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Formularios.cs" />
     <Compile Include="FuncionarioP.cs" />
     <Compile Include="GestãoDocumentos.cs">
       <SubType>Form</SubType>

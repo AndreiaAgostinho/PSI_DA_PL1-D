@@ -16,6 +16,7 @@ namespace Projeto
     public partial class GestaoPromotore : Form
     {
         private DBContainer dBContainer;
+        public int idpromotor;
         public GestaoPromotore()
         {
             InitializeComponent();
@@ -119,16 +120,33 @@ namespace Projeto
 
             try
             {
-                Promotor promo = new Promotor();
-                promo.Nome = tb_nome_promotor.Text;
-                promo.Morada = tb_morada_promotor.Text;
-                promo.NIF = Int32.Parse(tb_nif_promotor.Text);
-                promo.Telemovel = tb_telemovel_promotor.Text;
-                promo.Email = tb_email_promotor.Text;
-                promo.CodigoAcesso = tb_codigo_acesso.Text;
-                promo.Senha = tb_senha_promotor.Text;
-                dBContainer.Promotor.Add(promo);
-                dBContainer.SaveChanges();
+                if (idpromotor == -1)
+                {
+                    Promotor promo = new Promotor();
+                    promo.Nome = tb_nome_promotor.Text;
+                    promo.Morada = tb_morada_promotor.Text;
+                    promo.NIF = Int32.Parse(tb_nif_promotor.Text);
+                    promo.Telemovel = tb_telemovel_promotor.Text;
+                    promo.Email = tb_email_promotor.Text;
+                    promo.CodigoAcesso = tb_codigo_acesso.Text;
+                    promo.Senha = tb_senha_promotor.Text;
+                    dBContainer.Promotor.Add(promo);
+                    dBContainer.SaveChanges();
+                    reloadDados();
+                }
+                else
+                {
+                    Promotor promo = dBContainer.Promotor.ToList<Promotor>()[idpromotor];
+                    promo.Nome = tb_nome_promotor.Text;
+                    promo.Morada = tb_morada_promotor.Text;
+                    promo.NIF = Int32.Parse(tb_nif_promotor.Text);
+                    promo.Telemovel = tb_telemovel_promotor.Text;
+                    promo.Email = tb_email_promotor.Text;
+                    promo.CodigoAcesso = tb_codigo_acesso.Text;
+                    promo.Senha = tb_senha_promotor.Text;
+                    dBContainer.SaveChanges();
+                    reloadDados();
+                }
                 
                 
             }
@@ -154,6 +172,58 @@ namespace Projeto
             var gestaoProcessoButao = new GestaoProcesso();
             gestaoProcessoButao.Show();
             this.Hide();
+        }
+
+        private void reloadDados()
+        {
+            listbox_promotor.DataSource = null;
+            listbox_promotor.DataSource = dBContainer.Promotor.ToList<Promotor>();
+        }
+
+        private void listbox_promotor_Click(object sender, EventArgs e)
+        {
+            if(listbox_promotor.SelectedItem != null)
+            {
+                
+                Promotor promo = (Promotor)listbox_promotor.SelectedItem;
+
+                idpromotor = listbox_promotor.SelectedIndex;
+
+                tb_nome_promotor.Text = promo.Nome ;
+                tb_morada_promotor.Text = promo.Morada;
+                tb_nif_promotor.Text = Convert.ToString(promo.NIF);
+                tb_telemovel_promotor.Text = promo.Telemovel;
+                tb_email_promotor.Text = promo.Email;
+                tb_codigo_acesso.Text = promo.CodigoAcesso ;
+                tb_senha_promotor.Text = promo.Senha;
+
+            }
+        }
+
+        public void populateTexBoxs()
+        {
+            Promotor promo = (Promotor)listbox_promotor.Items[idpromotor];
+
+            tb_nome_promotor.Text = promo.Nome;
+            tb_morada_promotor.Text = promo.Morada;
+            tb_nif_promotor.Text = Convert.ToString(promo.NIF);
+            tb_telemovel_promotor.Text = promo.Telemovel;
+            tb_email_promotor.Text = promo.Email;
+            tb_codigo_acesso.Text = promo.CodigoAcesso;
+            tb_senha_promotor.Text = promo.Senha;
+        }
+
+        private void bt_limpar_Click(object sender, EventArgs e)
+        {
+            tb_nome_promotor.Text = "";
+            tb_morada_promotor.Text = "";
+            tb_nif_promotor.Text = "";
+            tb_telemovel_promotor.Text = "";
+            tb_email_promotor.Text = "";
+            tb_codigo_acesso.Text = "";
+            tb_senha_promotor.Text = "";
+
+            idpromotor = -1;
         }
     }
 }

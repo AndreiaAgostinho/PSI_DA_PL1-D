@@ -17,7 +17,9 @@ namespace Projeto
         {
             InitializeComponent();
             dBContainer = new DBContainer();
-            //checkbox_registro_funcionario.data
+            foreach (TipoProjeto tipo in dBContainer.TipoProjeto) {
+                checkbox_registro_funcionario.Items.Add(tipo);
+                    }
         }
 
 
@@ -70,7 +72,14 @@ namespace Projeto
             func.Extencao = tb_extensao_registro_funcionarios.Text;
             if(checkbox_registro_funcionario.CheckedItems.Count >= 0)
             {
-                //checkbox_registro_funcionario.Text;
+                foreach (TipoProjeto tipo in checkbox_registro_funcionario.CheckedItems) {
+
+                    Especialista especialista = new Especialista();
+                    especialista.Funcionario = func;
+                    especialista.TipoProjeto = tipo;
+                    func.Especialista.Add(especialista);
+
+                }
             }
             dBContainer.Funcionario.Add(func);
             dBContainer.SaveChanges();

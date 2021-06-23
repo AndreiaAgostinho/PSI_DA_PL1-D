@@ -18,7 +18,9 @@ namespace Projeto
         {
             InitializeComponent();
             dBContainer = new DBContainer();
-            dataGridView_promotores.DataSource = dBContainer.Promotor.ToList<Promotor>();
+
+            addDados();
+            //dataGridView_promotores.DataSource = dBContainer.Promotor.ToList<Promotor>();
         }
 
         private void gestãoDeFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,5 +57,55 @@ namespace Projeto
             voltarGestaoPromotores.Show();
             this.Hide();
         }
+
+        private void bt_adicionar_promotor_Click(object sender, EventArgs e)
+        {
+            Formularios.gestaoPromotore.Show();
+            this.Close();
+        }
+
+        private void addDados()
+        {
+
+            foreach (Promotor promo in dBContainer.Promotor)
+            {
+                dataGridView_promotores.Rows.Add(promo.NIF, promo.Nome, promo.Morada, promo.Telemovel, promo.Email, promo.CodigoAcesso, (promo.Processo.Count + " (Adicionar)"));
+            }
+        }
+
+        // Consoante seja uma celula normal ou um botão, esta função faz que, respetivamente, mostre o promotor no formulario de edição de promotores
+        // ou todos os processos desse promotor no formulario de edicao de processos
+        private void dataGridView_promotores_Click(object sender, EventArgs e)
+        {
+            if(dataGridView_promotores.CurrentCell != null)
+            {
+                if (dataGridView_promotores.CurrentCell.ColumnIndex == 6)
+                {
+                    int promotor = dataGridView_promotores.CurrentCell.RowIndex;
+
+                    Formularios.gestaoPromotore.idpromotor = promotor;
+
+                    Formularios.gestaoProcesso.addProcessosListbox();
+
+                    Formularios.gestaoProcesso.Show();
+
+                    this.Hide();
+
+                }
+                else {
+                    int promotor = dataGridView_promotores.CurrentCell.RowIndex;
+
+                    Formularios.gestaoPromotore.idpromotor = promotor;
+
+                    Formularios.gestaoPromotore.populateTexBoxs();
+
+                    Formularios.gestaoPromotore.Show();
+
+                    this.Close();
+                }
+            }
+        }
+
+
     }
 }

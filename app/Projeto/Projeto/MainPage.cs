@@ -15,6 +15,8 @@ namespace Projeto
         public MainPage()
         {
             InitializeComponent();
+            Formularios.gestaoPromotore = new GestaoPromotore();
+            Formularios.gestaoProcesso = new GestaoProcesso();
         }
 
         private void gestoresToolStripMenuItem_Click(object sender, EventArgs e)

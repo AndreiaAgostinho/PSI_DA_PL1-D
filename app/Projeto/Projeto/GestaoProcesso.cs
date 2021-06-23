@@ -12,9 +12,11 @@ namespace Projeto
 {
     public partial class GestaoProcesso : Form
     {
+        private DBContainer dBContainer;
         public GestaoProcesso()
         {
             InitializeComponent();
+            dBContainer = new DBContainer();
         }
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,6 +73,16 @@ namespace Projeto
             var gestaoProjetosButao = new GestaoProjeto();
             gestaoProjetosButao.Show();
             this.Hide();
+        }
+
+        //Adiciona os processos de um promotor à ListBox
+        public void addProcessosListbox()
+        {
+            List<Promotor> promotores = dBContainer.Promotor.ToList<Promotor>();
+
+            Promotor promo = promotores[Formularios.gestaoPromotore.idpromotor];
+
+            listBox_processos.DataSource = promo.Processo.ToList<Processo>();
         }
     }
 }
