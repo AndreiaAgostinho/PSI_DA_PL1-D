@@ -67,6 +67,7 @@ namespace Projeto
         {
             Projeto projeto = new Projeto();
             projeto.DataEntrega = dateTimePicker_projetos.Value;
+            //if para determinar se o projeto esta por aprovar, se faltam documentos, se foi aprovado ou nao
             if(comboBox_documento_projeto.Items.Count != 0)
             {
                 foreach(Documento documentos in comboBox_documento_projeto.Items)
@@ -84,7 +85,7 @@ namespace Projeto
                 projeto.TipoProjeto = (TipoProjeto)comboBox_tipo_projeto.SelectedItem;
             }
 
-
+            //atribuição de um funcionarios a um projeto(especialidade)
             if(comboBox_funcionario_projeto.SelectedItem != null)
             {
                 ProjetoAtribuicao atribuicao = new ProjetoAtribuicao();
