@@ -74,11 +74,13 @@ namespace Projeto
                 {
                     projeto.Documento.Add(documentos);
                     projeto.EstadoProjeto = "Por Aprovar";
+                    label5.ForeColor = Color.Yellow;
                 }
             }
             else
             {
                 projeto.EstadoProjeto = "Falta Documentos";
+                label5.ForeColor = Color.OrangeRed;
             }
 
             if (comboBox_tipo_projeto.SelectedItem != null) {
