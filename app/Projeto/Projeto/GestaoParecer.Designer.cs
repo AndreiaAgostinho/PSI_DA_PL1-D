@@ -55,11 +55,13 @@ namespace Projeto
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestoresToolStripMenuItem,
             this.menuIniciarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(800, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -164,6 +166,7 @@ namespace Projeto
             // 
             // combobox_projeto_associado
             // 
+            this.combobox_projeto_associado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_projeto_associado.FormattingEnabled = true;
             this.combobox_projeto_associado.Location = new System.Drawing.Point(113, 107);
             this.combobox_projeto_associado.Name = "combobox_projeto_associado";
@@ -206,6 +209,7 @@ namespace Projeto
             // 
             // combo_funcionario
             // 
+            this.combo_funcionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_funcionario.FormattingEnabled = true;
             this.combo_funcionario.Location = new System.Drawing.Point(83, 28);
             this.combo_funcionario.Name = "combo_funcionario";

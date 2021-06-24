@@ -48,15 +48,14 @@ namespace Projeto
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Futura Hv BT", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 49.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(77, 47);
+            this.label1.Location = new System.Drawing.Point(94, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(372, 77);
+            this.label1.Size = new System.Drawing.Size(359, 75);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bem-Vindo";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.DragOver += new System.Windows.Forms.DragEventHandler(this.True);
             // 
             // btGestFunc
             // 
@@ -66,9 +65,9 @@ namespace Projeto
             this.btGestFunc.FlatAppearance.BorderSize = 0;
             this.btGestFunc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btGestFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGestFunc.Font = new System.Drawing.Font("Futura Hv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGestFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGestFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btGestFunc.Location = new System.Drawing.Point(97, 345);
+            this.btGestFunc.Location = new System.Drawing.Point(97, 405);
             this.btGestFunc.Name = "btGestFunc";
             this.btGestFunc.Size = new System.Drawing.Size(329, 54);
             this.btGestFunc.TabIndex = 2;
@@ -83,9 +82,9 @@ namespace Projeto
             this.btGestaoProcessos.FlatAppearance.BorderSize = 0;
             this.btGestaoProcessos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btGestaoProcessos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGestaoProcessos.Font = new System.Drawing.Font("Futura Hv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGestaoProcessos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGestaoProcessos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btGestaoProcessos.Location = new System.Drawing.Point(97, 285);
+            this.btGestaoProcessos.Location = new System.Drawing.Point(97, 225);
             this.btGestaoProcessos.Name = "btGestaoProcessos";
             this.btGestaoProcessos.Size = new System.Drawing.Size(329, 54);
             this.btGestaoProcessos.TabIndex = 3;
@@ -101,9 +100,9 @@ namespace Projeto
             this.btGestaoPrometor.FlatAppearance.BorderSize = 0;
             this.btGestaoPrometor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btGestaoPrometor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGestaoPrometor.Font = new System.Drawing.Font("Futura Hv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGestaoPrometor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGestaoPrometor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btGestaoPrometor.Location = new System.Drawing.Point(97, 225);
+            this.btGestaoPrometor.Location = new System.Drawing.Point(97, 165);
             this.btGestaoPrometor.Name = "btGestaoPrometor";
             this.btGestaoPrometor.Size = new System.Drawing.Size(329, 54);
             this.btGestaoPrometor.TabIndex = 4;
@@ -119,9 +118,9 @@ namespace Projeto
             this.btGestaoProjetos.FlatAppearance.BorderSize = 0;
             this.btGestaoProjetos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btGestaoProjetos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGestaoProjetos.Font = new System.Drawing.Font("Futura Hv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGestaoProjetos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGestaoProjetos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btGestaoProjetos.Location = new System.Drawing.Point(97, 405);
+            this.btGestaoProjetos.Location = new System.Drawing.Point(97, 285);
             this.btGestaoProjetos.Name = "btGestaoProjetos";
             this.btGestaoProjetos.Size = new System.Drawing.Size(329, 54);
             this.btGestaoProjetos.TabIndex = 5;
@@ -138,9 +137,9 @@ namespace Projeto
             this.btGestaoPareceres.FlatAppearance.BorderSize = 0;
             this.btGestaoPareceres.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btGestaoPareceres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGestaoPareceres.Font = new System.Drawing.Font("Futura Hv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGestaoPareceres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGestaoPareceres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btGestaoPareceres.Location = new System.Drawing.Point(97, 165);
+            this.btGestaoPareceres.Location = new System.Drawing.Point(97, 345);
             this.btGestaoPareceres.Name = "btGestaoPareceres";
             this.btGestaoPareceres.Size = new System.Drawing.Size(329, 54);
             this.btGestaoPareceres.TabIndex = 6;
@@ -160,7 +159,6 @@ namespace Projeto
             this.gestoresToolStripMenuItem.Name = "gestoresToolStripMenuItem";
             this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
             this.gestoresToolStripMenuItem.Text = "Gestores";
-            this.gestoresToolStripMenuItem.Click += new System.EventHandler(this.gestoresToolStripMenuItem_Click);
             // 
             // gestãoDeFuncionáriosToolStripMenuItem
             // 
@@ -200,10 +198,12 @@ namespace Projeto
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestoresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(522, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -222,6 +222,7 @@ namespace Projeto
             this.Controls.Add(this.btGestFunc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainPage";
             this.Text = "MainPage";

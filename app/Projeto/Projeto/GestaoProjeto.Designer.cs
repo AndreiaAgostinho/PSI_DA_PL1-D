@@ -40,8 +40,9 @@ namespace Projeto
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alteraçãoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_limpar = new System.Windows.Forms.Button();
             this.dateTimePicker_projetos = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_aprovar = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox_tipo_projeto = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@ namespace Projeto
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttom_remover = new System.Windows.Forms.Button();
             this.lb_projetos = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -156,8 +157,9 @@ namespace Projeto
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_limpar);
             this.groupBox1.Controls.Add(this.dateTimePicker_projetos);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label_aprovar);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.comboBox_tipo_projeto);
             this.groupBox1.Controls.Add(this.label4);
@@ -167,7 +169,7 @@ namespace Projeto
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.buttom_remover);
             this.groupBox1.Controls.Add(this.lb_projetos);
             this.groupBox1.Location = new System.Drawing.Point(0, 32);
             this.groupBox1.Name = "groupBox1";
@@ -176,6 +178,18 @@ namespace Projeto
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestão de Projetos";
             // 
+            // button_limpar
+            // 
+            this.button_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button_limpar.Location = new System.Drawing.Point(252, 232);
+            this.button_limpar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_limpar.Name = "button_limpar";
+            this.button_limpar.Size = new System.Drawing.Size(123, 24);
+            this.button_limpar.TabIndex = 18;
+            this.button_limpar.Text = "Limpar Informação";
+            this.button_limpar.UseVisualStyleBackColor = false;
+            this.button_limpar.Click += new System.EventHandler(this.button_limpar_Click);
+            // 
             // dateTimePicker_projetos
             // 
             this.dateTimePicker_projetos.Location = new System.Drawing.Point(110, 31);
@@ -183,16 +197,16 @@ namespace Projeto
             this.dateTimePicker_projetos.Size = new System.Drawing.Size(265, 20);
             this.dateTimePicker_projetos.TabIndex = 16;
             // 
-            // label5
+            // label_aprovar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(130, 286);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "[Por Aprovar]";
-            this.label5.Visible = false;
+            this.label_aprovar.AutoSize = true;
+            this.label_aprovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_aprovar.Location = new System.Drawing.Point(130, 286);
+            this.label_aprovar.Name = "label_aprovar";
+            this.label_aprovar.Size = new System.Drawing.Size(138, 25);
+            this.label_aprovar.TabIndex = 15;
+            this.label_aprovar.Text = "[Por Aprovar]";
+            this.label_aprovar.Visible = false;
             // 
             // button1
             // 
@@ -206,28 +220,28 @@ namespace Projeto
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 22);
             this.button1.TabIndex = 14;
-            this.button1.Text = "Adicionar documentos";
+            this.button1.Text = "Ver documentos";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox_tipo_projeto
             // 
+            this.comboBox_tipo_projeto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_tipo_projeto.FormattingEnabled = true;
-            this.comboBox_tipo_projeto.Location = new System.Drawing.Point(100, 162);
+            this.comboBox_tipo_projeto.Location = new System.Drawing.Point(15, 162);
             this.comboBox_tipo_projeto.Name = "comboBox_tipo_projeto";
-            this.comboBox_tipo_projeto.Size = new System.Drawing.Size(275, 21);
+            this.comboBox_tipo_projeto.Size = new System.Drawing.Size(360, 21);
             this.comboBox_tipo_projeto.TabIndex = 13;
-            this.comboBox_tipo_projeto.SelectedIndexChanged += new System.EventHandler(this.comboBox_tipo_projeto_SelectedIndexChanged);
+            this.comboBox_tipo_projeto.SelectionChangeCommitted += new System.EventHandler(this.comboBox_tipo_projeto_SelectionChangeCommitted);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 162);
+            this.label4.Location = new System.Drawing.Point(13, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Tipo de Projeto:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // bt_guardar_projeto
             // 
@@ -249,6 +263,7 @@ namespace Projeto
             // comboBox_documento_projeto
             // 
             this.comboBox_documento_projeto.AllowDrop = true;
+            this.comboBox_documento_projeto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_documento_projeto.FormattingEnabled = true;
             this.comboBox_documento_projeto.Location = new System.Drawing.Point(145, 91);
             this.comboBox_documento_projeto.Name = "comboBox_documento_projeto";
@@ -257,6 +272,7 @@ namespace Projeto
             // 
             // comboBox_funcionario_projeto
             // 
+            this.comboBox_funcionario_projeto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_funcionario_projeto.FormattingEnabled = true;
             this.comboBox_funcionario_projeto.Location = new System.Drawing.Point(199, 206);
             this.comboBox_funcionario_projeto.Name = "comboBox_funcionario_projeto";
@@ -290,21 +306,22 @@ namespace Projeto
             this.label1.TabIndex = 3;
             this.label1.Text = "Data de entrega:";
             // 
-            // button2
+            // buttom_remover
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Location = new System.Drawing.Point(433, 354);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(355, 52);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Apagar Projeto";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttom_remover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttom_remover.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttom_remover.FlatAppearance.BorderSize = 0;
+            this.buttom_remover.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttom_remover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttom_remover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttom_remover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttom_remover.Location = new System.Drawing.Point(433, 354);
+            this.buttom_remover.Name = "buttom_remover";
+            this.buttom_remover.Size = new System.Drawing.Size(355, 52);
+            this.buttom_remover.TabIndex = 2;
+            this.buttom_remover.Text = "Apagar Projeto";
+            this.buttom_remover.UseVisualStyleBackColor = false;
+            this.buttom_remover.Click += new System.EventHandler(this.buttom_remover_Click);
             // 
             // lb_projetos
             // 
@@ -313,6 +330,7 @@ namespace Projeto
             this.lb_projetos.Name = "lb_projetos";
             this.lb_projetos.Size = new System.Drawing.Size(355, 316);
             this.lb_projetos.TabIndex = 0;
+            this.lb_projetos.Click += new System.EventHandler(this.lb_projetos_Click);
             // 
             // GestaoProjeto
             // 
@@ -321,6 +339,7 @@ namespace Projeto
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GestaoProjeto";
             this.Text = "GestaoProjetos";
@@ -349,7 +368,7 @@ namespace Projeto
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttom_remover;
         private System.Windows.Forms.ListBox lb_projetos;
         private System.Windows.Forms.ComboBox comboBox_documento_projeto;
         private System.Windows.Forms.ComboBox comboBox_tipo_projeto;
@@ -357,7 +376,8 @@ namespace Projeto
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alteraçãoDeDadosToolStripMenuItem;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_aprovar;
         private System.Windows.Forms.DateTimePicker dateTimePicker_projetos;
+        private System.Windows.Forms.Button button_limpar;
     }
 }

@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Projeto
 {
-    public partial class Parecer
+    public class IDExistente : Exception
     {
+
+    }
+
+    public class EmptyTextbox : Exception
+    {
+
     }
 }

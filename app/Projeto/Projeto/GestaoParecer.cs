@@ -12,71 +12,102 @@ namespace Projeto
 {
     public partial class GestaoParecer : Form
     {
+        //Criação de tabela na base de dados
         private DBContainer dBContainer;
         public GestaoParecer()
         {
             InitializeComponent();
             dBContainer = new DBContainer();
             combo_funcionario.DataSource = dBContainer.Funcionario.ToList<Funcionario>();
-            combobox_projeto_associado.DataSource = dBContainer.ProjetoSet.ToList<Projeto>();
 
         }
 
+        //Linhas 26 a 65 - Configuração de caminhos dos botões da toolstrip
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var voltarGestaoPareceres = new MainPage();
-            voltarGestaoPareceres.Show();
-            this.Hide();
+            Formularios.main.Show();
+            this.Close();
         }
 
         private void gestãoDeFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoFuncionariosButao = new GestaoFuncionariosTodos();
             gestaoFuncionariosButao.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void gestãoDePareceresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoPareceresButao = new GestaoParecer();
             gestaoPareceresButao.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoProjetosButao = new GestaoProjeto();
             gestaoProjetosButao.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoProcessosButao = new GestaoProcesso();
             gestaoProcessosButao.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoPromotoresButao = new GestaoPromotore();
             gestaoPromotoresButao.Show();
-            this.Hide();
+            this.Close();
         }
 
+        //Configuração do botão de aprovar - Reporta no estado do projeto como 'Aprovado'
         private void combo_funcionario_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            Funcionario func = dBContainer.Funcionario.ToList<Funcionario>()[combo_funcionario.SelectedIndex];
+            combobox_projeto_associado.Items.Clear();
+            combobox_projeto_associado.Text = null;
+            foreach (ProjetoAtribuicao projeto in func.ProjetoAtribuicao.ToArray<ProjetoAtribuicao>())
+            {
+                if (!projeto.Projeto.EstadoProjeto.Equals("Aprovado"))
+                {
+                    combobox_projeto_associado.Items.Add(projeto);
+                }
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Funcionario func = dBContainer.Funcionario.ToList<Funcionario>()[combo_funcionario.SelectedIndex];
+            Projeto projeto = func.ProjetoAtribuicao.ToList<ProjetoAtribuicao>()[combobox_projeto_associado.SelectedIndex].Projeto;
             Parecer parecer = new Parecer();
-            //parecer.Funcionario = combo_funcionario;
             parecer.DataParecer = datapicker_parecer.Value.ToString();
             parecer.TextoParecer = tb_observacoes.Text;
-            dBContainer.ParecerSet.Add(parecer);
+            parecer.Funcionario = func;
+            projeto.DataAprovação = datapicker_parecer.Value;
+            projeto.EstadoProjeto = "Aprovado";
+            projeto.Parecer.Add(parecer);
             dBContainer.SaveChanges();
         }
+
+        //Configuração do botão de não aprovar - Reporta no estado do projeto como 'Não Aprovado'
+        private void bt_nao_aprovar_Click(object sender, EventArgs e)
+        {
+            Funcionario func = dBContainer.Funcionario.ToList<Funcionario>()[combo_funcionario.SelectedIndex];
+            Projeto projeto = func.ProjetoAtribuicao.ToList<ProjetoAtribuicao>()[combobox_projeto_associado.SelectedIndex].Projeto;
+            Parecer parecer = new Parecer();
+            parecer.DataParecer = datapicker_parecer.Value.ToString();
+            parecer.TextoParecer = tb_observacoes.Text;
+            parecer.Funcionario = func;
+            projeto.EstadoProjeto = "Não Aprovado";
+            projeto.Parecer.Add(parecer);
+            dBContainer.SaveChanges();
+        }
+
+        
     }
 }

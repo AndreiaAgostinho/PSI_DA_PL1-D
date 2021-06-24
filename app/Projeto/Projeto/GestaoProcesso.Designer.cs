@@ -164,6 +164,7 @@ namespace Projeto
             this.button2.TabIndex = 2;
             this.button2.Text = "Apagar Processo";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -192,6 +193,7 @@ namespace Projeto
             // 
             // comboBox_projetos
             // 
+            this.comboBox_projetos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_projetos.FormattingEnabled = true;
             this.comboBox_projetos.Location = new System.Drawing.Point(167, 40);
             this.comboBox_projetos.Name = "comboBox_projetos";
@@ -217,12 +219,13 @@ namespace Projeto
             // 
             // bt_addprojeto
             // 
+            this.bt_addprojeto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bt_addprojeto.Location = new System.Drawing.Point(167, 67);
             this.bt_addprojeto.Name = "bt_addprojeto";
             this.bt_addprojeto.Size = new System.Drawing.Size(220, 21);
             this.bt_addprojeto.TabIndex = 12;
-            this.bt_addprojeto.Text = "Adicionar projeto";
-            this.bt_addprojeto.UseVisualStyleBackColor = true;
+            this.bt_addprojeto.Text = "Ver projetos";
+            this.bt_addprojeto.UseVisualStyleBackColor = false;
             this.bt_addprojeto.Click += new System.EventHandler(this.bt_addprojeto_Click);
             // 
             // groupBox1
@@ -246,13 +249,14 @@ namespace Projeto
             // 
             // bt_limpar
             // 
-            this.bt_limpar.Location = new System.Drawing.Point(321, 140);
+            this.bt_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_limpar.Location = new System.Drawing.Point(271, 140);
             this.bt_limpar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_limpar.Name = "bt_limpar";
-            this.bt_limpar.Size = new System.Drawing.Size(65, 28);
+            this.bt_limpar.Size = new System.Drawing.Size(116, 28);
             this.bt_limpar.TabIndex = 14;
-            this.bt_limpar.Text = "Limpar";
-            this.bt_limpar.UseVisualStyleBackColor = true;
+            this.bt_limpar.Text = "Limpar Informação";
+            this.bt_limpar.UseVisualStyleBackColor = false;
             this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
             // 
             // label_aprovar
@@ -274,6 +278,7 @@ namespace Projeto
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GestaoProcesso";
             this.Text = "GestãoProcessos";

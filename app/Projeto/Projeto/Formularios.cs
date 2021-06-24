@@ -12,6 +12,8 @@ namespace Projeto
         public static GestaoProcesso gestaoProcesso;
         public static GestaoProjeto gestaoProjeto;
         public static GestãoDocumentos gestãoDocumentos;
+        public static GestãoFuncionario gestãoFuncionario;
+        public static MainPage main;
 
     }
 }

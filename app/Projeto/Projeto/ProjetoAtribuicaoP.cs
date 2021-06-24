@@ -8,5 +8,10 @@ namespace Projeto
 {
     public partial class ProjetoAtribuicao
     {
+
+        public override string ToString()
+        {
+            return string.Format(this.Projeto.ToString());
+        }
     }
 }

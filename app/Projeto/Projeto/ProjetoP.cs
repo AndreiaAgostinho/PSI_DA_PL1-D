@@ -10,7 +10,7 @@ namespace Projeto
     {
         public override string ToString()
         {
-            return string.Format("Projeto ID: {0}", ProcessoId);
+            return string.Format("Processo Nº{0} - {1} - Documentos {2}", ProcessoId, TipoProjeto, Documento.Count);
         }
     }
 }

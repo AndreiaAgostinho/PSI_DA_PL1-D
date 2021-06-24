@@ -13,10 +13,11 @@ using System.Data.SqlClient;
 namespace Projeto
 {
 
+    //Inicializa o DBcontainer
     public partial class GestaoPromotore : Form
     {
         private DBContainer dBContainer;
-        public int idpromotor = 0;
+        public int idpromotor = -1;
         public GestaoPromotore()
         {
             InitializeComponent();
@@ -25,16 +26,11 @@ namespace Projeto
 
         }
 
-        
-        private void GestaoPromotores_Load(object sender, EventArgs e)
-        {
-           
-        }
+        //Linhas 31 a 70 - Configuração de caminhos dos botões da toolstrip
 
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var voltarGestaoPromotores = new MainPage();
-            voltarGestaoPromotores.Show();
+            Formularios.main.Show();
             this.Hide();
         }
 
@@ -54,50 +50,25 @@ namespace Projeto
 
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProcessosButao = new GestaoProcesso();
+            var gestaoProcessosButao = new GestãoProcessosTodos();
             gestaoProcessosButao.Show();
             this.Hide();
         }
 
         private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProjetosButao = new GestaoProjeto();
+            var gestaoProjetosButao = new GestãoProjetosTodos();
             gestaoProjetosButao.Show();
             this.Hide();
         }
 
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoPromotoresButao = new GestaoPromotore();
+            var gestaoPromotoresButao = new GestãoPromotoresTodos();
             gestaoPromotoresButao.Show();
             this.Hide();
         }
 
-        private void alteraçãoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_nome_promotor_TextChanged(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void tb_morada_promotor_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tb_nif_promotor_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
         //codigo para textbox de telemovel so aceitar numeros
         private void tb_telemovel_promotor_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -120,6 +91,20 @@ namespace Projeto
 
             try
             {
+                if (String.IsNullOrWhiteSpace(tb_nome_promotor.Text))
+                    throw new EmptyTextbox();
+                if (String.IsNullOrWhiteSpace(tb_morada_promotor.Text))
+                    throw new EmptyTextbox();
+                if (String.IsNullOrWhiteSpace(tb_telemovel_promotor.Text))
+                    throw new EmptyTextbox();
+                if (String.IsNullOrWhiteSpace(tb_email_promotor.Text))
+                    throw new EmptyTextbox();
+                if (String.IsNullOrWhiteSpace(tb_codigo_acesso.Text))
+                    throw new EmptyTextbox();
+                if (String.IsNullOrWhiteSpace(tb_senha_promotor.Text))
+                    throw new EmptyTextbox();
+
+
                 if (idpromotor == -1)
                 {
                     Promotor promo = new Promotor();
@@ -131,6 +116,14 @@ namespace Projeto
                     promo.CodigoAcesso = tb_codigo_acesso.Text;
                     promo.Senha = tb_senha_promotor.Text;
                     dBContainer.Promotor.Add(promo);
+
+                    foreach(Promotor promotor in dBContainer.Promotor)
+                    {
+                        if(promo.NIF == promotor.NIF)
+                        {
+                            throw new IDExistente();
+                        }
+                    }
                     dBContainer.SaveChanges();
                     reloadDados();
                 }
@@ -147,8 +140,8 @@ namespace Projeto
                     dBContainer.SaveChanges();
                     reloadDados();
                 }
-                
-                
+
+
             }
             catch (DbEntityValidationException a)
             {
@@ -164,6 +157,18 @@ namespace Projeto
                 }
                 throw;
             }
+            catch (FormatException a)
+            {
+                MessageBox.Show("NIF Inválido");
+            }
+            catch (IDExistente)
+            {
+                MessageBox.Show("Promotor com NIF já existente");
+            }
+            catch (EmptyTextbox)
+            {
+                MessageBox.Show("Preencha todas as caixas de texto");
+            }
 
         }
 
@@ -176,19 +181,19 @@ namespace Projeto
         //preenche as textboxs com o promotor selecionado da listbox
         private void listbox_promotor_Click(object sender, EventArgs e)
         {
-            if(listbox_promotor.SelectedItem != null)
+            if (listbox_promotor.SelectedItem != null)
             {
-                
+
                 Promotor promo = (Promotor)listbox_promotor.SelectedItem;
 
                 idpromotor = listbox_promotor.SelectedIndex;
 
-                tb_nome_promotor.Text = promo.Nome ;
+                tb_nome_promotor.Text = promo.Nome;
                 tb_morada_promotor.Text = promo.Morada;
                 tb_nif_promotor.Text = Convert.ToString(promo.NIF);
                 tb_telemovel_promotor.Text = promo.Telemovel;
                 tb_email_promotor.Text = promo.Email;
-                tb_codigo_acesso.Text = promo.CodigoAcesso ;
+                tb_codigo_acesso.Text = promo.CodigoAcesso;
                 tb_senha_promotor.Text = promo.Senha;
 
             }
@@ -196,7 +201,10 @@ namespace Projeto
 
         public void populateTexBoxs()
         {
+
             Promotor promo = (Promotor)listbox_promotor.Items[idpromotor];
+
+            listbox_promotor.SelectedIndex = idpromotor;
 
             tb_nome_promotor.Text = promo.Nome;
             tb_morada_promotor.Text = promo.Morada;
@@ -222,10 +230,67 @@ namespace Projeto
         //mantem os formularios em execução para nao se perderem dados
         private void bt_processo_Click(object sender, EventArgs e)
         {
-            Formularios.gestaoProcesso.addProcessosListbox();
-            Formularios.gestaoProcesso.populateTextBoxes();
-            Formularios.gestaoProcesso.Show();
-            this.Hide();
+            if (idpromotor != -1)
+            {
+                Formularios.gestaoProcesso.addProcessosListbox();
+                Formularios.gestaoProcesso.populateTextBoxes();
+                Formularios.gestaoProcesso.Show();
+                this.Hide();
+            }
+        }
+
+        private void bt_remover_promotor_Click(object sender, EventArgs e)
+        {
+            if(idpromotor != -1)
+            {
+                DialogResult apagar;
+
+                apagar = MessageBox.Show("Quer remover este Promotor? Isto irá remover todos os processos associados", "Remover Documento", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (apagar == DialogResult.Yes)
+                {
+                    Promotor promotor = (Promotor)listbox_promotor.SelectedItem;
+
+                    List<Processo> processos = promotor.Processo.ToList<Processo>();
+                    foreach (Processo processo in processos)
+                    {
+                        List<Projeto> projetos = processo.Projeto.ToList<Projeto>();
+
+                        foreach (Projeto projeto in projetos)
+                        {
+                            List<ProjetoAtribuicao> projetoAtribuicaos = projeto.ProjetoAtribuicao.ToList<ProjetoAtribuicao>();
+                            foreach (ProjetoAtribuicao projetoAtribuicao in projetoAtribuicaos)
+                            {
+                                dBContainer.ProjetoAtribuicao.Remove(projetoAtribuicao);
+                            }
+
+                            List<Parecer> pareceres = projeto.Parecer.ToList<Parecer>();
+                            foreach (Parecer parecer in pareceres)
+                            {
+                                dBContainer.ParecerSet.Remove(parecer);
+                            }
+
+                            List<Documento> documentos = projeto.Documento.ToList<Documento>();
+                            foreach (Documento doc in documentos)
+                            {
+                                dBContainer.Documento.Remove(doc);
+                            }
+
+
+                            dBContainer.ProjetoSet.Remove(projeto);
+
+                        }
+
+                        dBContainer.Processo.Remove(processo);
+                    }
+
+                    dBContainer.Promotor.Remove(promotor);
+
+                    dBContainer.SaveChanges();
+
+                    reloadDados();
+                }
+            }
         }
     }
 }

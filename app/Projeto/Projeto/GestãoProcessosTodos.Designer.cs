@@ -30,6 +30,10 @@ namespace Projeto
         private void InitializeComponent()
         {
             this.dataGridView_processos = new System.Windows.Forms.DataGridView();
+            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Promotor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Projetos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,20 +47,67 @@ namespace Projeto
             // 
             // dataGridView_processos
             // 
+            this.dataGridView_processos.AllowUserToAddRows = false;
+            this.dataGridView_processos.AllowUserToDeleteRows = false;
             this.dataGridView_processos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_processos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Data,
+            this.Id,
+            this.Promotor,
+            this.Projetos});
             this.dataGridView_processos.Location = new System.Drawing.Point(12, 38);
             this.dataGridView_processos.Name = "dataGridView_processos";
+            this.dataGridView_processos.ReadOnly = true;
+            this.dataGridView_processos.RowHeadersWidth = 51;
             this.dataGridView_processos.Size = new System.Drawing.Size(776, 406);
             this.dataGridView_processos.TabIndex = 3;
+            this.dataGridView_processos.Click += new System.EventHandler(this.dataGridView_processos_Click);
+            // 
+            // Data
+            // 
+            this.Data.HeaderText = "Data";
+            this.Data.MinimumWidth = 6;
+            this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
+            this.Data.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Data.Width = 125;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID do Promotor";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 125;
+            // 
+            // Promotor
+            // 
+            this.Promotor.HeaderText = "Promotor";
+            this.Promotor.MinimumWidth = 6;
+            this.Promotor.Name = "Promotor";
+            this.Promotor.ReadOnly = true;
+            this.Promotor.Width = 125;
+            // 
+            // Projetos
+            // 
+            this.Projetos.HeaderText = "Número de Projetos";
+            this.Projetos.MinimumWidth = 6;
+            this.Projetos.Name = "Projetos";
+            this.Projetos.ReadOnly = true;
+            this.Projetos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Projetos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Projetos.Width = 125;
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestoresToolStripMenuItem,
             this.menuIniciarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(800, 29);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
@@ -122,6 +173,7 @@ namespace Projeto
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView_processos);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GestãoProcessosTodos";
             this.Text = "GestãoProcessosTodos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_processos)).EndInit();
@@ -142,5 +194,9 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePromotoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Promotor;
+        private System.Windows.Forms.DataGridViewButtonColumn Projetos;
     }
 }

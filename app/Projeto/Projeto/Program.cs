@@ -16,7 +16,8 @@ namespace Projeto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainPage());
+            Formularios.main = new MainPage();
+            Application.Run(Formularios.main);
         }
     }
 }

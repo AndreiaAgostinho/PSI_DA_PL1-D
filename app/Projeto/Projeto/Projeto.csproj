@@ -87,6 +87,7 @@
     <Compile Include="EstadoProcesso.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Exceções.cs" />
     <Compile Include="Formularios.cs" />
     <Compile Include="FuncionarioP.cs" />
     <Compile Include="GestãoDocumentos.cs">
@@ -266,6 +267,7 @@
       <LastGenOutput>DB.cs</LastGenOutput>
       <DependentUpon>DB.edmx</DependentUpon>
     </Content>
+    <Content Include="Inserir.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

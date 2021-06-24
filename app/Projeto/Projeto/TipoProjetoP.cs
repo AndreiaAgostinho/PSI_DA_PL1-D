@@ -10,7 +10,7 @@ namespace Projeto
     {
         public override string ToString()
         {
-            return string.Format("Nome Projeto: {0}", Designacao);
+            return string.Format(Designacao);
         }
     }
 }

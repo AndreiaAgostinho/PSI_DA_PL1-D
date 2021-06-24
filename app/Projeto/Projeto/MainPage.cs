@@ -12,25 +12,22 @@ namespace Projeto
 {
     public partial class MainPage : Form
     {
+        //Inicializar os formulários
         public MainPage()
         {
             InitializeComponent();
             Formularios.gestaoPromotore = new GestaoPromotore();
             Formularios.gestaoProcesso = new GestaoProcesso();
             Formularios.gestaoProjeto = new GestaoProjeto();
+            Formularios.gestãoDocumentos = new GestãoDocumentos();
+            Formularios.gestãoFuncionario = new GestãoFuncionario();
         }
 
-        private void gestoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
 
         //Animação p/ main page - passar com o rato por cima para aparecerem os botões
-        private void True(object sender, DragEventArgs e)
-        {
-
-        }
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -64,7 +61,8 @@ namespace Projeto
         {
             var gestaoprojetos = new GestãoProjetosTodos();
             gestaoprojetos.Show();
-            this.Hide();
+            this.Hide(); 
         }
+
     }
 }

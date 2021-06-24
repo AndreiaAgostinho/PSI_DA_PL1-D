@@ -13,22 +13,22 @@ namespace Projeto
     public partial class GestãoFuncionario : Form
     {
         private DBContainer dBContainer;
+        public int idfuncionario = -1;
         //Inicializa a checkbox com ligação as especialidades.
         public GestãoFuncionario()
         {
             InitializeComponent();
             dBContainer = new DBContainer();
-            foreach (TipoProjeto tipo in dBContainer.TipoProjeto) {
+            foreach (TipoProjeto tipo in dBContainer.TipoProjeto)
+            {
                 checkbox_registro_funcionario.Items.Add(tipo);
-                
-                    }
+            }
         }
 
         //botão em toolstrip para voltar ao menu iniciar
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var voltarMenuInicialRegistroFuncionarios = new MainPage();
-            voltarMenuInicialRegistroFuncionarios.Show();
+            Formularios.main.Show();
             this.Hide();
         }
         //botão em toolstrip para voltar ao gestao de funcionarios
@@ -94,28 +94,88 @@ namespace Projeto
                 if (result == DialogResult.Yes)
                 {
                     //guarda os dados dos funcionarios e as especialidades na sua respetiva tabela na base de dados
-                    MessageBox.Show("Funcionário salvo com sucesso!");
-                    Funcionario func = new Funcionario();
-                    func.Nome = tb_nome_registro_funcionarios.Text;
-                    func.Extencao = tb_extensao_registro_funcionarios.Text;
-                    if (checkbox_registro_funcionario.CheckedItems.Count >= 0)
+                    if (idfuncionario == -1)
                     {
-                        foreach (TipoProjeto tipo in checkbox_registro_funcionario.CheckedItems)
+                        MessageBox.Show("Funcionário salvo com sucesso!");
+                        Funcionario func = new Funcionario();
+                        func.Nome = tb_nome_registro_funcionarios.Text;
+                        func.Extencao = tb_extensao_registro_funcionarios.Text;
+                        if (checkbox_registro_funcionario.CheckedItems.Count >= 0)
                         {
+                            foreach (TipoProjeto tipo in checkbox_registro_funcionario.CheckedItems)
+                            {
 
-                            Especialista especialista = new Especialista();
-                            especialista.Funcionario = func;
-                            especialista.TipoProjeto = tipo;
-                            func.Especialista.Add(especialista);
+                                Especialista especialista = new Especialista();
+                                especialista.Funcionario = func;
+                                especialista.TipoProjeto = tipo;
+                                func.Especialista.Add(especialista);
 
+                            }
                         }
+                        dBContainer.Funcionario.Add(func);
+                        dBContainer.SaveChanges();
                     }
-                    dBContainer.Funcionario.Add(func);
-                    dBContainer.SaveChanges();
+                    else
+                    {
+                        int var = 0;
+                        Funcionario func = dBContainer.Funcionario.ToList<Funcionario>()[idfuncionario];
+                        func.Nome = tb_nome_registro_funcionarios.Text;
+                        func.Extencao = tb_extensao_registro_funcionarios.Text;
+                        if (checkbox_registro_funcionario.CheckedItems.Count >= 0)
+                        {
+                            foreach (TipoProjeto tipo in checkbox_registro_funcionario.CheckedItems)
+                            {
+
+                                Especialista especialista = new Especialista();
+                                especialista.Funcionario = func;
+                                especialista.TipoProjeto = tipo;
+
+                                foreach (Especialista espe in func.Especialista)
+                                {
+                                    if (espe.TipoProjetoId == tipo.Id)
+                                    {
+                                        var = 1;
+                                        break;
+                                    }
+                                }
+
+                                if (var == 0)
+                                {
+                                    Console.WriteLine("hello");
+                                    func.Especialista.Add(especialista);
+                                }
+                                var = 0;
+
+                            }
+                        }
+                        dBContainer.SaveChanges();
+                    }
+                }
+
+            }
+        }
+
+        //Apresentar a informação de um funcionário nas textbox e na checkbox
+        public void populateTextBoxes()
+        {
+            Funcionario func = dBContainer.Funcionario.ToList<Funcionario>()[idfuncionario];
+
+            tb_nome_registro_funcionarios.Text = func.Nome;
+
+            tb_extensao_registro_funcionarios.Text = func.Extencao;
+
+            foreach (Especialista especialista in func.Especialista)
+            {
+                foreach (TipoProjeto tipo in dBContainer.TipoProjeto)
+                {
+                    if (tipo.Equals(especialista.TipoProjeto))
+                    {
+                        checkbox_registro_funcionario.SetItemChecked(checkbox_registro_funcionario.Items.IndexOf(tipo), true);
+                    }
                 }
             }
-
-            
         }
+
+       
     }
 }

@@ -13,17 +13,17 @@ namespace Projeto
     public partial class GestaoProcesso : Form
     {
         private DBContainer dBContainer;
-        public int idprocesso  = 0;
+        public int idprocesso = 0;
         public GestaoProcesso()
         {
             InitializeComponent();
             dBContainer = new DBContainer();
         }
 
+        //Linhas 24 a 70 - Configuração de caminhos dos botões da toolstrip
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var voltarGestaoProcessos = new MainPage();
-            voltarGestaoProcessos.Show();
+            Formularios.main.Show();
             this.Hide();
         }
 
@@ -43,27 +43,28 @@ namespace Projeto
 
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProcessosButao = new GestaoProcesso();
+            var gestaoProcessosButao = new GestãoProcessosTodos();
             gestaoProcessosButao.Show();
             this.Hide();
         }
 
         private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProjetosButao = new GestaoProjeto();
+            var gestaoProjetosButao = new GestãoProjetosTodos();
             gestaoProjetosButao.Show();
             this.Hide();
         }
 
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoPromotoresButao = new GestaoPromotore();
+            var gestaoPromotoresButao = new GestãoPromotoresTodos();
             gestaoPromotoresButao.Show();
             this.Hide();
         }
 
         private void alteraçãoDeDadosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Formularios.gestaoPromotore.populateTexBoxs();
             Formularios.gestaoPromotore.Show();
             this.Hide();
         }
@@ -71,38 +72,33 @@ namespace Projeto
         //Adiciona os processos de um promotor à ListBox
         public void addProcessosListbox()
         {
+            dBContainer.Dispose();
+            dBContainer = new DBContainer();
+
             List<Promotor> promotores = dBContainer.Promotor.ToList<Promotor>();
 
             Promotor promo = promotores[Formularios.gestaoPromotore.idpromotor];
 
+            listBox_processos.DataSource = null;
             listBox_processos.DataSource = promo.Processo.ToList<Processo>();
+
+            comboBox_projetos.Items.Clear();
+            label_aprovar.Visible = false;
+            data_Processos.Enabled = true;
+            data_Processos.Value = DateTime.Now;
         }
-        //guarda os dados do processo na base de dados
+
+        //Guardar o processo - Adiciona um novo processo à base de dados
         private void bt_guardar_Click(object sender, EventArgs e)
         {
 
-            if (idprocesso != -1)
+            if (idprocesso == -1)
             {
                 Processo processo = new Processo();
-                //transforma a data em string
+
                 processo.DataInicio = data_Processos.Value.ToString();
 
-                EstadoProcesso estado = new EstadoProcesso();
-                //adiciona os projetos na combobox ao objeto processo
-                if (comboBox_projetos.Items.Count != 0)
-                {
-                    foreach (Projeto projeto in comboBox_projetos.Items)
-                    {
-                        processo.Projeto.Add(projeto);
-                    }
-                    estado = dBContainer.EstadoProcesso.ToList<EstadoProcesso>()[0];
-                }
-                else
-                {
-                    estado = dBContainer.EstadoProcesso.ToList<EstadoProcesso>()[3];
-                }
-
-                estado.Processo.Add(processo);
+                processo.EstadoProcesso = dBContainer.EstadoProcesso.ToList<EstadoProcesso>()[3];
 
                 List<Promotor> promotores = dBContainer.Promotor.ToList<Promotor>();
 
@@ -112,28 +108,13 @@ namespace Projeto
 
                 idprocesso = promo.Processo.Count - 1;
 
+
                 dBContainer.SaveChanges();
                 reloadDados();
             }
-            else
-            {
-                Processo processo = (Processo)listBox_processos.SelectedItem;
-
-                if (comboBox_projetos.Items.Count != 0)
-                {
-                    foreach (Projeto projeto in comboBox_projetos.Items)
-                    {
-                        if (!processo.Projeto.Contains(projeto))
-                        {
-                            processo.Projeto.Add(projeto);
-                        }
-                        
-                    }
-                    processo.EstadoProcesso = dBContainer.EstadoProcesso.ToList<EstadoProcesso>()[0];
-                }
-            }
         }
 
+        //Atualização de dados
         private void reloadDados()
         {
             List<Promotor> promotores = dBContainer.Promotor.ToList<Promotor>();
@@ -143,54 +124,162 @@ namespace Projeto
             listBox_processos.DataSource = null;
             listBox_processos.DataSource = promo.Processo.ToList<Processo>();
 
-            int count = listBox_processos.Items.Count;
+            if (idprocesso != -1)
+            {
 
-            label_aprovar.Text = promo.Processo.Last<Processo>().EstadoProcesso.DescricaoEstado;
-            label_aprovar.Visible = true;
+                label_aprovar.Text = promo.Processo.Last<Processo>().EstadoProcesso.DescricaoEstado;
+                label_aprovar.Visible = true;
+                data_Processos.Enabled = false;
+            }
+            else
+            {
+                label_aprovar.Visible = false;
+                data_Processos.Enabled = true;
+            }
 
 
         }
 
+        //Configuração da listbox para aparecerem os processos
         private void listBox_processos_Click(object sender, EventArgs e)
         {
             if (listBox_processos.SelectedItem != null)
             {
-                Processo processo = (Processo)listBox_processos.SelectedItem;
-
                 idprocesso = listBox_processos.SelectedIndex;
+
+                List<Promotor> promotores = dBContainer.Promotor.ToList<Promotor>();
+
+                Promotor promo = promotores[Formularios.gestaoPromotore.idpromotor];
+
+                Processo processo = promo.Processo.ToList<Processo>()[idprocesso];
+
+
 
                 label_aprovar.Text = processo.EstadoProcesso.DescricaoEstado;
                 label_aprovar.Visible = true;
-                comboBox_projetos.Items.AddRange(processo.Projeto.ToArray<Projeto>());
+                comboBox_projetos.Items.Clear();
+                foreach (Projeto projeto in processo.Projeto.ToList<Projeto>())
+                {
+                    comboBox_projetos.Items.Add(projeto);
+                }
 
                 data_Processos.Value = Convert.ToDateTime(processo.DataInicio);
                 data_Processos.Enabled = false;
             }
         }
-        //abre o formularios dos projetos
+
+        //Botão de Adicionar projeto
         private void bt_addprojeto_Click(object sender, EventArgs e)
         {
-            Formularios.gestaoProjeto.Show();
-            this.Hide();
+            if (idprocesso != -1)
+            {
+                Formularios.gestaoProjeto.addProjetoListBox();
+                Formularios.gestaoProjeto.Show();
+                this.Hide();
+            }
         }
 
+        //Apresentar a informação de um funcionário nas textbox e na checkbox
         public void populateTextBoxes()
         {
-            Processo processo = (Processo)listBox_processos.Items[idprocesso];
+            if (listBox_processos.Items.Count != 0)
+            {
+                Processo processo = (Processo)listBox_processos.Items[idprocesso];
 
-            label_aprovar.Text = processo.EstadoProcesso.DescricaoEstado;
-            label_aprovar.Visible = true;
-            comboBox_projetos.Items.AddRange(processo.Projeto.ToArray<Projeto>());
+                listBox_processos.SelectedIndex = idprocesso;
 
-            data_Processos.Value = Convert.ToDateTime(processo.DataInicio);
-            data_Processos.Enabled = false;
+                int var = 0;
+                
+                comboBox_projetos.Items.Clear();
+                foreach (Projeto projeto in processo.Projeto.ToList<Projeto>())
+                {
+                    comboBox_projetos.Items.Add(projeto);
+                    if (!projeto.EstadoProjeto.Equals("Aprovado"))
+                    {
+                        var = 1;
+                    }
+                }
+                if(var == 0)
+                {
+                    processo.EstadoProcesso = dBContainer.EstadoProcesso.ToList<EstadoProcesso>()[1];
+                }
+                var = 0;
+                label_aprovar.Text = processo.EstadoProcesso.DescricaoEstado;
+                label_aprovar.Visible = true;
+
+                data_Processos.Value = Convert.ToDateTime(processo.DataInicio);
+                data_Processos.Enabled = false;
+            }
+            else
+            {
+                idprocesso = -1;
+            }
         }
 
+        //Botão de Limpar o que foi escrito/selecionado anteriormente
         private void bt_limpar_Click(object sender, EventArgs e)
         {
             comboBox_projetos.Items.Clear();
             label_aprovar.Visible = false;
+            data_Processos.Enabled = true;
+            data_Processos.Value = DateTime.Now;
             idprocesso = -1;
         }
+
+        public void addComboBox(Projeto projeto)
+        {
+            comboBox_projetos.Items.Add(projeto);
+        }
+
+        //Botão de remover processo
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (idprocesso != -1)
+            {
+                DialogResult apagar;
+
+                apagar = MessageBox.Show("Quer remover este Processo? Isto irá remover todos os projetos associados", "Remover Documento", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (apagar == DialogResult.Yes)
+                {
+                    Processo processo = (Processo)listBox_processos.SelectedItem;
+
+                    List<Projeto> projetos = processo.Projeto.ToList<Projeto>();
+
+                    foreach (Projeto projeto in projetos)
+                    {
+                        List<ProjetoAtribuicao> projetoAtribuicaos = projeto.ProjetoAtribuicao.ToList<ProjetoAtribuicao>();
+                        foreach (ProjetoAtribuicao projetoAtribuicao in projetoAtribuicaos)
+                        {
+                            dBContainer.ProjetoAtribuicao.Remove(projetoAtribuicao);
+                        }
+
+                        List<Parecer> pareceres = projeto.Parecer.ToList<Parecer>();
+                        foreach (Parecer parecer in pareceres)
+                        {
+                            dBContainer.ParecerSet.Remove(parecer);
+                        }
+
+                        List<Documento> documentos = projeto.Documento.ToList<Documento>();
+                        foreach (Documento doc in documentos)
+                        {
+                            dBContainer.Documento.Remove(doc);
+                        }
+
+
+                        dBContainer.ProjetoSet.Remove(projeto);
+
+                    }
+
+                    dBContainer.Processo.Remove(processo);
+
+                    dBContainer.SaveChanges();
+
+                    reloadDados();
+                }
+            }
+        }
+
+       
     }
 }

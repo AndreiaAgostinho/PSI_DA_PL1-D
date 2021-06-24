@@ -51,6 +51,8 @@ namespace Projeto
             // 
             // dataGridView_promotores
             // 
+            this.dataGridView_promotores.AllowUserToAddRows = false;
+            this.dataGridView_promotores.AllowUserToDeleteRows = false;
             this.dataGridView_promotores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_promotores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NIF,
@@ -70,61 +72,68 @@ namespace Projeto
             // 
             // NIF
             // 
+            this.NIF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.NIF.HeaderText = "NIF";
             this.NIF.MinimumWidth = 6;
             this.NIF.Name = "NIF";
             this.NIF.ReadOnly = true;
-            this.NIF.Width = 125;
+            this.NIF.Width = 49;
             // 
             // Nome
             // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Nome.HeaderText = "Nome";
             this.Nome.MinimumWidth = 6;
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
-            this.Nome.Width = 125;
+            this.Nome.Width = 60;
             // 
             // Morada
             // 
+            this.Morada.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Morada.HeaderText = "Morada";
             this.Morada.MinimumWidth = 6;
             this.Morada.Name = "Morada";
             this.Morada.ReadOnly = true;
-            this.Morada.Width = 125;
+            this.Morada.Width = 68;
             // 
             // Telemovel
             // 
+            this.Telemovel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Telemovel.HeaderText = "Telemovel";
             this.Telemovel.MinimumWidth = 6;
             this.Telemovel.Name = "Telemovel";
             this.Telemovel.ReadOnly = true;
-            this.Telemovel.Width = 125;
+            this.Telemovel.Width = 81;
             // 
             // Email
             // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
-            this.Email.Width = 125;
+            this.Email.Width = 57;
             // 
             // CodigoAcesso
             // 
+            this.CodigoAcesso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.CodigoAcesso.HeaderText = "Codigo de Acesso";
             this.CodigoAcesso.MinimumWidth = 6;
             this.CodigoAcesso.Name = "CodigoAcesso";
             this.CodigoAcesso.ReadOnly = true;
-            this.CodigoAcesso.Width = 125;
+            this.CodigoAcesso.Width = 108;
             // 
             // Processos
             // 
+            this.Processos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Processos.HeaderText = "Número de Processos";
             this.Processos.MinimumWidth = 6;
             this.Processos.Name = "Processos";
             this.Processos.ReadOnly = true;
             this.Processos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Processos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Processos.Width = 125;
+            this.Processos.Width = 124;
             // 
             // menuStrip1
             // 
@@ -219,6 +228,7 @@ namespace Projeto
             this.Controls.Add(this.bt_adicionar_promotor);
             this.Controls.Add(this.dataGridView_promotores);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GestãoPromotoresTodos";
             this.Text = "GestãoPromotoresTodos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_promotores)).EndInit();
