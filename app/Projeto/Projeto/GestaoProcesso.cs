@@ -77,18 +77,18 @@ namespace Projeto
 
             listBox_processos.DataSource = promo.Processo.ToList<Processo>();
         }
-
+        //guarda os dados do processo na base de dados
         private void bt_guardar_Click(object sender, EventArgs e)
         {
 
             if (idprocesso != -1)
             {
                 Processo processo = new Processo();
-
+                //transforma a data em string
                 processo.DataInicio = data_Processos.Value.ToString();
 
                 EstadoProcesso estado = new EstadoProcesso();
-
+                //adiciona os projetos na combobox ao objeto processo
                 if (comboBox_projetos.Items.Count != 0)
                 {
                     foreach (Projeto projeto in comboBox_projetos.Items)
@@ -167,7 +167,7 @@ namespace Projeto
                 data_Processos.Enabled = false;
             }
         }
-
+        //abre o formularios dos projetos
         private void bt_addprojeto_Click(object sender, EventArgs e)
         {
             Formularios.gestaoProjeto.Show();

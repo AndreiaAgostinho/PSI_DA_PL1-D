@@ -47,6 +47,7 @@ namespace Projeto
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestoresToolStripMenuItem,
             this.menuIniciarToolStripMenuItem});
@@ -71,6 +72,7 @@ namespace Projeto
             // 
             // gestãoDeFuncionáriosToolStripMenuItem
             // 
+            this.gestãoDeFuncionáriosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
             this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
@@ -78,6 +80,7 @@ namespace Projeto
             // 
             // gestãoDePareceresToolStripMenuItem
             // 
+            this.gestãoDePareceresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
             this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
@@ -85,6 +88,7 @@ namespace Projeto
             // 
             // gestãoDeProcessosToolStripMenuItem
             // 
+            this.gestãoDeProcessosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
             this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
@@ -92,6 +96,7 @@ namespace Projeto
             // 
             // gestãoDeProjetosToolStripMenuItem
             // 
+            this.gestãoDeProjetosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
             this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
@@ -99,6 +104,7 @@ namespace Projeto
             // 
             // gestãoDePromotoresToolStripMenuItem
             // 
+            this.gestãoDePromotoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDePromotoresToolStripMenuItem.Name = "gestãoDePromotoresToolStripMenuItem";
             this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
@@ -107,7 +113,7 @@ namespace Projeto
             // menuIniciarToolStripMenuItem
             // 
             this.menuIniciarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
             this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
@@ -123,17 +129,24 @@ namespace Projeto
             this.dataGridView_funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_funcionarios.Location = new System.Drawing.Point(12, 32);
             this.dataGridView_funcionarios.Name = "dataGridView_funcionarios";
-            this.dataGridView_funcionarios.Size = new System.Drawing.Size(776, 383);
+            this.dataGridView_funcionarios.Size = new System.Drawing.Size(776, 360);
             this.dataGridView_funcionarios.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 421);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Location = new System.Drawing.Point(13, 398);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(775, 23);
+            this.button1.Size = new System.Drawing.Size(775, 46);
             this.button1.TabIndex = 5;
             this.button1.Text = "Adicionar Funcionario";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GestaoFuncionariosTodos

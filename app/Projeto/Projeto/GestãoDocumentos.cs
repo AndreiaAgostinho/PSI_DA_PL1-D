@@ -13,6 +13,7 @@ namespace Projeto
     public partial class GestãoDocumentos : Form
     {
         private DBContainer dBContainer;
+        //Inicializa o DBcontainer e inicializa os datasource das listbox e comboBoxs.
         public GestãoDocumentos()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace Projeto
             
         }
 
+        //Armazena os documentos na sua tabela dentro da base de dados.
         private void bt_guardar_documento_Click(object sender, EventArgs e)
         {
             Documento doc = new Documento();
@@ -38,27 +40,28 @@ namespace Projeto
 
         }
 
+        //botão em toolstrip para voltar ao gestao de promotores
         private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoPromotoresButao = new GestaoPromotore();
             gestaoPromotoresButao.Show();
             this.Hide();
         }
-
+        //botão em toolstrip para voltar ao gestao de processos
         private void alteraçãoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoProcessosButao = new GestaoProcesso();
             gestaoProcessosButao.Show();
             this.Hide();
         }
-
+        //botão em toolstrip para voltar ao gestao de projetos
         private void alteraçãoDeDadosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var gestaoProjetoButao = new GestaoProjeto();
             gestaoProjetoButao.Show();
             this.Hide();
         }
-
+        //botão em toolstrip para voltar atras
         private void voltarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var gestaoProjetoButao = new GestaoProjeto();

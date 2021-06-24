@@ -13,6 +13,7 @@ namespace Projeto
     public partial class GestãoFuncionario : Form
     {
         private DBContainer dBContainer;
+        //Inicializa a checkbox com ligação as especialidades.
         public GestãoFuncionario()
         {
             InitializeComponent();
@@ -23,42 +24,42 @@ namespace Projeto
                     }
         }
 
-
+        //botão em toolstrip para voltar ao menu iniciar
         private void menuIniciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var voltarMenuInicialRegistroFuncionarios = new MainPage();
             voltarMenuInicialRegistroFuncionarios.Show();
             this.Hide();
         }
-
+        //botão em toolstrip para voltar ao gestao de funcionarios
         private void gestãoDeFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoFuncionariosButao = new GestaoFuncionariosTodos();
             gestaoFuncionariosButao.Show();
             this.Hide();
         }
-
+        //botão em toolstrip para voltar ao gestao de pareceres
         private void gestãoDePareceresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoPareceresButao = new GestaoParecer();
             gestaoPareceresButao.Show();
             this.Hide();
         }
-
+        //botão em toolstrip para voltar ao gestao de processos
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoProcessosButao = new GestaoProcesso();
             gestaoProcessosButao.Show();
             this.Hide();
         }
-
+        //botão em toolstrip para voltar ao gestao de projetos
         private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoProjetosButao = new GestaoProjeto();
             gestaoProjetosButao.Show();
             this.Hide();
         }
-
+        //botão em toolstrip para voltar ao gestao de promotores
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var gestaoPromotoresButao = new GestaoPromotore();
@@ -92,6 +93,7 @@ namespace Projeto
                 //se o resultado for sim o funcionario é criado apresentado uma mensagem dizendo que a acção foi executada com sucesso
                 if (result == DialogResult.Yes)
                 {
+                    //guarda os dados dos funcionarios e as especialidades na sua respetiva tabela na base de dados
                     MessageBox.Show("Funcionário salvo com sucesso!");
                     Funcionario func = new Funcionario();
                     func.Nome = tb_nome_registro_funcionarios.Text;

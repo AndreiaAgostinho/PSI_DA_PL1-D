@@ -30,6 +30,13 @@ namespace Projeto
         private void InitializeComponent()
         {
             this.dataGridView_promotores = new System.Windows.Forms.DataGridView();
+            this.NIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Morada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telemovel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoAcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Processos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,13 +45,6 @@ namespace Projeto
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bt_adicionar_promotor = new System.Windows.Forms.Button();
-            this.NIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Morada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telemovel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoAcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Processos = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_promotores)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,86 +60,13 @@ namespace Projeto
             this.Email,
             this.CodigoAcesso,
             this.Processos});
-            this.dataGridView_promotores.Location = new System.Drawing.Point(13, 47);
-            this.dataGridView_promotores.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView_promotores.Location = new System.Drawing.Point(10, 38);
             this.dataGridView_promotores.Name = "dataGridView_promotores";
             this.dataGridView_promotores.ReadOnly = true;
             this.dataGridView_promotores.RowHeadersWidth = 51;
-            this.dataGridView_promotores.Size = new System.Drawing.Size(1035, 465);
+            this.dataGridView_promotores.Size = new System.Drawing.Size(776, 364);
             this.dataGridView_promotores.TabIndex = 3;
             this.dataGridView_promotores.Click += new System.EventHandler(this.dataGridView_promotores_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestoresToolStripMenuItem,
-            this.menuIniciarToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 36);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // gestoresToolStripMenuItem
-            // 
-            this.gestoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestãoDeFuncionáriosToolStripMenuItem,
-            this.gestãoDePareceresToolStripMenuItem,
-            this.gestãoDeProcessosToolStripMenuItem,
-            this.gestãoDeProjetosToolStripMenuItem});
-            this.gestoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gestoresToolStripMenuItem.Name = "gestoresToolStripMenuItem";
-            this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(102, 32);
-            this.gestoresToolStripMenuItem.Text = "Gestores";
-            // 
-            // gestãoDeFuncionáriosToolStripMenuItem
-            // 
-            this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
-            this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
-            this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
-            this.gestãoDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeFuncionáriosToolStripMenuItem_Click);
-            // 
-            // gestãoDePareceresToolStripMenuItem
-            // 
-            this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
-            this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
-            this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
-            this.gestãoDePareceresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePareceresToolStripMenuItem_Click);
-            // 
-            // gestãoDeProcessosToolStripMenuItem
-            // 
-            this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
-            this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
-            this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
-            this.gestãoDeProcessosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProcessosToolStripMenuItem_Click);
-            // 
-            // gestãoDeProjetosToolStripMenuItem
-            // 
-            this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
-            this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
-            this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
-            this.gestãoDeProjetosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProjetosToolStripMenuItem_Click);
-            // 
-            // menuIniciarToolStripMenuItem
-            // 
-            this.menuIniciarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
-            this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(104, 32);
-            this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
-            this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
-            // 
-            // bt_adicionar_promotor
-            // 
-            this.bt_adicionar_promotor.Location = new System.Drawing.Point(16, 520);
-            this.bt_adicionar_promotor.Margin = new System.Windows.Forms.Padding(4);
-            this.bt_adicionar_promotor.Name = "bt_adicionar_promotor";
-            this.bt_adicionar_promotor.Size = new System.Drawing.Size(1035, 28);
-            this.bt_adicionar_promotor.TabIndex = 4;
-            this.bt_adicionar_promotor.Text = "Adicionar Promotor";
-            this.bt_adicionar_promotor.UseVisualStyleBackColor = true;
-            this.bt_adicionar_promotor.Click += new System.EventHandler(this.bt_adicionar_promotor_Click);
             // 
             // NIF
             // 
@@ -199,15 +126,99 @@ namespace Projeto
             this.Processos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Processos.Width = 125;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestoresToolStripMenuItem,
+            this.menuIniciarToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 29);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // gestoresToolStripMenuItem
+            // 
+            this.gestoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.gestoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestãoDeFuncionáriosToolStripMenuItem,
+            this.gestãoDePareceresToolStripMenuItem,
+            this.gestãoDeProcessosToolStripMenuItem,
+            this.gestãoDeProjetosToolStripMenuItem});
+            this.gestoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gestoresToolStripMenuItem.Name = "gestoresToolStripMenuItem";
+            this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.gestoresToolStripMenuItem.Text = "Gestores";
+            // 
+            // gestãoDeFuncionáriosToolStripMenuItem
+            // 
+            this.gestãoDeFuncionáriosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
+            this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
+            this.gestãoDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeFuncionáriosToolStripMenuItem_Click);
+            // 
+            // gestãoDePareceresToolStripMenuItem
+            // 
+            this.gestãoDePareceresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
+            this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
+            this.gestãoDePareceresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePareceresToolStripMenuItem_Click);
+            // 
+            // gestãoDeProcessosToolStripMenuItem
+            // 
+            this.gestãoDeProcessosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
+            this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
+            this.gestãoDeProcessosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProcessosToolStripMenuItem_Click);
+            // 
+            // gestãoDeProjetosToolStripMenuItem
+            // 
+            this.gestãoDeProjetosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
+            this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
+            this.gestãoDeProjetosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProjetosToolStripMenuItem_Click);
+            // 
+            // menuIniciarToolStripMenuItem
+            // 
+            this.menuIniciarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.menuIniciarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
+            this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
+            this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
+            // 
+            // bt_adicionar_promotor
+            // 
+            this.bt_adicionar_promotor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_adicionar_promotor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_adicionar_promotor.FlatAppearance.BorderSize = 0;
+            this.bt_adicionar_promotor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_adicionar_promotor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_adicionar_promotor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bt_adicionar_promotor.Location = new System.Drawing.Point(12, 408);
+            this.bt_adicionar_promotor.Name = "bt_adicionar_promotor";
+            this.bt_adicionar_promotor.Size = new System.Drawing.Size(776, 37);
+            this.bt_adicionar_promotor.TabIndex = 4;
+            this.bt_adicionar_promotor.Text = "Adicionar Promotor";
+            this.bt_adicionar_promotor.UseVisualStyleBackColor = false;
+            this.bt_adicionar_promotor.Click += new System.EventHandler(this.bt_adicionar_promotor_Click);
+            // 
             // GestãoPromotoresTodos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bt_adicionar_promotor);
             this.Controls.Add(this.dataGridView_promotores);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GestãoPromotoresTodos";
             this.Text = "GestãoPromotoresTodos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_promotores)).EndInit();

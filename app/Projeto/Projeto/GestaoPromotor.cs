@@ -98,6 +98,7 @@ namespace Projeto
         {
             
         }
+        //codigo para textbox de telemovel so aceitar numeros
         private void tb_telemovel_promotor_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -105,15 +106,15 @@ namespace Projeto
                 e.Handled = true;
             }
         }
-
-            private void tb_nif_promotor_KeyPress(object sender, KeyPressEventArgs e)
+        //codigo para textbox de nif aceitar numeros
+        private void tb_nif_promotor_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
         }
-
+        //guarda os promotores novos e os seus devidos dados na base de dados
         private void bt_guardar_promotor_Click(object sender, EventArgs e)
         {
 
@@ -166,13 +167,13 @@ namespace Projeto
 
         }
 
-
+        //refresh nos dados do formulario
         private void reloadDados()
         {
             listbox_promotor.DataSource = null;
             listbox_promotor.DataSource = dBContainer.Promotor.ToList<Promotor>();
         }
-
+        //preenche as textboxs com o promotor selecionado da listbox
         private void listbox_promotor_Click(object sender, EventArgs e)
         {
             if(listbox_promotor.SelectedItem != null)
@@ -205,7 +206,7 @@ namespace Projeto
             tb_codigo_acesso.Text = promo.CodigoAcesso;
             tb_senha_promotor.Text = promo.Senha;
         }
-
+        //butao para limpar os dados da textboxs
         private void bt_limpar_Click(object sender, EventArgs e)
         {
             tb_nome_promotor.Text = "";
@@ -218,7 +219,7 @@ namespace Projeto
 
             idpromotor = -1;
         }
-
+        //mantem os formularios em execução para nao se perderem dados
         private void bt_processo_Click(object sender, EventArgs e)
         {
             Formularios.gestaoProcesso.addProcessosListbox();

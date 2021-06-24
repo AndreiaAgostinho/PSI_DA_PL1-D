@@ -38,6 +38,7 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_nao_aprovar = new System.Windows.Forms.Button();
             this.combobox_projeto_associado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.bt_aprovar = new System.Windows.Forms.Button();
@@ -47,13 +48,13 @@ namespace Projeto
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bt_nao_aprovar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestoresToolStripMenuItem,
             this.menuIniciarToolStripMenuItem});
@@ -78,6 +79,7 @@ namespace Projeto
             // 
             // gestãoDeFuncionáriosToolStripMenuItem
             // 
+            this.gestãoDeFuncionáriosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
             this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
@@ -85,6 +87,7 @@ namespace Projeto
             // 
             // gestãoDePareceresToolStripMenuItem
             // 
+            this.gestãoDePareceresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
             this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
@@ -92,6 +95,7 @@ namespace Projeto
             // 
             // gestãoDeProcessosToolStripMenuItem
             // 
+            this.gestãoDeProcessosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
             this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
@@ -99,6 +103,7 @@ namespace Projeto
             // 
             // gestãoDeProjetosToolStripMenuItem
             // 
+            this.gestãoDeProjetosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
             this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
@@ -106,6 +111,7 @@ namespace Projeto
             // 
             // gestãoDePromotoresToolStripMenuItem
             // 
+            this.gestãoDePromotoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDePromotoresToolStripMenuItem.Name = "gestãoDePromotoresToolStripMenuItem";
             this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
@@ -114,7 +120,8 @@ namespace Projeto
             // menuIniciarToolStripMenuItem
             // 
             this.menuIniciarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.menuIniciarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
             this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
@@ -139,6 +146,22 @@ namespace Projeto
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestão de Pareceres";
             // 
+            // bt_nao_aprovar
+            // 
+            this.bt_nao_aprovar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_nao_aprovar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_nao_aprovar.FlatAppearance.BorderSize = 0;
+            this.bt_nao_aprovar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_nao_aprovar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_nao_aprovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_nao_aprovar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bt_nao_aprovar.Location = new System.Drawing.Point(15, 363);
+            this.bt_nao_aprovar.Name = "bt_nao_aprovar";
+            this.bt_nao_aprovar.Size = new System.Drawing.Size(745, 43);
+            this.bt_nao_aprovar.TabIndex = 12;
+            this.bt_nao_aprovar.Text = "Não Aprovar";
+            this.bt_nao_aprovar.UseVisualStyleBackColor = false;
+            // 
             // combobox_projeto_associado
             // 
             this.combobox_projeto_associado.FormattingEnabled = true;
@@ -158,12 +181,19 @@ namespace Projeto
             // 
             // bt_aprovar
             // 
+            this.bt_aprovar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_aprovar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_aprovar.FlatAppearance.BorderSize = 0;
+            this.bt_aprovar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_aprovar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_aprovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_aprovar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bt_aprovar.Location = new System.Drawing.Point(15, 316);
             this.bt_aprovar.Name = "bt_aprovar";
             this.bt_aprovar.Size = new System.Drawing.Size(745, 43);
             this.bt_aprovar.TabIndex = 9;
             this.bt_aprovar.Text = "Aprovar";
-            this.bt_aprovar.UseVisualStyleBackColor = true;
+            this.bt_aprovar.UseVisualStyleBackColor = false;
             this.bt_aprovar.Click += new System.EventHandler(this.button1_Click);
             // 
             // tb_observacoes
@@ -216,15 +246,6 @@ namespace Projeto
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Funcionário:";
-            // 
-            // bt_nao_aprovar
-            // 
-            this.bt_nao_aprovar.Location = new System.Drawing.Point(15, 363);
-            this.bt_nao_aprovar.Name = "bt_nao_aprovar";
-            this.bt_nao_aprovar.Size = new System.Drawing.Size(745, 43);
-            this.bt_nao_aprovar.TabIndex = 12;
-            this.bt_nao_aprovar.Text = "Não Aprovar";
-            this.bt_nao_aprovar.UseVisualStyleBackColor = true;
             // 
             // GestaoParecer
             // 
