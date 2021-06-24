@@ -68,5 +68,11 @@ namespace Projeto
             gestaoProjetoButao.Show();
             this.Hide();
         }
+
+        //.
+        private void GestãoDocumentos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

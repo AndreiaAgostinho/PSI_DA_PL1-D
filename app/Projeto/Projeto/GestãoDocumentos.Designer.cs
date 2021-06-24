@@ -295,6 +295,7 @@ namespace Projeto
             this.Controls.Add(this.menuStrip1);
             this.Name = "GestãoDocumentos";
             this.Text = "GestãoDocumentos";
+            this.Load += new System.EventHandler(this.GestãoDocumentos_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
