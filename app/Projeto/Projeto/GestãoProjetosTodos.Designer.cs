@@ -190,6 +190,7 @@ namespace Projeto
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GestãoProjetosTodos";
             this.Text = "Gestão Projetos";
+            this.Load += new System.EventHandler(this.GestãoProjetosTodos_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projetos)).EndInit();
