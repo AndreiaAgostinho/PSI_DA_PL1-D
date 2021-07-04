@@ -35,13 +35,6 @@ namespace Projeto
             Formularios.main.Show();
             this.Close();
         }
-        //botão em toolstrip para voltar ao gestao de funcionarios(grelha)
-        private void gestãoDeFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var gestaoFuncionariosButao = new GestaoFuncionariosTodos();
-            gestaoFuncionariosButao.Show();
-            this.Close();
-        }
         //botão em toolstrip para voltar ao gestao de pareceres
         private void gestãoDePareceresToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -66,7 +59,7 @@ namespace Projeto
         //botão em toolstrip para voltar ao gestao de promotores
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoPromotoresButao = new GestaoPromotore();
+            var gestaoPromotoresButao = new GestãoPromotoresTodos();
             gestaoPromotoresButao.Show();
             this.Close();
         }

@@ -32,7 +32,6 @@ namespace Projeto
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestãoDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDePareceresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoDeProjetosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +65,6 @@ namespace Projeto
             // gestoresToolStripMenuItem
             // 
             this.gestoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestãoDeFuncionáriosToolStripMenuItem,
             this.gestãoDePareceresToolStripMenuItem,
             this.gestãoDeProcessosToolStripMenuItem,
             this.gestãoDeProjetosToolStripMenuItem,
@@ -76,19 +74,11 @@ namespace Projeto
             this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(102, 32);
             this.gestoresToolStripMenuItem.Text = "Gestores";
             // 
-            // gestãoDeFuncionáriosToolStripMenuItem
-            // 
-            this.gestãoDeFuncionáriosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
-            this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
-            this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
-            this.gestãoDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeFuncionáriosToolStripMenuItem_Click);
-            // 
             // gestãoDePareceresToolStripMenuItem
             // 
             this.gestãoDePareceresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
-            this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
+            this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(294, 32);
             this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
             this.gestãoDePareceresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePareceresToolStripMenuItem_Click);
             // 
@@ -96,7 +86,7 @@ namespace Projeto
             // 
             this.gestãoDeProcessosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
-            this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
+            this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(294, 32);
             this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
             this.gestãoDeProcessosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProcessosToolStripMenuItem_Click);
             // 
@@ -104,7 +94,7 @@ namespace Projeto
             // 
             this.gestãoDeProjetosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
-            this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
+            this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(294, 32);
             this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
             this.gestãoDeProjetosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProjetosToolStripMenuItem_Click);
             // 
@@ -112,7 +102,7 @@ namespace Projeto
             // 
             this.gestãoDePromotoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDePromotoresToolStripMenuItem.Name = "gestãoDePromotoresToolStripMenuItem";
-            this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
+            this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(294, 32);
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
             this.gestãoDePromotoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePromotoresToolStripMenuItem_Click);
             // 
@@ -240,7 +230,6 @@ namespace Projeto
         private System.Windows.Forms.ToolStripMenuItem menuIniciarToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gestoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gestãoDeFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDePareceresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoDeProjetosToolStripMenuItem;

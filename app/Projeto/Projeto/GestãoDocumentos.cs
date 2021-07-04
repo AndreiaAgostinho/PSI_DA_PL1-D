@@ -220,6 +220,7 @@ namespace Projeto
 
                     dBContainer.SaveChanges();
 
+                    iddocumento = -1;
                     reloadListbox();
                 }
             }

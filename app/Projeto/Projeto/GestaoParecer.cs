@@ -59,7 +59,7 @@ namespace Projeto
 
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoPromotoresButao = new GestaoPromotore();
+            var gestaoPromotoresButao = new GestãoPromotoresTodos();
             gestaoPromotoresButao.Show();
             this.Close();
         }
@@ -107,7 +107,5 @@ namespace Projeto
             projeto.Parecer.Add(parecer);
             dBContainer.SaveChanges();
         }
-
-        
     }
 }

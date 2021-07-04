@@ -79,7 +79,7 @@ namespace Projeto
                 projeto.DataEntrega = dateTimePicker_projetos.Value.Date;
                 projeto.DataAprovação = dateTimePicker_projetos.MinDate;
                 projeto.EstadoProjeto = "Falta Documentos";
-                label_aprovar.Visible = true; ;
+                label_aprovar.Visible = true;
 
                 if (comboBox_tipo_projeto.SelectedItem != null)
                 {
@@ -90,7 +90,6 @@ namespace Projeto
                 {
                     return;
                 }
-
                 //Se os documentos estiverem corretos, adiciona-os na base de dados
                 if (comboBox_funcionario_projeto.SelectedItem != null)
                 {
@@ -115,30 +114,7 @@ namespace Projeto
 
                 processo.Projeto.Add(projeto);
                 processo.EstadoProcesso = dBContainer.EstadoProcesso.ToList<EstadoProcesso>()[0];
-                idprojeto = processo.Projeto.Count - 1;
 
-                projeto = processo.Projeto.Last<Projeto>();
-
-                if (comboBox_funcionario_projeto.SelectedItem != null)
-                {
-                    ProjetoAtribuicao atribuicao = new ProjetoAtribuicao();
-
-                    atribuicao.Funcionario = (Funcionario)comboBox_funcionario_projeto.SelectedItem;
-                    atribuicao.Data = dateTimePicker_projetos.Value.ToString();
-                    atribuicao.Projeto = projeto;
-                    projeto.ProjetoAtribuicao.Add(atribuicao);
-
-                    Parecer parecer = new Parecer();
-                    parecer.DataParecer = dateTimePicker_projetos.MinDate.ToString();
-                    parecer.TextoParecer = "";
-                    parecer.Funcionario = (Funcionario)comboBox_funcionario_projeto.SelectedItem;
-
-                    projeto.Parecer.Add(parecer);
-                }
-                else
-                {
-                    return;
-                }
                 dateTimePicker_projetos.Enabled = false;
 
                 dBContainer.SaveChanges();

@@ -62,7 +62,7 @@ namespace Projeto
         //botão em toolstrip para voltar ao gestao de promotores
         private void gestãoDePromotoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoPromotoresButao = new GestaoPromotore();
+            var gestaoPromotoresButao = new GestãoPromotoresTodos();
             gestaoPromotoresButao.Show();
             this.Hide();
         }

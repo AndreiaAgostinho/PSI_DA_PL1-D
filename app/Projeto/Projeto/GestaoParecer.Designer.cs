@@ -61,8 +61,8 @@ namespace Projeto
             this.menuIniciarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 29);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,14 +76,14 @@ namespace Projeto
             this.gestãoDePromotoresToolStripMenuItem});
             this.gestoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestoresToolStripMenuItem.Name = "gestoresToolStripMenuItem";
-            this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.gestoresToolStripMenuItem.Size = new System.Drawing.Size(102, 32);
             this.gestoresToolStripMenuItem.Text = "Gestores";
             // 
             // gestãoDeFuncionáriosToolStripMenuItem
             // 
             this.gestãoDeFuncionáriosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeFuncionáriosToolStripMenuItem.Name = "gestãoDeFuncionáriosToolStripMenuItem";
-            this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
             this.gestãoDeFuncionáriosToolStripMenuItem.Text = "Gestão de Funcionários";
             this.gestãoDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeFuncionáriosToolStripMenuItem_Click);
             // 
@@ -91,7 +91,7 @@ namespace Projeto
             // 
             this.gestãoDePareceresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDePareceresToolStripMenuItem.Name = "gestãoDePareceresToolStripMenuItem";
-            this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDePareceresToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
             this.gestãoDePareceresToolStripMenuItem.Text = "Gestão de Pareceres";
             this.gestãoDePareceresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePareceresToolStripMenuItem_Click);
             // 
@@ -99,7 +99,7 @@ namespace Projeto
             // 
             this.gestãoDeProcessosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeProcessosToolStripMenuItem.Name = "gestãoDeProcessosToolStripMenuItem";
-            this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
             this.gestãoDeProcessosToolStripMenuItem.Text = "Gestão de Processos";
             this.gestãoDeProcessosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProcessosToolStripMenuItem_Click);
             // 
@@ -107,7 +107,7 @@ namespace Projeto
             // 
             this.gestãoDeProjetosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDeProjetosToolStripMenuItem.Name = "gestãoDeProjetosToolStripMenuItem";
-            this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDeProjetosToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
             this.gestãoDeProjetosToolStripMenuItem.Text = "Gestão de Projetos";
             this.gestãoDeProjetosToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProjetosToolStripMenuItem_Click);
             // 
@@ -115,7 +115,7 @@ namespace Projeto
             // 
             this.gestãoDePromotoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gestãoDePromotoresToolStripMenuItem.Name = "gestãoDePromotoresToolStripMenuItem";
-            this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.gestãoDePromotoresToolStripMenuItem.Size = new System.Drawing.Size(302, 32);
             this.gestãoDePromotoresToolStripMenuItem.Text = "Gestão de Promotores";
             this.gestãoDePromotoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDePromotoresToolStripMenuItem_Click);
             // 
@@ -125,7 +125,7 @@ namespace Projeto
             this.menuIniciarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.menuIniciarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuIniciarToolStripMenuItem.Name = "menuIniciarToolStripMenuItem";
-            this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.menuIniciarToolStripMenuItem.Size = new System.Drawing.Size(104, 32);
             this.menuIniciarToolStripMenuItem.Text = "Menu Iniciar";
             this.menuIniciarToolStripMenuItem.Click += new System.EventHandler(this.menuIniciarToolStripMenuItem_Click);
             // 
@@ -141,9 +141,11 @@ namespace Projeto
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 32);
+            this.groupBox1.Location = new System.Drawing.Point(0, 39);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 415);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1067, 511);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestão de Pareceres";
@@ -157,28 +159,32 @@ namespace Projeto
             this.bt_nao_aprovar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_nao_aprovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_nao_aprovar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bt_nao_aprovar.Location = new System.Drawing.Point(15, 363);
+            this.bt_nao_aprovar.Location = new System.Drawing.Point(20, 447);
+            this.bt_nao_aprovar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_nao_aprovar.Name = "bt_nao_aprovar";
-            this.bt_nao_aprovar.Size = new System.Drawing.Size(745, 43);
+            this.bt_nao_aprovar.Size = new System.Drawing.Size(993, 53);
             this.bt_nao_aprovar.TabIndex = 12;
             this.bt_nao_aprovar.Text = "Não Aprovar";
             this.bt_nao_aprovar.UseVisualStyleBackColor = false;
+            this.bt_nao_aprovar.Click += new System.EventHandler(this.bt_nao_aprovar_Click);
             // 
             // combobox_projeto_associado
             // 
             this.combobox_projeto_associado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_projeto_associado.FormattingEnabled = true;
-            this.combobox_projeto_associado.Location = new System.Drawing.Point(113, 107);
+            this.combobox_projeto_associado.Location = new System.Drawing.Point(151, 132);
+            this.combobox_projeto_associado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.combobox_projeto_associado.Name = "combobox_projeto_associado";
-            this.combobox_projeto_associado.Size = new System.Drawing.Size(647, 21);
+            this.combobox_projeto_associado.Size = new System.Drawing.Size(861, 24);
             this.combobox_projeto_associado.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 107);
+            this.label5.Location = new System.Drawing.Point(16, 132);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 13);
+            this.label5.Size = new System.Drawing.Size(126, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Projeto Associado:";
             // 
@@ -191,9 +197,10 @@ namespace Projeto
             this.bt_aprovar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_aprovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_aprovar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bt_aprovar.Location = new System.Drawing.Point(15, 316);
+            this.bt_aprovar.Location = new System.Drawing.Point(20, 389);
+            this.bt_aprovar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_aprovar.Name = "bt_aprovar";
-            this.bt_aprovar.Size = new System.Drawing.Size(745, 43);
+            this.bt_aprovar.Size = new System.Drawing.Size(993, 53);
             this.bt_aprovar.TabIndex = 9;
             this.bt_aprovar.Text = "Aprovar";
             this.bt_aprovar.UseVisualStyleBackColor = false;
@@ -201,64 +208,71 @@ namespace Projeto
             // 
             // tb_observacoes
             // 
-            this.tb_observacoes.Location = new System.Drawing.Point(15, 168);
+            this.tb_observacoes.Location = new System.Drawing.Point(20, 207);
+            this.tb_observacoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_observacoes.Multiline = true;
             this.tb_observacoes.Name = "tb_observacoes";
-            this.tb_observacoes.Size = new System.Drawing.Size(745, 133);
+            this.tb_observacoes.Size = new System.Drawing.Size(992, 163);
             this.tb_observacoes.TabIndex = 8;
             // 
             // combo_funcionario
             // 
             this.combo_funcionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_funcionario.FormattingEnabled = true;
-            this.combo_funcionario.Location = new System.Drawing.Point(83, 28);
+            this.combo_funcionario.Location = new System.Drawing.Point(111, 34);
+            this.combo_funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.combo_funcionario.Name = "combo_funcionario";
-            this.combo_funcionario.Size = new System.Drawing.Size(677, 21);
+            this.combo_funcionario.Size = new System.Drawing.Size(901, 24);
             this.combo_funcionario.TabIndex = 6;
             this.combo_funcionario.SelectedIndexChanged += new System.EventHandler(this.combo_funcionario_SelectedIndexChanged);
             // 
             // datapicker_parecer
             // 
-            this.datapicker_parecer.Location = new System.Drawing.Point(83, 61);
+            this.datapicker_parecer.Location = new System.Drawing.Point(111, 75);
+            this.datapicker_parecer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datapicker_parecer.Name = "datapicker_parecer";
-            this.datapicker_parecer.Size = new System.Drawing.Size(677, 20);
+            this.datapicker_parecer.Size = new System.Drawing.Size(901, 22);
             this.datapicker_parecer.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 152);
+            this.label4.Location = new System.Drawing.Point(16, 187);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.Size = new System.Drawing.Size(96, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Observações:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 61);
+            this.label2.Location = new System.Drawing.Point(59, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(42, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Data:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Location = new System.Drawing.Point(16, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Funcionário:";
             // 
             // GestaoParecer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GestaoParecer";
             this.Text = "Gestão Pareceres";
             this.menuStrip1.ResumeLayout(false);
