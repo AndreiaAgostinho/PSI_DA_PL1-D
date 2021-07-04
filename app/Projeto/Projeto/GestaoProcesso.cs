@@ -275,7 +275,7 @@ namespace Projeto
 
                     dBContainer.SaveChanges();
 
-                    idprocesso = -1;
+                    idprocesso = 0;
                     reloadDados();
                 }
             }

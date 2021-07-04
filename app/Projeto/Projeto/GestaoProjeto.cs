@@ -359,6 +359,7 @@ namespace Projeto
 
                     dBContainer.SaveChanges();
 
+                    idprojeto = -1;
                     reloadDados();
                 }
             }

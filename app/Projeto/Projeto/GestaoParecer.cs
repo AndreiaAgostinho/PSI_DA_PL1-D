@@ -45,14 +45,14 @@ namespace Projeto
 
         private void gestãoDeProjetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProjetosButao = new GestaoProjeto();
+            var gestaoProjetosButao = new GestãoProjetosTodos();
             gestaoProjetosButao.Show();
             this.Close();
         }
 
         private void gestãoDeProcessosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gestaoProcessosButao = new GestaoProcesso();
+            var gestaoProcessosButao = new GestãoProcessosTodos();
             gestaoProcessosButao.Show();
             this.Close();
         }
