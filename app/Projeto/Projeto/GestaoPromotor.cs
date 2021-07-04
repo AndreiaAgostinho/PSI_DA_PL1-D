@@ -157,7 +157,7 @@ namespace Projeto
                 }
                 throw;
             }
-            catch (FormatException a)
+            catch (FormatException)
             {
                 MessageBox.Show("NIF Inválido");
             }
